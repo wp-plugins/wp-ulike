@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: I-Like-This\n"
+"POT-Creation-Date: 2014-08-28 11:21+0330\n"
+"PO-Revision-Date: 2014-08-28 11:21+0330\n"
+"Last-Translator: Alimir <info@alimir.ir>\n"
+"Language-Team: alimir.ir <info@alimir.ir>\n"
+"Language: Persian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../wp-ulike.php:16
+msgid "WP ULike"
+msgstr "وردپرس یولایک"
+
+#: ../wp-ulike.php:17
+msgid ""
+"WP ULike plugin allows to integrate Like Button into your WordPress website "
+"to allow your visitors to like pages and posts. Its very simple to use and "
+"support a widget to display the most liked posts."
+msgstr ""
+"یولایک، یک افزونه ساده و سبک برای راه اندازی سیستم \"لایک مطالب\" در وبلاگ "
+"یا وبسایت شماست :) - این پلاگین توسط علی میرزائی و در دنیای وردپرس و برنامه "
+"نویسی منتشر شده است."
+
+#: ../wp-ulike.php:81
+msgid "You need to login in order to like this post: "
+msgstr "برای امتیاز دهی به این مطلب، لطفا وارد شوید: "
+
+#: ../wp-ulike.php:81
+msgid "click here"
+msgstr "برای ورود کلیک کنید"
+
+#: ../inc/wp-options.php:4
+msgid "WP Ulike"
+msgstr "تنظیمات یولایک"
+
+#: ../inc/wp-options.php:22
+msgid "Configuration"
+msgstr "پیکربندی"
+
+#: ../inc/wp-options.php:28
+msgid "Image or text?"
+msgstr "متن یا تصویر؟"
+
+#: ../inc/wp-options.php:40
+msgid "Liked Text?"
+msgstr "متن دکمه پس از لایک"
+
+#: ../inc/wp-options.php:48
+msgid "Automatic display"
+msgstr "نمایش خودکار"
+
+#: ../inc/wp-options.php:52
+msgid ""
+"<strong>On all posts</strong> (home, archives, search) at the bottom of the "
+"post"
+msgstr ""
+"<strong>نمایش در تمامی پست ها</strong> (خانه, بایگانی, جستجو)در بخش زیرین "
+"مطالب."
+
+#: ../inc/wp-options.php:54
+msgid "If you disable this option, you have to put manually the code"
+msgstr "اگر این قابلیت را غیر فعال کنید، باید به صورت دستی این کد را "
+
+#: ../inc/wp-options.php:54
+msgid "wherever you want in your template."
+msgstr "در قالب خود قرار دهید."
+
+#: ../inc/wp-options.php:58
+msgid "Only registered Users"
+msgstr "محدودسازی لایک کاربران"
+
+#: ../inc/wp-options.php:62
+msgid "<strong>Active</strong> this option."
+msgstr "<strong>فعال کردن</strong> این قابلیت."
+
+#: ../inc/wp-options.php:64
+msgid "<strong>Only</strong> registered users have permission to like posts."
+msgstr "<strong>تنها</strong> کاربران عضو شده، می توانند مطالب را لایک کنند.."
+
+#: ../inc/wp-options.php:74
+msgid "Like this plugin?"
+msgstr "این پلاگین چندتا لایک داره؟!؟ :)"
+
+#: ../inc/wp-options.php:77
+msgid ""
+"Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
+"wp-ulike\"> Plugin Directory reviews</a>"
+msgstr ""
+"حمایتتون رو از این افزونه، با امتیاز 5 ستاره در <a href=\"http://wordpress."
+"org/plugins/wp-ulike\">مخزن وردپرس</a> مشخص کنید..."
+
+#: ../inc/wp-options.php:78
+msgid ""
+"Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
+msgstr ""
+"دنیای وردپرس و برنامه نویسی را در  <a href=\"https://www.facebook.com/alimir."
+"ir\"> فیسبوک</a> دنبال کنید..."
+
+#: ../inc/wp-options.php:79
+msgid ""
+"Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
+"World.</a>"
+msgstr ""
+"صفحه سازنده افزونه <a href=\"http://alimir.ir\"> دنیای وردپرس و برنامه "
+"نویسی</a>."
+
+#: ../inc/wp-widget.php:8
+msgid "WP Ulike Widget"
+msgstr "ابزارک یولایک"
+
+#: ../inc/wp-widget.php:9
+msgid ""
+"This plugin allows your visitors to simply like your posts instead of "
+"comment it."
+msgstr "یک پلاگین ساده و سبک برای راه اندازی سیستم لایک در وبلاگ شما"
+
+#: ../inc/wp-widget.php:51
+msgid "Most liked posts"
+msgstr "بیشترین مطالب لایک شده"
+
+#: ../inc/wp-widget.php:55
+msgid "Title:"
+msgstr "عنوان:"
+
+#: ../inc/wp-widget.php:60
+msgid "Number of posts to show:"
+msgstr "تعداد مطالب قابل نمایش:"
+
+#: ../inc/wp-widget.php:66
+msgid "Show post count"
+msgstr "نمایش شمارشگر"
+
+#~ msgid "Save Options"
+#~ msgstr "ذخیره تغییرات"
+
+#~ msgid "jQuery framework"
+#~ msgstr "چارچوب جی کوئری"
+
+#~ msgid "Enabled"
+#~ msgstr "فعال"
+
+#~ msgid "Disabled"
+#~ msgstr "غیر فعال"
+
+#~ msgid ""
+#~ "Disable it if you already have the jQuery framework enabled in your theme."
+#~ msgstr ""
+#~ "اگر پیش ازاین، از چارچوب جی کوئری در قالب خود استفاده کرده اید، این "
+#~ "قابلیت را غیر فعال کنید."
+
+#~ msgid "I Like This"
+#~ msgstr "افزونه لایک وردپرس"
+
+#~ msgid "Translated in"
+#~ msgstr "فارسی سازی در "
+
+#~ msgid "wp and programming world"
+#~ msgstr "دنیای وردپرس و برنامه نویسی"

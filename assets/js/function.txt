@@ -1,0 +1,17 @@
+function likeThis(postId) {
+    if (postId != '') {
+        jQuery('#wp-ulike-' + postId + ' .counter').html('<a class="text">' + ulike_obj.likeText + '</a><span class="count-box">...</span>');
+
+		jQuery.ajax({
+		  type:'POST',
+		  url: ulike_obj.ajaxurl,
+          data:{
+            action:'ulikeprocess',
+            id: postId
+          },
+		  success: function(value) {
+			jQuery('#wp-ulike-' + postId + ' .counter').html('<a class="text">' + ulike_obj.likeText + '</a><span class="count-box">'+value+ '</span>');
+		  }
+		});			
+    }
+}
