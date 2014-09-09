@@ -11,7 +11,9 @@ function wp_ulike_register_mysettings() { // whitelist options
 	register_setting( 'wp_ulike_options', 'wp_ulike_textOrImage' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_text' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_btn_text' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_dislike_text' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_onlyRegistered' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_user_like_box' );
 }
 
 
@@ -27,7 +29,7 @@ function wp_ulike_settings_page() {
 				<tr valign="top">
 					<th scope="row"><?php _e('Image or text?', 'alimir'); ?></th>
 					<td>
-						<label for="wp_ulike_textOrImage" style="padding:3px 20px 3px; background: url(<?php echo plugins_url('assets/css/add.png', dirname(__FILE__)); ?>) no-repeat right center;">
+						<label for="wp_ulike_textOrImage" style="padding:3px 10px 3px; background: url(<?php echo plugins_url('assets/css/add.png', dirname(__FILE__)); ?>) no-repeat right center;">
 						<?php echo get_option('wp_ulike_textOrImage') == 'image' ? '<input type="radio" name="wp_ulike_textOrImage" id="wp_ulike_textOrImage" value="image" checked="checked">' : '<input type="radio" name="wp_ulike_textOrImage" id="wp_ulike_textOrImage" value="image">'; ?>
 						</label>
 						<label for="wp_ulike_text">
@@ -37,10 +39,18 @@ function wp_ulike_settings_page() {
 					</td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><?php _e('Liked Text?', 'alimir'); ?></th>
+					<th scope="row"><?php _e('Like Text', 'alimir'); ?></th>
 					<td>
 						<label for="wp_ulike_btn_text">
 						<input type="text" name="wp_ulike_btn_text" id="wp_ulike_btn_text" value="<?php echo get_option('wp_ulike_btn_text'); ?>" />
+						</label>
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><?php _e('Dislike Text?', 'alimir'); ?></th>
+					<td>
+						<label for="wp_ulike_dislike_text">
+						<input type="text" name="wp_ulike_dislike_text" id="wp_ulike_dislike_text" value="<?php echo get_option('wp_ulike_dislike_text'); ?>" />
 						</label>
 					</td>
 				</tr>
@@ -62,6 +72,16 @@ function wp_ulike_settings_page() {
 						<?php _e('<strong>Active</strong> this option.', 'alimir'); ?>
 						</label>
 						<p class="description"><?php _e('<strong>Only</strong> registered users have permission to like posts.', 'alimir'); ?></p>
+					</td>
+				</tr>		
+				<tr valign="top">
+					<th scope="row"><?php _e('Show Users Like Box', 'alimir'); ?></th>
+					<td>
+						<label for="wp_ulike_user_like_box">
+						<?php echo get_option('wp_ulike_user_like_box') == '1' ? '<input type="checkbox" name="wp_ulike_user_like_box" id="wp_ulike_user_like_box" value="1" checked="checked">' : '<input type="checkbox" name="wp_ulike_user_like_box" id="wp_ulike_user_like_box" value="1">'; ?>
+						<?php _e('Activate', 'alimir'); ?>
+						</label>
+						<p class="description"><?php _e('Active this option to show users avatar in like box.', 'alimir'); ?></p>
 					</td>
 				</tr>		
 			</table>

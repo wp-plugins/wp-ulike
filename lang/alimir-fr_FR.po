@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP ULike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-28 11:21+0330\n"
+"POT-Creation-Date: 2014-09-04 15:00+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: \n"
@@ -27,11 +27,31 @@ msgid ""
 "support a widget to display the most liked posts."
 msgstr ""
 
-#: ../wp-ulike.php:81
+#: ../wp-ulike.php:55
+msgid "Like"
+msgstr ""
+
+#: ../wp-ulike.php:56
+msgid "You Like This"
+msgstr ""
+
+#: ../wp-ulike.php:57
+msgid "You Dislike This"
+msgstr ""
+
+#: ../wp-ulike.php:114 ../wp-ulike.php:130
+msgid "Already Voted"
+msgstr ""
+
+#: ../wp-ulike.php:141
+msgid "Users who have LIKED this post:"
+msgstr ""
+
+#: ../wp-ulike.php:153
 msgid "You need to login in order to like this post: "
 msgstr ""
 
-#: ../wp-ulike.php:81
+#: ../wp-ulike.php:153
 msgid "click here"
 msgstr ""
 
@@ -39,23 +59,27 @@ msgstr ""
 msgid "WP Ulike"
 msgstr ""
 
-#: ../inc/wp-options.php:22
+#: ../inc/wp-options.php:24
 msgid "Configuration"
 msgstr "Configuration"
 
-#: ../inc/wp-options.php:28
+#: ../inc/wp-options.php:30
 msgid "Image or text?"
 msgstr "Image ou texte?"
 
-#: ../inc/wp-options.php:40
-msgid "Liked Text?"
+#: ../inc/wp-options.php:42
+msgid "Like Text"
 msgstr ""
 
-#: ../inc/wp-options.php:48
+#: ../inc/wp-options.php:50
+msgid "Dislike Text?"
+msgstr ""
+
+#: ../inc/wp-options.php:58
 msgid "Automatic display"
 msgstr "Affichage automatique"
 
-#: ../inc/wp-options.php:52
+#: ../inc/wp-options.php:62
 msgid ""
 "<strong>On all posts</strong> (home, archives, search) at the bottom of the "
 "post"
@@ -63,43 +87,55 @@ msgstr ""
 "<strong>Pour tous les articles</strong> (accueil, archives, recherche) au "
 "fond de l'article."
 
-#: ../inc/wp-options.php:54
+#: ../inc/wp-options.php:64
 msgid "If you disable this option, you have to put manually the code"
 msgstr ""
 "Si vous désactivez cette option, vous devez ajouter manuellement le code"
 
-#: ../inc/wp-options.php:54
+#: ../inc/wp-options.php:64
 msgid "wherever you want in your template."
 msgstr "n'importe où vous le souhaitez dans votre thème."
 
-#: ../inc/wp-options.php:58
+#: ../inc/wp-options.php:68
 msgid "Only registered Users"
 msgstr ""
 
-#: ../inc/wp-options.php:62
+#: ../inc/wp-options.php:72
 msgid "<strong>Active</strong> this option."
 msgstr ""
 
-#: ../inc/wp-options.php:64
+#: ../inc/wp-options.php:74
 msgid "<strong>Only</strong> registered users have permission to like posts."
 msgstr ""
 
-#: ../inc/wp-options.php:74
+#: ../inc/wp-options.php:78
+msgid "Show Users Like Box"
+msgstr ""
+
+#: ../inc/wp-options.php:82
+msgid "Activate"
+msgstr ""
+
+#: ../inc/wp-options.php:84
+msgid "Active this option to show users avatar in like box."
+msgstr ""
+
+#: ../inc/wp-options.php:94
 msgid "Like this plugin?"
 msgstr "Vous aimez ce plugin?"
 
-#: ../inc/wp-options.php:77
+#: ../inc/wp-options.php:97
 msgid ""
 "Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
 "wp-ulike\"> Plugin Directory reviews</a>"
 msgstr ""
 
-#: ../inc/wp-options.php:78
+#: ../inc/wp-options.php:98
 msgid ""
 "Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
 msgstr ""
 
-#: ../inc/wp-options.php:79
+#: ../inc/wp-options.php:99
 msgid ""
 "Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
 "World.</a>"

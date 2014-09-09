@@ -3,17 +3,17 @@ Contributors: alimir
 Donate link: http://alimir.ir
 Author: Ali Mirzaei
 Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin
-Requires at least: 3.1
-Tested up to: 3.9.2
-Stable tag: 1.0
+Requires at least: 3.0
+Tested up to: 4.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WP ULike plugin allows to integrate Ajax Like Button into your WordPress website to allow your visitors to like pages and posts.
+WP ULike plugin allows to integrate Ajax Like Button into your WordPress website to allow your visitors to like and dislike pages and posts.
 
 == Description ==
 
-WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like pages and posts. Its very simple to use and support a widget to display the most liked posts.
+WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and dislike pages and posts. Its very simple to use and support a widget to display the most liked posts.
 
 = Demo =
 
@@ -21,14 +21,20 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 
 = Features =
 
-*   A counter/button to submit and display the number of likes.
-*   A widget and a function to display the most liked posts.
+*   Clean Design.
+*   Ajax feature to update the data without reloading.
+*   Visitors do not have to register or log in to use the Like Button.
+*   Compatible with WP version 3.0 & above.
+*   Added automatically (no Code required).
+*   Simple likeBox to show users avatar.
+*   Custom Like-Dislike Texts.
+*   Widget to show 'Most Liked' posts.
 *   Simple configuration panel.
-*   Full RTL support.
+*   Support RTL & language file.
 *   And so on...
 
 = How To Use? =
-* Just install the plugin and use `<?php if(function_exists('wp_ulike')) wp_ulike('get'); ?>` function or activate the "automatic display" in plugin setting panel.
+* Just install the plugin and use `<?php if(function_exists('wp_ulike')) wp_ulike('get'); ?>` function or activate the "automatic display" in plugin configuration panel.
 
 = Translations =
 *   English
@@ -50,10 +56,18 @@ Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" 
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.1 =
+* Add loading spinner.
+* Add new database table.
+* Add user dislike support.
+* Add Simple "user avatar box" at the bottom of every post.
+* Improve plugin security and authentication.
+* Update language files.
+
+= 1.0 =
 * The initial version
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0 =
 The initial version
