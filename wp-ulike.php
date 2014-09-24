@@ -3,7 +3,7 @@
 Plugin Name:WP ULike
 Plugin URI: http://wordpress.org/plugins/wp-ulike
 Description: WP ULike plugin allows to integrate Like Button into your WordPress website to allow your visitors to like pages and posts. Its very simple to use and support a widget to display the most liked posts.
-Version: 1.1
+Version: 1.2
 Author: Ali Mirzaei
 Author URI: http://about.alimir.ir
 Text Domain: alimir

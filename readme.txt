@@ -5,7 +5,7 @@ Author: Ali Mirzaei
 Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,7 +28,7 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   Added automatically (no Code required).
 *   Simple likeBox to show users avatar.
 *   Custom Like-Dislike Texts.
-*   Widget to show 'Most Liked' posts.
+*   Widget to show 'Most Liked' posts And 'Most Liked' users avatars.
 *   Simple configuration panel.
 *   Support RTL & language file.
 *   And so on...
@@ -40,10 +40,11 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   English
 *   Persian
 *   France
+*   Chinese (Thanks Changmeng Hu)
 
 = Plugin Author =
 Website: <a href="http://about.alimir.ir" target="_blank">Ali Mirzaei</a><br />
-Follow on <a href="https://www.facebook.com/alimir.ir" target="_blank">facebook</a>
+Follow on <a href="https://www.facebook.com/alimir.ir" target="_blank">Facebook</a>
 
 == Installation ==
 
@@ -56,13 +57,17 @@ Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" 
 
 == Changelog ==
 
+= 1.2 =
+* Added: Most liked users widget.
+* Added: Chinese (ZH_CN) language. (Thanks to Changmeng Hu) 
+
 = 1.1 =
-* Add loading spinner.
-* Add new database table.
-* Add user dislike support.
-* Add Simple "user avatar box" at the bottom of every post.
-* Improve plugin security and authentication.
-* Update language files.
+* Added: loading spinner.
+* Added: new database table.
+* Added: user dislike support.
+* Added: Simple "user avatar box" at the bottom of every post.
+* Fixes: plugin security and authentication.
+* Updated: language files.
 
 = 1.0 =
 * The initial version

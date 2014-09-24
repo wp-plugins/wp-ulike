@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: I-Like-This\n"
-"POT-Creation-Date: 2014-09-09 16:54+0330\n"
-"PO-Revision-Date: 2014-09-09 16:54+0330\n"
+"POT-Creation-Date: 2014-09-24 18:05+0330\n"
+"PO-Revision-Date: 2014-09-24 18:25+0330\n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: alimir.ir <info@alimir.ir>\n"
 "Language: Persian\n"
@@ -30,7 +30,7 @@ msgstr ""
 "در وبلاگ یا وبسایت شماست :) - این پلاگین توسط علی میرزائی و در دنیای وردپرس "
 "و برنامه نویسی توسعه داده شده."
 
-#: ../wp-ulike.php:56
+#: ../wp-ulike.php:56 ../inc/wp-widget.php:106
 msgid "Like"
 msgstr "لایک"
 
@@ -60,7 +60,7 @@ msgstr "برای ورود کلیک کنید"
 
 #: ../inc/wp-options.php:4
 msgid "WP Ulike"
-msgstr "تنظیمات یولایک"
+msgstr "تنظیمات افزونه یولایک"
 
 #: ../inc/wp-options.php:24
 msgid "Configuration"
@@ -154,20 +154,20 @@ msgstr ""
 "نویسی</a>."
 
 #: ../inc/wp-widget.php:8
-msgid "WP Ulike Widget"
-msgstr "ابزارک یولایک"
+msgid "WP Ulike - Most Liked Posts"
+msgstr "وردپرس یولایک - نمایش پرلایک ترین مطالب"
 
 #: ../inc/wp-widget.php:9
-msgid ""
-"This plugin allows your visitors to simply like your posts instead of "
-"comment it."
-msgstr "یک پلاگین ساده و سبک برای راه اندازی سیستم لایک در وبلاگ شما"
+msgid "This widget allows you to show most liked posts."
+msgstr ""
+"با استفاده از این ابزارک، میتونید لیستی از پرلایک ترین مطالب سایتتون رو به "
+"همراه تعداد لایک هر نوشته، نمایش بدید."
 
 #: ../inc/wp-widget.php:51
-msgid "Most liked posts"
-msgstr "بیشترین مطالب لایک شده"
+msgid "Most Liked Posts"
+msgstr "پرلایک ترین مطالب"
 
-#: ../inc/wp-widget.php:55
+#: ../inc/wp-widget.php:55 ../inc/wp-widget.php:136
 msgid "Title:"
 msgstr "عنوان:"
 
@@ -176,8 +176,45 @@ msgid "Number of posts to show:"
 msgstr "تعداد مطالب قابل نمایش:"
 
 #: ../inc/wp-widget.php:66
-msgid "Show post count"
-msgstr "نمایش شمارشگر"
+msgid "Activate post like count"
+msgstr "تعداد لایک های هر نوشته رو نمایش بد:"
+
+#: ../inc/wp-widget.php:87
+msgid "WP Ulike - Most Liked Users"
+msgstr "وردپرس یولایک - نمایش پرلایک ترین کاربران"
+
+#: ../inc/wp-widget.php:88
+msgid "This widget allows you to show most liked users avatars."
+msgstr ""
+"با استفاده از این ابزارک، میتونید لیستی از پرلایک ترین کاربران سایتتون رو به "
+"همراه تصویر آواتار و تعداد لایکشون، نمایش بدید."
+
+#: ../inc/wp-widget.php:132
+msgid "Most Liked Users"
+msgstr "پرلایک ترین کاربران"
+
+#: ../inc/wp-widget.php:141
+msgid "Number of users to show:"
+msgstr "تعداد کاربران قابل نمایش:"
+
+#: ../inc/wp-widget.php:146
+msgid "User avatar size:"
+msgstr "سایز آواتار کاربران:"
+
+#: ../inc/wp-widget.php:152
+msgid "Activate user like count"
+msgstr "تعداد لایک های هر کاربر رو نمایش بده"
+
+#~ msgid "Show post count"
+#~ msgstr "نمایش شمارشگر"
+
+#~ msgid "WP Ulike Widget"
+#~ msgstr "ابزارک یولایک"
+
+#~ msgid ""
+#~ "This plugin allows your visitors to simply like your posts instead of "
+#~ "comment it."
+#~ msgstr "یک پلاگین ساده و سبک برای راه اندازی سیستم لایک در وبلاگ شما"
 
 #~ msgid "Save Options"
 #~ msgstr "ذخیره تغییرات"
