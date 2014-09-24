@@ -1,0 +1,208 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP ULike\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-24 16:53+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Alimir <info@alimir.ir>\n"
+"Language-Team: \n"
+"Language: France\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../wp-ulike.php:16
+msgid "WP ULike"
+msgstr ""
+
+#: ../wp-ulike.php:17
+msgid ""
+"WP ULike plugin allows to integrate Like Button into your WordPress website "
+"to allow your visitors to like pages and posts. Its very simple to use and "
+"support a widget to display the most liked posts."
+msgstr ""
+
+#: ../wp-ulike.php:56 ../inc/wp-widget.php:106
+msgid "Like"
+msgstr ""
+
+#: ../wp-ulike.php:57
+msgid "You Like This"
+msgstr ""
+
+#: ../wp-ulike.php:58
+msgid "You Dislike This"
+msgstr ""
+
+#: ../wp-ulike.php:115 ../wp-ulike.php:131
+msgid "Already Voted"
+msgstr ""
+
+#: ../wp-ulike.php:142
+msgid "Users who have LIKED this post:"
+msgstr ""
+
+#: ../wp-ulike.php:154
+msgid "You need to login in order to like this post: "
+msgstr ""
+
+#: ../wp-ulike.php:154
+msgid "click here"
+msgstr ""
+
+#: ../inc/wp-options.php:4
+msgid "WP Ulike"
+msgstr ""
+
+#: ../inc/wp-options.php:24
+msgid "Configuration"
+msgstr "Configuration"
+
+#: ../inc/wp-options.php:30
+msgid "Image or text?"
+msgstr "Image ou texte?"
+
+#: ../inc/wp-options.php:42
+msgid "Like Text"
+msgstr ""
+
+#: ../inc/wp-options.php:50
+msgid "Dislike Text?"
+msgstr ""
+
+#: ../inc/wp-options.php:58
+msgid "Automatic display"
+msgstr "Affichage automatique"
+
+#: ../inc/wp-options.php:62
+msgid ""
+"<strong>On all posts</strong> (home, archives, search) at the bottom of the "
+"post"
+msgstr ""
+"<strong>Pour tous les articles</strong> (accueil, archives, recherche) au "
+"fond de l'article."
+
+#: ../inc/wp-options.php:64
+msgid "If you disable this option, you have to put manually the code"
+msgstr ""
+"Si vous désactivez cette option, vous devez ajouter manuellement le code"
+
+#: ../inc/wp-options.php:64
+msgid "wherever you want in your template."
+msgstr "n'importe où vous le souhaitez dans votre thème."
+
+#: ../inc/wp-options.php:68
+msgid "Only registered Users"
+msgstr ""
+
+#: ../inc/wp-options.php:72
+msgid "<strong>Active</strong> this option."
+msgstr ""
+
+#: ../inc/wp-options.php:74
+msgid "<strong>Only</strong> registered users have permission to like posts."
+msgstr ""
+
+#: ../inc/wp-options.php:78
+msgid "Show Users Like Box"
+msgstr ""
+
+#: ../inc/wp-options.php:82
+msgid "Activate"
+msgstr ""
+
+#: ../inc/wp-options.php:84
+msgid "Active this option to show users avatar in like box."
+msgstr ""
+
+#: ../inc/wp-options.php:94
+msgid "Like this plugin?"
+msgstr "Vous aimez ce plugin?"
+
+#: ../inc/wp-options.php:97
+msgid ""
+"Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
+"wp-ulike\"> Plugin Directory reviews</a>"
+msgstr ""
+
+#: ../inc/wp-options.php:98
+msgid ""
+"Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
+msgstr ""
+
+#: ../inc/wp-options.php:99
+msgid ""
+"Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
+"World.</a>"
+msgstr ""
+
+#: ../inc/wp-widget.php:8
+msgid "WP Ulike - Most Liked Posts"
+msgstr ""
+
+#: ../inc/wp-widget.php:9
+msgid "This widget allows you to show most liked posts."
+msgstr ""
+
+#: ../inc/wp-widget.php:51
+msgid "Most Liked Posts"
+msgstr ""
+
+#: ../inc/wp-widget.php:55 ../inc/wp-widget.php:136
+msgid "Title:"
+msgstr "Titre:"
+
+#: ../inc/wp-widget.php:60
+msgid "Number of posts to show:"
+msgstr "Nombre d'articles à afficher:"
+
+#: ../inc/wp-widget.php:66
+msgid "Show post count"
+msgstr "Afficher le nombre d'articles"
+
+#: ../inc/wp-widget.php:87
+msgid "WP Ulike - Most Liked Users"
+msgstr ""
+
+#: ../inc/wp-widget.php:88
+msgid "This widget allows you to show most liked users avatars."
+msgstr ""
+
+#: ../inc/wp-widget.php:132
+msgid "Most Liked Users"
+msgstr ""
+
+#: ../inc/wp-widget.php:141
+msgid "Number of users to show:"
+msgstr ""
+
+#: ../inc/wp-widget.php:146
+msgid "User avatar size:"
+msgstr ""
+
+#: ../inc/wp-widget.php:152
+msgid "Show user like count"
+msgstr ""
+
+#~ msgid "Save Options"
+#~ msgstr "Enregistrer les options"
+
+#~ msgid "jQuery framework"
+#~ msgstr "Librairie jQuery"
+
+#~ msgid "Enabled"
+#~ msgstr "Activé"
+
+#~ msgid "Disabled"
+#~ msgstr "Désactivé"
+
+#~ msgid ""
+#~ "Disable it if you already have the jQuery framework enabled in your theme."
+#~ msgstr ""
+#~ "Désactivez cette option si vous avez déjà la librairie jQuery activée "
+#~ "dans votre thème."

@@ -1,0 +1,241 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: I-Like-This\n"
+"POT-Creation-Date: 2014-09-24 18:05+0330\n"
+"PO-Revision-Date: 2014-09-24 18:25+0330\n"
+"Last-Translator: Alimir <info@alimir.ir>\n"
+"Language-Team: alimir.ir <info@alimir.ir>\n"
+"Language: Persian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../wp-ulike.php:16
+msgid "WP ULike"
+msgstr "وردپرس یولایک"
+
+#: ../wp-ulike.php:17
+msgid ""
+"WP ULike plugin allows to integrate Like Button into your WordPress website "
+"to allow your visitors to like pages and posts. Its very simple to use and "
+"support a widget to display the most liked posts."
+msgstr ""
+"یولایک، یه افزونه ی ساده و سبک ایرونی، برای راه اندازی سیستم \"لایک مطالب\" "
+"در وبلاگ یا وبسایت شماست :) - این پلاگین توسط علی میرزائی و در دنیای وردپرس "
+"و برنامه نویسی توسعه داده شده."
+
+#: ../wp-ulike.php:56 ../inc/wp-widget.php:106
+msgid "Like"
+msgstr "لایک"
+
+#: ../wp-ulike.php:57
+msgid "You Like This"
+msgstr "شما این را پسندیده اید"
+
+#: ../wp-ulike.php:58
+msgid "You Dislike This"
+msgstr "شما این را نپسندیده اید"
+
+#: ../wp-ulike.php:115 ../wp-ulike.php:131
+msgid "Already Voted"
+msgstr "قبلا لایک کرده اید"
+
+#: ../wp-ulike.php:142
+msgid "Users who have LIKED this post:"
+msgstr "کاربرانی که این مطلب را پسندیده اند:"
+
+#: ../wp-ulike.php:154
+msgid "You need to login in order to like this post: "
+msgstr "برای امتیاز دهی به این مطلب، لطفا وارد شوید: "
+
+#: ../wp-ulike.php:154
+msgid "click here"
+msgstr "برای ورود کلیک کنید"
+
+#: ../inc/wp-options.php:4
+msgid "WP Ulike"
+msgstr "تنظیمات افزونه یولایک"
+
+#: ../inc/wp-options.php:24
+msgid "Configuration"
+msgstr "پیکربندی"
+
+#: ../inc/wp-options.php:30
+msgid "Image or text?"
+msgstr "متن یا تصویر؟"
+
+#: ../inc/wp-options.php:42
+msgid "Like Text"
+msgstr "متن دکمه لایک"
+
+#: ../inc/wp-options.php:50
+msgid "Dislike Text?"
+msgstr "متن دکمه دیسلایک"
+
+#: ../inc/wp-options.php:58
+msgid "Automatic display"
+msgstr "نمایش خودکار"
+
+#: ../inc/wp-options.php:62
+msgid ""
+"<strong>On all posts</strong> (home, archives, search) at the bottom of the "
+"post"
+msgstr ""
+"<strong>نمایش در تمامی پست ها</strong> (خانه, بایگانی, جستجو)در بخش زیرین "
+"مطالب."
+
+#: ../inc/wp-options.php:64
+msgid "If you disable this option, you have to put manually the code"
+msgstr "اگر این قابلیت را غیر فعال کنید، باید به صورت دستی این کد را "
+
+#: ../inc/wp-options.php:64
+msgid "wherever you want in your template."
+msgstr "در قالب خود قرار دهید."
+
+#: ../inc/wp-options.php:68
+msgid "Only registered Users"
+msgstr "محدودسازی لایک کاربران"
+
+#: ../inc/wp-options.php:72
+msgid "<strong>Active</strong> this option."
+msgstr "می خواهم این قابلیت را<strong>فعال</strong> کنم"
+
+#: ../inc/wp-options.php:74
+msgid "<strong>Only</strong> registered users have permission to like posts."
+msgstr ""
+"با فعال سازی این گزینه، <strong>تنها</strong> کاربران عضو شده، می توانند "
+"مطالب را لایک کنند."
+
+#: ../inc/wp-options.php:78
+msgid "Show Users Like Box"
+msgstr "نمایش باکس کاربران لایک کرده"
+
+#: ../inc/wp-options.php:82
+msgid "Activate"
+msgstr "فعال سازی"
+
+#: ../inc/wp-options.php:84
+msgid "Active this option to show users avatar in like box."
+msgstr ""
+"با فعال سازی این گزینه، می توانید آواتار کاربران لایک کرده، را در زیر هر "
+"مطلب، نمایش دهید."
+
+#: ../inc/wp-options.php:94
+msgid "Like this plugin?"
+msgstr "این پلاگین چندتا لایک داره؟!؟ :)"
+
+#: ../inc/wp-options.php:97
+msgid ""
+"Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
+"wp-ulike\"> Plugin Directory reviews</a>"
+msgstr ""
+"حمایتتون رو از این افزونه، با امتیاز 5 ستاره در <a href=\"http://wordpress."
+"org/plugins/wp-ulike\">مخزن وردپرس</a> مشخص کنید..."
+
+#: ../inc/wp-options.php:98
+msgid ""
+"Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
+msgstr ""
+"دنیای وردپرس و برنامه نویسی را در  <a href=\"https://www.facebook.com/alimir."
+"ir\"> فیسبوک</a> دنبال کنید..."
+
+#: ../inc/wp-options.php:99
+msgid ""
+"Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
+"World.</a>"
+msgstr ""
+"صفحه سازنده افزونه <a href=\"http://alimir.ir\"> دنیای وردپرس و برنامه "
+"نویسی</a>."
+
+#: ../inc/wp-widget.php:8
+msgid "WP Ulike - Most Liked Posts"
+msgstr "وردپرس یولایک - نمایش پرلایک ترین مطالب"
+
+#: ../inc/wp-widget.php:9
+msgid "This widget allows you to show most liked posts."
+msgstr ""
+"با استفاده از این ابزارک، میتونید لیستی از پرلایک ترین مطالب سایتتون رو به "
+"همراه تعداد لایک هر نوشته، نمایش بدید."
+
+#: ../inc/wp-widget.php:51
+msgid "Most Liked Posts"
+msgstr "پرلایک ترین مطالب"
+
+#: ../inc/wp-widget.php:55 ../inc/wp-widget.php:136
+msgid "Title:"
+msgstr "عنوان:"
+
+#: ../inc/wp-widget.php:60
+msgid "Number of posts to show:"
+msgstr "تعداد مطالب قابل نمایش:"
+
+#: ../inc/wp-widget.php:66
+msgid "Activate post like count"
+msgstr "تعداد لایک های هر نوشته رو نمایش بد:"
+
+#: ../inc/wp-widget.php:87
+msgid "WP Ulike - Most Liked Users"
+msgstr "وردپرس یولایک - نمایش پرلایک ترین کاربران"
+
+#: ../inc/wp-widget.php:88
+msgid "This widget allows you to show most liked users avatars."
+msgstr ""
+"با استفاده از این ابزارک، میتونید لیستی از پرلایک ترین کاربران سایتتون رو به "
+"همراه تصویر آواتار و تعداد لایکشون، نمایش بدید."
+
+#: ../inc/wp-widget.php:132
+msgid "Most Liked Users"
+msgstr "پرلایک ترین کاربران"
+
+#: ../inc/wp-widget.php:141
+msgid "Number of users to show:"
+msgstr "تعداد کاربران قابل نمایش:"
+
+#: ../inc/wp-widget.php:146
+msgid "User avatar size:"
+msgstr "سایز آواتار کاربران:"
+
+#: ../inc/wp-widget.php:152
+msgid "Activate user like count"
+msgstr "تعداد لایک های هر کاربر رو نمایش بده"
+
+#~ msgid "Show post count"
+#~ msgstr "نمایش شمارشگر"
+
+#~ msgid "WP Ulike Widget"
+#~ msgstr "ابزارک یولایک"
+
+#~ msgid ""
+#~ "This plugin allows your visitors to simply like your posts instead of "
+#~ "comment it."
+#~ msgstr "یک پلاگین ساده و سبک برای راه اندازی سیستم لایک در وبلاگ شما"
+
+#~ msgid "Save Options"
+#~ msgstr "ذخیره تغییرات"
+
+#~ msgid "jQuery framework"
+#~ msgstr "چارچوب جی کوئری"
+
+#~ msgid "Enabled"
+#~ msgstr "فعال"
+
+#~ msgid "Disabled"
+#~ msgstr "غیر فعال"
+
+#~ msgid ""
+#~ "Disable it if you already have the jQuery framework enabled in your theme."
+#~ msgstr ""
+#~ "اگر پیش ازاین، از چارچوب جی کوئری در قالب خود استفاده کرده اید، این "
+#~ "قابلیت را غیر فعال کنید."
+
+#~ msgid "Translated in"
+#~ msgstr "فارسی سازی در "
+
+#~ msgid "wp and programming world"
+#~ msgstr "دنیای وردپرس و برنامه نویسی"

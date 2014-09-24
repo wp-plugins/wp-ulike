@@ -1,0 +1,224 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP ULike\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-24 18:13+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Alimir <info@alimir.ir>\n"
+"Language-Team: 倡萌@WordPress大学 <admin@cmhello.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../wp-ulike.php:16
+msgid "WP ULike"
+msgstr "WP ULike"
+
+#: ../wp-ulike.php:17
+msgid ""
+"WP ULike plugin allows to integrate Like Button into your WordPress website "
+"to allow your visitors to like pages and posts. Its very simple to use and "
+"support a widget to display the most liked posts."
+msgstr ""
+"WP ULike 插件允许集成喜欢按钮到你的WordPress站点，让你的访客可以喜欢页面和文"
+"章。它非常简单易用，还支持通过小工具显示最多人喜欢的文章。"
+
+#: ../wp-ulike.php:56 ../inc/wp-widget.php:106
+msgid "Like"
+msgstr "喜欢"
+
+#: ../wp-ulike.php:57
+msgid "You Like This"
+msgstr "你喜欢这个"
+
+#: ../wp-ulike.php:58
+msgid "You Dislike This"
+msgstr "你不喜欢这个"
+
+#: ../wp-ulike.php:115 ../wp-ulike.php:131
+msgid "Already Voted"
+msgstr "已经投票"
+
+#: ../wp-ulike.php:142
+msgid "Users who have LIKED this post:"
+msgstr "喜欢该文章的用户："
+
+#: ../wp-ulike.php:154
+msgid "You need to login in order to like this post: "
+msgstr "你需要登录后才能喜欢这篇文章："
+
+#: ../wp-ulike.php:154
+msgid "click here"
+msgstr "点击这里"
+
+#: ../inc/wp-options.php:4
+msgid "WP Ulike"
+msgstr "WP Ulike"
+
+#: ../inc/wp-options.php:24
+msgid "Configuration"
+msgstr "配置"
+
+#: ../inc/wp-options.php:30
+msgid "Image or text?"
+msgstr "图片或文本？"
+
+#: ../inc/wp-options.php:42
+msgid "Like Text"
+msgstr "[喜欢]文本"
+
+#: ../inc/wp-options.php:50
+msgid "Dislike Text?"
+msgstr "[不喜欢]文本"
+
+#: ../inc/wp-options.php:58
+msgid "Automatic display"
+msgstr "自动显示"
+
+#: ../inc/wp-options.php:62
+msgid ""
+"<strong>On all posts</strong> (home, archives, search) at the bottom of the "
+"post"
+msgstr "<strong>在所有文章</strong>（首页、存档、搜索）文章的底部"
+
+#: ../inc/wp-options.php:64
+msgid "If you disable this option, you have to put manually the code"
+msgstr "如果你禁用这个选项，你必须手动添加代码 "
+
+#: ../inc/wp-options.php:64
+msgid "wherever you want in your template."
+msgstr " 到模板中你想要添加的地方。"
+
+#: ../inc/wp-options.php:68
+msgid "Only registered Users"
+msgstr "只有已注册的用户"
+
+#: ../inc/wp-options.php:72
+msgid "<strong>Active</strong> this option."
+msgstr "<strong>激活</strong>这个选项"
+
+#: ../inc/wp-options.php:74
+msgid "<strong>Only</strong> registered users have permission to like posts."
+msgstr "<strong>只有</strong> 已注册的用户才有权限喜欢文章。"
+
+#: ../inc/wp-options.php:78
+msgid "Show Users Like Box"
+msgstr "显示用户喜欢盒子"
+
+#: ../inc/wp-options.php:82
+msgid "Activate"
+msgstr "激活"
+
+#: ../inc/wp-options.php:84
+msgid "Active this option to show users avatar in like box."
+msgstr "激活这个选项可以在喜欢盒子里显示用户头像"
+
+#: ../inc/wp-options.php:94
+msgid "Like this plugin?"
+msgstr "喜欢这个插件？"
+
+#: ../inc/wp-options.php:97
+msgid ""
+"Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
+"wp-ulike\"> Plugin Directory reviews</a>"
+msgstr ""
+"支持本插件，请在 <a href=\"http://wordpress.org/plugins/wp-ulike\"> 插件目录"
+"评论 </a> 提交 5 星级投票"
+
+#: ../inc/wp-options.php:98
+msgid ""
+"Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
+msgstr "关注我的 <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
+
+#: ../inc/wp-options.php:99
+msgid ""
+"Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
+"World.</a>"
+msgstr ""
+"插件作者博客：<a href=\"http://alimir.ir\"> Wordpress & Programming World</"
+"a><br /> 感谢 <a href=\"http://www.wpdaxue.com\" target=\"_blank\">WordPress"
+"大学</a> 提供简体中文支持"
+
+#: ../inc/wp-widget.php:8
+msgid "WP Ulike - Most Liked Posts"
+msgstr ""
+
+#: ../inc/wp-widget.php:9
+msgid "This widget allows you to show most liked posts."
+msgstr ""
+
+#: ../inc/wp-widget.php:51
+msgid "Most Liked Posts"
+msgstr ""
+
+#: ../inc/wp-widget.php:55 ../inc/wp-widget.php:136
+msgid "Title:"
+msgstr "标题："
+
+#: ../inc/wp-widget.php:60
+msgid "Number of posts to show:"
+msgstr "要显示的文章数量："
+
+#: ../inc/wp-widget.php:66
+msgid "Activate post like count"
+msgstr ""
+
+#: ../inc/wp-widget.php:87
+msgid "WP Ulike - Most Liked Users"
+msgstr ""
+
+#: ../inc/wp-widget.php:88
+msgid "This widget allows you to show most liked users avatars."
+msgstr ""
+
+#: ../inc/wp-widget.php:132
+msgid "Most Liked Users"
+msgstr ""
+
+#: ../inc/wp-widget.php:141
+msgid "Number of users to show:"
+msgstr ""
+
+#: ../inc/wp-widget.php:146
+msgid "User avatar size:"
+msgstr ""
+
+#: ../inc/wp-widget.php:152
+msgid "Activate user like count"
+msgstr ""
+
+#~ msgid "WP Ulike Widget"
+#~ msgstr "WP Ulike 小工具"
+
+#~ msgid ""
+#~ "This plugin allows your visitors to simply like your posts instead of "
+#~ "comment it."
+#~ msgstr "该插件允许你的访客简单地喜欢您的文章而不是评论它。"
+
+#~ msgid "Show post count"
+#~ msgstr "显示文章计数"
+
+#~ msgid "Save Options"
+#~ msgstr "Enregistrer les options"
+
+#~ msgid "jQuery framework"
+#~ msgstr "Librairie jQuery"
+
+#~ msgid "Enabled"
+#~ msgstr "Activé"
+
+#~ msgid "Disabled"
+#~ msgstr "Désactivé"
+
+#~ msgid ""
+#~ "Disable it if you already have the jQuery framework enabled in your theme."
+#~ msgstr ""
+#~ "Désactivez cette option si vous avez déjà la librairie jQuery activée "
+#~ "dans votre thème."
