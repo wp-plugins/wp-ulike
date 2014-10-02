@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP ULike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-24 18:13+0330\n"
+"POT-Creation-Date: 2014-10-02 18:47+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: 倡萌@WordPress大学 <admin@cmhello.com>\n"
@@ -42,19 +42,19 @@ msgstr "你喜欢这个"
 msgid "You Dislike This"
 msgstr "你不喜欢这个"
 
-#: ../wp-ulike.php:115 ../wp-ulike.php:131
+#: ../wp-ulike.php:118 ../wp-ulike.php:134
 msgid "Already Voted"
 msgstr "已经投票"
 
-#: ../wp-ulike.php:142
+#: ../wp-ulike.php:146
 msgid "Users who have LIKED this post:"
 msgstr "喜欢该文章的用户："
 
-#: ../wp-ulike.php:154
+#: ../wp-ulike.php:158
 msgid "You need to login in order to like this post: "
 msgstr "你需要登录后才能喜欢这篇文章："
 
-#: ../wp-ulike.php:154
+#: ../wp-ulike.php:158
 msgid "click here"
 msgstr "点击这里"
 
@@ -62,69 +62,97 @@ msgstr "点击这里"
 msgid "WP Ulike"
 msgstr "WP Ulike"
 
-#: ../inc/wp-options.php:24
+#: ../inc/wp-options.php:31
 msgid "Configuration"
 msgstr "配置"
 
-#: ../inc/wp-options.php:30
+#: ../inc/wp-options.php:37
 msgid "Image or text?"
 msgstr "图片或文本？"
 
-#: ../inc/wp-options.php:42
+#: ../inc/wp-options.php:52
 msgid "Like Text"
 msgstr "[喜欢]文本"
 
-#: ../inc/wp-options.php:50
+#: ../inc/wp-options.php:60
 msgid "Dislike Text?"
 msgstr "[不喜欢]文本"
 
-#: ../inc/wp-options.php:58
+#: ../inc/wp-options.php:68
 msgid "Automatic display"
 msgstr "自动显示"
 
-#: ../inc/wp-options.php:62
+#: ../inc/wp-options.php:72
 msgid ""
 "<strong>On all posts</strong> (home, archives, search) at the bottom of the "
 "post"
 msgstr "<strong>在所有文章</strong>（首页、存档、搜索）文章的底部"
 
-#: ../inc/wp-options.php:64
+#: ../inc/wp-options.php:74
 msgid "If you disable this option, you have to put manually the code"
 msgstr "如果你禁用这个选项，你必须手动添加代码 "
 
-#: ../inc/wp-options.php:64
+#: ../inc/wp-options.php:74
 msgid "wherever you want in your template."
 msgstr " 到模板中你想要添加的地方。"
 
-#: ../inc/wp-options.php:68
+#: ../inc/wp-options.php:78
 msgid "Only registered Users"
 msgstr "只有已注册的用户"
 
-#: ../inc/wp-options.php:72
+#: ../inc/wp-options.php:82
 msgid "<strong>Active</strong> this option."
 msgstr "<strong>激活</strong>这个选项"
 
-#: ../inc/wp-options.php:74
+#: ../inc/wp-options.php:84
 msgid "<strong>Only</strong> registered users have permission to like posts."
 msgstr "<strong>只有</strong> 已注册的用户才有权限喜欢文章。"
 
-#: ../inc/wp-options.php:78
+#: ../inc/wp-options.php:88
 msgid "Show Users Like Box"
 msgstr "显示用户喜欢盒子"
 
-#: ../inc/wp-options.php:82
+#: ../inc/wp-options.php:92 ../inc/wp-options.php:102
 msgid "Activate"
 msgstr "激活"
 
-#: ../inc/wp-options.php:84
+#: ../inc/wp-options.php:94
 msgid "Active this option to show users avatar in like box."
 msgstr "激活这个选项可以在喜欢盒子里显示用户头像"
 
-#: ../inc/wp-options.php:94
+#: ../inc/wp-options.php:98
+msgid "Custom Style"
+msgstr ""
+
+#: ../inc/wp-options.php:104
+msgid "Active this option to see custom color settings."
+msgstr ""
+
+#: ../inc/wp-options.php:108
+msgid "Button style"
+msgstr ""
+
+#: ../inc/wp-options.php:113 ../inc/wp-options.php:130
+msgid "Background"
+msgstr ""
+
+#: ../inc/wp-options.php:117 ../inc/wp-options.php:134
+msgid "Border Color"
+msgstr ""
+
+#: ../inc/wp-options.php:121 ../inc/wp-options.php:138
+msgid "Text Color"
+msgstr ""
+
+#: ../inc/wp-options.php:125
+msgid "Counter Style"
+msgstr ""
+
+#: ../inc/wp-options.php:148
 msgid "Like this plugin?"
 msgstr "喜欢这个插件？"
 
-#: ../inc/wp-options.php:97
+#: ../inc/wp-options.php:151
 msgid ""
 "Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
 "wp-ulike\"> Plugin Directory reviews</a>"
@@ -132,12 +160,12 @@ msgstr ""
 "支持本插件，请在 <a href=\"http://wordpress.org/plugins/wp-ulike\"> 插件目录"
 "评论 </a> 提交 5 星级投票"
 
-#: ../inc/wp-options.php:98
+#: ../inc/wp-options.php:152
 msgid ""
 "Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
 msgstr "关注我的 <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
 
-#: ../inc/wp-options.php:99
+#: ../inc/wp-options.php:153
 msgid ""
 "Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
 "World.</a>"

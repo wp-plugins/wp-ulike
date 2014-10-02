@@ -14,6 +14,13 @@ function wp_ulike_register_mysettings() { // whitelist options
 	register_setting( 'wp_ulike_options', 'wp_ulike_dislike_text' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_onlyRegistered' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_user_like_box' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_style' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_btn_bg' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_btn_border' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_btn_color' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_counter_bg' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_counter_border' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_counter_color' );	
 }
 
 
@@ -26,19 +33,22 @@ function wp_ulike_settings_page() {
 			<?php settings_fields('wp_ulike_options'); ?>
 			<?php do_settings_sections( 'wp_ulike_options' ); ?>
 			<table class="form-table">
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e('Image or text?', 'alimir'); ?></th>
 					<td>
-						<label for="wp_ulike_textOrImage" style="padding:3px 10px 3px; background: url(<?php echo plugins_url('assets/css/add.png', dirname(__FILE__)); ?>) no-repeat right center;">
-						<?php echo get_option('wp_ulike_textOrImage') == 'image' ? '<input type="radio" name="wp_ulike_textOrImage" id="wp_ulike_textOrImage" value="image" checked="checked">' : '<input type="radio" name="wp_ulike_textOrImage" id="wp_ulike_textOrImage" value="image">'; ?>
+						<label>
+						<input name="wp_ulike_textOrImage" type="radio" value="image" <?php checked('image', get_option( 'wp_ulike_textOrImage' ) ); ?> /><img src="<?php echo plugins_url('assets/css/add.png', dirname(__FILE__)); ?>" alt="image">
 						</label>
-						<label for="wp_ulike_text">
-						<?php echo get_option('wp_ulike_textOrImage') == 'text' ? '<input type="radio" name="wp_ulike_textOrImage" id="wp_ulike_textOrImage" value="text" checked="checked">' : '<input type="radio" name="wp_ulike_textOrImage" id="wp_ulike_textOrImage" value="text">'; ?>
+						<br />
+						<label>
+						<input name="wp_ulike_textOrImage" type="radio" value="text" <?php checked('text', get_option( 'wp_ulike_textOrImage' ) ); ?> />
+						</label>
+						<label>
 						<input type="text" name="wp_ulike_text" id="wp_ulike_text" value="<?php echo get_option('wp_ulike_text'); ?>" />
 						</label>
 					</td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e('Like Text', 'alimir'); ?></th>
 					<td>
 						<label for="wp_ulike_btn_text">
@@ -46,7 +56,7 @@ function wp_ulike_settings_page() {
 						</label>
 					</td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e('Dislike Text?', 'alimir'); ?></th>
 					<td>
 						<label for="wp_ulike_dislike_text">
@@ -54,36 +64,80 @@ function wp_ulike_settings_page() {
 						</label>
 					</td>
 				</tr>
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e('Automatic display', 'alimir'); ?></th>
 					<td>
 						<label for="wp_ulike_onPage">
-						<?php echo get_option('wp_ulike_onPage') == '1' ? '<input type="checkbox" name="wp_ulike_onPage" id="wp_ulike_onPage" value="1" checked="checked">' : '<input type="checkbox" name="wp_ulike_onPage" id="wp_ulike_onPage" value="1">'; ?>
+						<input name="wp_ulike_onPage" id="wp_ulike_onPage" type="checkbox" value="1" <?php checked( '1', get_option( 'wp_ulike_onPage' ) ); ?> />
 						<?php _e('<strong>On all posts</strong> (home, archives, search) at the bottom of the post', 'alimir'); ?>
 						</label>
 						<p class="description"><?php _e('If you disable this option, you have to put manually the code', 'alimir'); ?><code dir="ltr">&lt;?php if(function_exists('wp_ulike')) wp_ulike('get'); ?&gt;</code> <?php _e('wherever you want in your template.', 'alimir'); ?></p>
 					</td>
 				</tr>		
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e('Only registered Users', 'alimir'); ?></th>
 					<td>
-						<label for="wp_ulike_onlyRegistered">
-						<?php echo get_option('wp_ulike_onlyRegistered') == '1' ? '<input type="checkbox" name="wp_ulike_onlyRegistered" id="wp_ulike_onlyRegistered" value="1" checked="checked">' : '<input type="checkbox" name="wp_ulike_onlyRegistered" id="wp_ulike_onlyRegistered" value="1">'; ?>
+						<label for="wp_ulike_onlyRegistered">			
+						<input name="wp_ulike_onlyRegistered" id="wp_ulike_onlyRegistered" type="checkbox" value="1" <?php checked( '1', get_option( 'wp_ulike_onlyRegistered' ) ); ?> />
 						<?php _e('<strong>Active</strong> this option.', 'alimir'); ?>
 						</label>
 						<p class="description"><?php _e('<strong>Only</strong> registered users have permission to like posts.', 'alimir'); ?></p>
 					</td>
 				</tr>		
-				<tr valign="top">
+				<tr>
 					<th scope="row"><?php _e('Show Users Like Box', 'alimir'); ?></th>
 					<td>
 						<label for="wp_ulike_user_like_box">
-						<?php echo get_option('wp_ulike_user_like_box') == '1' ? '<input type="checkbox" name="wp_ulike_user_like_box" id="wp_ulike_user_like_box" value="1" checked="checked">' : '<input type="checkbox" name="wp_ulike_user_like_box" id="wp_ulike_user_like_box" value="1">'; ?>
+						<input name="wp_ulike_user_like_box" id="wp_ulike_user_like_box" type="checkbox" value="1" <?php checked( '1', get_option( 'wp_ulike_user_like_box' ) ); ?> />
 						<?php _e('Activate', 'alimir'); ?>
 						</label>
 						<p class="description"><?php _e('Active this option to show users avatar in like box.', 'alimir'); ?></p>
 					</td>
 				</tr>		
+				<tr>
+					<th scope="row"><?php _e('Custom Style', 'alimir'); ?></th>
+					<td>
+						<label for="wp_ulike_style">
+						<input name="wp_ulike_style" id="wp_ulike_style" type="checkbox" value="1" <?php checked( '1', get_option( 'wp_ulike_style' ) ); ?> />
+						<?php _e('Activate', 'alimir'); ?>
+						</label>
+						<p class="description"><?php _e('Active this option to see custom color settings.', 'alimir'); ?></p>
+					</td>
+				</tr>
+				<tr class="checktoshow">
+					<th scope="row"><?php _e('Button style', 'alimir'); ?></th>
+					<td>
+						<label for="wp_ulike_btn_bg">
+						<input type="text" class="my-color-field" id="wp_ulike_btn_bg" name="wp_ulike_btn_bg" value="<?php echo get_option('wp_ulike_btn_bg'); ?>" />
+						</label>
+						<p class="description"><?php _e('Background', 'alimir'); ?></p><br />
+						<label for="wp_ulike_btn_border">
+						<input type="text" class="my-color-field" id="wp_ulike_btn_border" name="wp_ulike_btn_border" value="<?php echo get_option('wp_ulike_btn_border'); ?>" />
+						</label>
+						<p class="description"><?php _e('Border Color', 'alimir'); ?></p><br />
+						<label for="wp_ulike_btn_color">
+						<input type="text" class="my-color-field" id="wp_ulike_btn_color" name="wp_ulike_btn_color" value="<?php echo get_option('wp_ulike_btn_color'); ?>" />
+						</label>
+						<p class="description"><?php _e('Text Color', 'alimir'); ?></p>
+					</td>
+				</tr>	
+				<tr class="checktoshow">
+					<th scope="row"><?php _e('Counter Style', 'alimir'); ?></th>
+					<td>
+						<label for="wp_ulike_counter_bg">
+						<input type="text" class="my-color-field" id="wp_ulike_counter_bg" name="wp_ulike_counter_bg" value="<?php echo get_option('wp_ulike_counter_bg'); ?>" />
+						</label>
+						<p class="description"><?php _e('Background', 'alimir'); ?></p><br />
+						<label for="wp_ulike_counter_border">
+						<input type="text" class="my-color-field" id="wp_ulike_counter_border" name="wp_ulike_counter_border" value="<?php echo get_option('wp_ulike_counter_border'); ?>" />
+						</label>
+						<p class="description"><?php _e('Border Color', 'alimir'); ?></p><br />
+						<label for="wp_ulike_counter_color">
+						<input type="text" class="my-color-field" id="wp_ulike_counter_color" name="wp_ulike_counter_color" value="<?php echo get_option('wp_ulike_counter_color'); ?>" />
+						</label>
+						<p class="description"><?php _e('Text Color', 'alimir'); ?></p>
+					</td>
+				</tr>
 			</table>
 			<?php submit_button(); ?>
 			</form>

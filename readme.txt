@@ -5,7 +5,7 @@ Author: Ali Mirzaei
 Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,9 +26,10 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   Visitors do not have to register or log in to use the Like Button.
 *   Compatible with WP version 3.0 & above.
 *   Added automatically (no Code required).
-*   Simple likeBox to show users avatar.
+*   Simple user like box with avatar support.
 *   Custom Like-Dislike Texts.
-*   Widget to show 'Most Liked' posts And 'Most Liked' users avatars.
+*   Simple custom style with color picker settings.
+*   Widget to show 'Most Liked Posts' And 'Most Liked Users' avatars.
 *   Simple configuration panel.
 *   Support RTL & language file.
 *   And so on...
@@ -41,6 +42,7 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   Persian
 *   France
 *   Chinese (Thanks Changmeng Hu)
+*   Chinese Tradition (Thanks Arefly)
 
 = Plugin Author =
 Website: <a href="http://about.alimir.ir" target="_blank">Ali Mirzaei</a><br />
@@ -57,8 +59,13 @@ Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" 
 
 == Changelog ==
 
+= 1.3 =
+* Added: Custom style with color picker setting. (for button and counter box)
+* Added: Chinese Tradition (zh_TW) language. (Thanks to Arefly)
+* Updated: Persian language.
+
 = 1.2 =
-* Added: Most liked users widget.
+* Added: most liked users widget.
 * Added: Chinese (ZH_CN) language. (Thanks to Changmeng Hu) 
 
 = 1.1 =

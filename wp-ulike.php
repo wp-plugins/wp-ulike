@@ -3,7 +3,7 @@
 Plugin Name:WP ULike
 Plugin URI: http://wordpress.org/plugins/wp-ulike
 Description: WP ULike plugin allows to integrate Like Button into your WordPress website to allow your visitors to like pages and posts. Its very simple to use and support a widget to display the most liked posts.
-Version: 1.2
+Version: 1.3
 Author: Ali Mirzaei
 Author URI: http://about.alimir.ir
 Text Domain: alimir
@@ -56,6 +56,7 @@ License: GPL2
 		add_option('wp_ulike_text', __('Like','alimir'), '', 'yes');
 		add_option('wp_ulike_btn_text', __('You Like This','alimir'), '', 'yes');
 		add_option('wp_ulike_dislike_text', __('You Dislike This','alimir'), '', 'yes');
+		add_option('wp_ulike_style', '0', '', 'yes');
 	}
 
 	register_activation_hook(__FILE__, 'wp_ulike_options');
@@ -71,11 +72,13 @@ License: GPL2
 		}
 	
 		delete_option('wp_ulike_onPage');
+		delete_option('wp_ulike_onlyRegistered');
+		delete_option('wp_ulike_user_like_box');
 		delete_option('wp_ulike_textOrImage');
 		delete_option('wp_ulike_text');
 		delete_option('wp_ulike_btn_text');
-		delete_option('wp_ulike_user_like_box');
-		delete_option('wp_ulike_onlyRegistered');
+		delete_option('wp_ulike_dislike_text');
+		delete_option('wp_ulike_style');
 	}
 
 	register_uninstall_hook(__FILE__, 'wp_ulike_unset_options');
@@ -136,6 +139,7 @@ License: GPL2
 		$wp_ulike = '<div id="wp-ulike-'.$post_ID.'" class="wpulike">';
 		$wp_ulike .= '<div class="counter">'.$counter.'</div>';
 		$wp_ulike .= '</div>';
+		
 		
 		$user_data = get_user_data($post_ID,$user_ID);
 		if(get_option('wp_ulike_user_like_box') == '1' && $user_data != '')

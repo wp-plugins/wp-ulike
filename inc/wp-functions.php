@@ -56,6 +56,49 @@
 		else
 		return "dislike";
 	}
+	
+	//get user style settings
+	function get_user_style(){
+		$btn_style = '';
+		$counter_style = '';
+		$btn_bg = get_option('wp_ulike_btn_bg');
+		$btn_border = get_option('wp_ulike_btn_border');
+		$btn_color = get_option('wp_ulike_btn_color');
+		$counter_bg = get_option('wp_ulike_counter_bg');
+		$counter_border = get_option('wp_ulike_counter_border');
+		$counter_color = get_option('wp_ulike_counter_color');
+		
+		if(isset($btn_bg)){
+		$btn_style .= "background-color:$btn_bg !important; ";
+		}			
+		if(isset($btn_border)){
+		$btn_style .= "border-color:$btn_border !important; ";
+		}			
+		if(isset($btn_color)){
+		$btn_style .= "color:$btn_color !important;";
+		}
+
+		if(isset($counter_bg)){
+		$counter_style .= "background-color:$counter_bg !important; ";
+		}			
+		if(isset($counter_border)){
+		$counter_style .= "border-color:$counter_border !important; ";
+		}			
+		if(isset($counter_color)){
+		$counter_style .= "color:$counter_color !important;";
+		}
+
+		echo "
+		<style>
+		.wpulike .counter a{
+			$btn_style	
+		}
+		.wpulike .count-box,.wpulike .count-box:before{
+			$counter_style
+		}
+		</style>
+		";
+	}
 
 	//add ULike button to the posts
 	if (get_option('wp_ulike_onPage') == '1') {
