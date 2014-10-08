@@ -13,7 +13,7 @@ WP ULike plugin allows to integrate Ajax Like Button into your WordPress website
 
 == Description ==
 
-WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and dislike pages and posts. Its very simple to use and support a widget to display the most liked posts.
+WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and dislike pages and posts. Its very simple to use and support a widget to display the most liked posts. 
 
 = Demo =
 
