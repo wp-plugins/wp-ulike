@@ -5,7 +5,7 @@ Author: Ali Mirzaei
 Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,7 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   Visitors do not have to register or log in to use the Like Button.
 *   Compatible with WP version 3.0 & above.
 *   Added automatically (no Code required).
+*   Shortcode support.
 *   Simple user like box with avatar support.
 *   Custom Like-Dislike Texts.
 *   Simple custom style with color picker settings.
@@ -35,7 +36,11 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   And so on...
 
 = How To Use? =
-* Just install the plugin and use `<?php if(function_exists('wp_ulike')) wp_ulike('get'); ?>` function or activate the "automatic display" in plugin configuration panel.
+Just install the plugin and use this function:
+`<?php if(function_exists('wp_ulike')) wp_ulike('get'); ?>`
+<strong>OR</strong> this shortcode:
+`[wp_ulike]`
+<strong>OR</strong> activate the "automatic display" in plugin configuration panel.
 
 = Translations =
 *   English
@@ -58,6 +63,9 @@ Follow on <a href="https://www.facebook.com/alimir.ir" target="_blank">Facebook<
 Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" target="_blank">here</a>
 
 == Changelog ==
+
+= 1.4 =
+* Added: Shortcode support.
 
 = 1.3 =
 * Added: Custom style with color picker setting. (for button and counter box)

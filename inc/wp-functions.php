@@ -99,6 +99,12 @@
 		</style>
 		";
 	}
+	
+	//Shortcode function
+	function  wp_ulike_shortcode(){
+		return wp_ulike('put');
+	}
+	add_shortcode( 'wp_ulike', 'wp_ulike_shortcode' );		
 
 	//add ULike button to the posts
 	if (get_option('wp_ulike_onPage') == '1') {
