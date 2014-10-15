@@ -100,6 +100,15 @@
 		";
 	}
 	
+	//Convert numbers of Likes with string (kilobyte) format.
+	function wp_ulike_format_number($num){
+		if ($num >= 1000 && get_option('wp_ulike_format_number') == '1'){
+			return round($num/1000, 2) . 'K+';
+		}
+		else
+		return $num . '+';
+	}	
+	
 	//Shortcode function
 	function  wp_ulike_shortcode(){
 		return wp_ulike('put');

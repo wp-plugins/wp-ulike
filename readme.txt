@@ -5,7 +5,7 @@ Author: Ali Mirzaei
 Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.4
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,10 @@ Follow on <a href="https://www.facebook.com/alimir.ir" target="_blank">Facebook<
 Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" target="_blank">here</a>
 
 == Changelog ==
+
+= 1.5 =
+* Added: Number format option to convert numbers of Likes with string (kilobyte) format.
+* Updated: Persian language.
 
 = 1.4 =
 * Added: Shortcode support.

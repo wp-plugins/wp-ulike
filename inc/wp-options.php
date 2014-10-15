@@ -14,6 +14,7 @@ function wp_ulike_register_mysettings() { // whitelist options
 	register_setting( 'wp_ulike_options', 'wp_ulike_dislike_text' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_onlyRegistered' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_user_like_box' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_format_number' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_style' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_btn_bg' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_btn_border' );
@@ -93,7 +94,17 @@ function wp_ulike_settings_page() {
 						</label>
 						<p class="description"><?php _e('Active this option to show users avatar in like box.', 'alimir'); ?></p>
 					</td>
-				</tr>		
+				</tr>
+				<tr>
+					<th scope="row"><?php _e('Format Number', 'alimir'); ?></th>
+					<td>
+						<label for="wp_ulike_format_number">
+						<input name="wp_ulike_format_number" id="wp_ulike_format_number" type="checkbox" value="1" <?php checked( '1', get_option( 'wp_ulike_format_number' ) ); ?> />
+						<?php _e('Activate', 'alimir'); ?>
+						</label>
+						<p class="description"><?php _e('Convert numbers of Likes with string (kilobyte) format.', 'alimir'); ?><strong> (if -> likes>=1000)</strong></p>
+					</td>
+				</tr>				
 				<tr>
 					<th scope="row"><?php _e('Custom Style', 'alimir'); ?></th>
 					<td>

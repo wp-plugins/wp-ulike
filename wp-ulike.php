@@ -3,7 +3,7 @@
 Plugin Name:WP ULike
 Plugin URI: http://wordpress.org/plugins/wp-ulike
 Description: WP ULike plugin allows to integrate Like Button into your WordPress website to allow your visitors to like pages and posts. Its very simple to use and support a widget to display the most liked posts.
-Version: 1.4
+Version: 1.5
 Author: Ali Mirzaei
 Author URI: http://about.alimir.ir
 Text Domain: alimir
@@ -56,6 +56,7 @@ License: GPL2
 		add_option('wp_ulike_text', __('Like','alimir'), '', 'yes');
 		add_option('wp_ulike_btn_text', __('You Like This','alimir'), '', 'yes');
 		add_option('wp_ulike_dislike_text', __('You Dislike This','alimir'), '', 'yes');
+		add_option('wp_ulike_format_number', '0', '', 'yes');
 		add_option('wp_ulike_style', '0', '', 'yes');
 	}
 
@@ -78,6 +79,7 @@ License: GPL2
 		delete_option('wp_ulike_text');
 		delete_option('wp_ulike_btn_text');
 		delete_option('wp_ulike_dislike_text');
+		delete_option('wp_ulike_format_number');
 		delete_option('wp_ulike_style');
 	}
 
@@ -89,7 +91,8 @@ License: GPL2
 		global $post,$wpdb,$user_ID;
 		$post_ID = $post->ID;
 		$counter = '';
-		$liked = get_post_meta($post_ID, '_liked', true) != '' ? '+' . get_post_meta($post_ID, '_liked', true) : '0';
+		$get_like = get_post_meta($post_ID, '_liked', true) != '' ? get_post_meta($post_ID, '_liked', true) : '0';
+		$liked = wp_ulike_format_number($get_like);
 		
 	   if ( (get_option('wp_ulike_onlyRegistered') != '1') or (get_option('wp_ulike_onlyRegistered') == '1' && is_user_logged_in()) ){
 	   
@@ -180,7 +183,7 @@ License: GPL2
 				$wpdb->query("INSERT INTO ".$wpdb->prefix."ulike VALUES ('', '$post_ID', NOW(), '$ip', '$user_ID', 'like')");
 				endif;
 
-				echo '+' . $newLike;
+				echo wp_ulike_format_number($newLike);
 			}
 			else if ($user_status != 0) {
 				if(get_user_status($post_ID,$user_ID) == "like"){
@@ -193,7 +196,7 @@ License: GPL2
 						WHERE post_id = '$post_ID' AND user_id = '$user_ID'
 					");
 					
-					echo '+' . $newLike;					
+					echo wp_ulike_format_number($newLike);					
 				}
 				else{
 					$newLike = $like + 1;
@@ -205,11 +208,11 @@ License: GPL2
 						WHERE post_id = '$post_ID' AND user_id = '$user_ID'
 					");
 					
-					echo '+' . $newLike;
+					echo wp_ulike_format_number($newLike);
 				}
 			}
 			else if (isset($_COOKIE['liked-'.$post_ID]) && $user_status == 0){
-					echo '+' . $like;
+					echo wp_ulike_format_number($like);
 			}
 		}
 		die();

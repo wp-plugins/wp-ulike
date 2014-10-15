@@ -25,7 +25,7 @@ class wp_ulike_posts_widget extends WP_Widget {
 			$post_count = $post->meta_value;
 			
 			echo $before.'<a href="' . $permalink . '" title="' . $post_title.'" rel="nofollow">' . $post_title . '</a>';
-			echo $show_count == '1' ? ' ('.$post_count.')' : '';
+			echo $show_count == '1' ? ' ('.wp_ulike_format_number($post_count).')' : '';
 			echo $after;
 		}
 	}	

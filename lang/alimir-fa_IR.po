@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP ULike\n"
-"POT-Creation-Date: 2014-10-02 18:09+0330\n"
-"PO-Revision-Date: 2014-10-02 18:16+0330\n"
+"POT-Creation-Date: 2014-10-15 18:38+0330\n"
+"PO-Revision-Date: 2014-10-15 18:38+0330\n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: alimir.ir <info@alimir.ir>\n"
 "Language: fa_IR\n"
@@ -44,19 +44,19 @@ msgstr "شما این را پسندیده اید"
 msgid "You Dislike This"
 msgstr "شما این را نپسندیده اید"
 
-#: ../wp-ulike.php:115 ../wp-ulike.php:131
+#: ../wp-ulike.php:121 ../wp-ulike.php:137
 msgid "Already Voted"
 msgstr "قبلا لایک کرده اید"
 
-#: ../wp-ulike.php:143
+#: ../wp-ulike.php:149
 msgid "Users who have LIKED this post:"
 msgstr "کاربرانی که این مطلب را پسندیده اند:"
 
-#: ../wp-ulike.php:155
+#: ../wp-ulike.php:161
 msgid "You need to login in order to like this post: "
 msgstr "برای امتیاز دهی به این مطلب، لطفا وارد شوید: "
 
-#: ../wp-ulike.php:155
+#: ../wp-ulike.php:161
 msgid "click here"
 msgstr "برای ورود کلیک کنید"
 
@@ -64,11 +64,11 @@ msgstr "برای ورود کلیک کنید"
 msgid "WP Ulike"
 msgstr "تنظیمات افزونه یولایک"
 
-#: ../inc/wp-options.php:31
+#: ../inc/wp-options.php:32
 msgid "Configuration"
 msgstr "پیکربندی"
 
-#: ../inc/wp-options.php:37
+#: ../inc/wp-options.php:38
 msgid "Image or text?"
 msgstr "متن یا تصویر؟"
 
@@ -119,6 +119,7 @@ msgid "Show Users Like Box"
 msgstr "نمایش باکس کاربران لایک کرده"
 
 #: ../inc/wp-options.php:93 ../inc/wp-options.php:103
+#: ../inc/wp-options.php:113
 msgid "Activate"
 msgstr "فعال سازی"
 
@@ -129,40 +130,50 @@ msgstr ""
 "مطلب، نمایش دهید."
 
 #: ../inc/wp-options.php:99
+msgid "Format Number"
+msgstr "فرمت اعداد"
+
+#: ../inc/wp-options.php:105
+msgid "Convert numbers of Likes with string (kilobyte) format."
+msgstr ""
+"با فعال سازی این گزینه، می توانید اعداد بالای 1000 را با فرمت رشته ای "
+"(کیلوبایت) نمایش دهید."
+
+#: ../inc/wp-options.php:109
 msgid "Custom Style"
 msgstr "سفارشی سازی"
 
-#: ../inc/wp-options.php:105
+#: ../inc/wp-options.php:115
 msgid "Active this option to see custom color settings."
 msgstr ""
 "با فعال سازی این گزینه، می توانید رنگ های دلخواه خود را در افزونه به کار "
 "ببرید."
 
-#: ../inc/wp-options.php:109
+#: ../inc/wp-options.php:119
 msgid "Button style"
 msgstr "دکمه لایک"
 
-#: ../inc/wp-options.php:114 ../inc/wp-options.php:131
+#: ../inc/wp-options.php:124 ../inc/wp-options.php:141
 msgid "Background"
 msgstr "رنگ پس زمینه"
 
-#: ../inc/wp-options.php:118 ../inc/wp-options.php:135
+#: ../inc/wp-options.php:128 ../inc/wp-options.php:145
 msgid "Border Color"
 msgstr "رنگ حاشیه"
 
-#: ../inc/wp-options.php:122 ../inc/wp-options.php:139
+#: ../inc/wp-options.php:132 ../inc/wp-options.php:149
 msgid "Text Color"
 msgstr "رنگ متن"
 
-#: ../inc/wp-options.php:126
+#: ../inc/wp-options.php:136
 msgid "Counter Style"
 msgstr "باکس شمارنده"
 
-#: ../inc/wp-options.php:149
+#: ../inc/wp-options.php:159
 msgid "Like this plugin?"
 msgstr "این پلاگین چندتا لایک داره؟!؟ :)"
 
-#: ../inc/wp-options.php:152
+#: ../inc/wp-options.php:162
 msgid ""
 "Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
 "wp-ulike\"> Plugin Directory reviews</a>"
@@ -170,14 +181,14 @@ msgstr ""
 "حمایتتون رو از این افزونه، با امتیاز 5 ستاره در <a href=\"http://wordpress."
 "org/plugins/wp-ulike\">مخزن وردپرس</a> مشخص کنید..."
 
-#: ../inc/wp-options.php:153
+#: ../inc/wp-options.php:163
 msgid ""
 "Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
 msgstr ""
 "دنیای وردپرس و برنامه نویسی را در  <a href=\"https://www.facebook.com/alimir."
 "ir\"> فیسبوک</a> دنبال کنید..."
 
-#: ../inc/wp-options.php:154
+#: ../inc/wp-options.php:164
 msgid ""
 "Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
 "World.</a>"
