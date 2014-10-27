@@ -8,11 +8,13 @@ add_action('admin_menu', 'wp_ulike_adminMenu');
 
 function wp_ulike_register_mysettings() { // whitelist options
 	register_setting( 'wp_ulike_options', 'wp_ulike_onPage' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_onComments' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_textOrImage' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_text' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_btn_text' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_dislike_text' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_onlyRegistered' );
+	register_setting( 'wp_ulike_options', 'wp_ulike_bp_activity_add' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_user_like_box' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_format_number' );
 	register_setting( 'wp_ulike_options', 'wp_ulike_style' );
@@ -76,13 +78,33 @@ function wp_ulike_settings_page() {
 					</td>
 				</tr>		
 				<tr>
+					<th scope="row"><?php _e('Comment likes', 'alimir'); ?></th>
+					<td>
+						<label for="wp_ulike_onComments">
+						<input name="wp_ulike_onComments" id="wp_ulike_onComments" type="checkbox" value="1" <?php checked( '1', get_option( 'wp_ulike_onComments' ) ); ?> />
+						<?php _e('<strong>On all comments</strong> at the bottom of the comment', 'alimir'); ?>
+						</label>
+						<p class="description"><?php _e('If you disable this option, you have to put manually this code on comments text', 'alimir'); ?><code dir="ltr">&lt;?php if(function_exists('wp_ulike_comments')) wp_ulike_comments('get'); ?&gt;</code></p>
+					</td>
+				</tr>		
+				<tr>
 					<th scope="row"><?php _e('Only registered Users', 'alimir'); ?></th>
 					<td>
 						<label for="wp_ulike_onlyRegistered">			
 						<input name="wp_ulike_onlyRegistered" id="wp_ulike_onlyRegistered" type="checkbox" value="1" <?php checked( '1', get_option( 'wp_ulike_onlyRegistered' ) ); ?> />
-						<?php _e('<strong>Active</strong> this option.', 'alimir'); ?>
+						<?php _e('Activate', 'alimir'); ?>
 						</label>
 						<p class="description"><?php _e('<strong>Only</strong> registered users have permission to like posts.', 'alimir'); ?></p>
+					</td>
+				</tr>		
+				<tr>
+					<th scope="row"><?php _e('BuddyPress Activity', 'alimir'); ?></th>
+					<td>
+						<label for="wp_ulike_bp_activity_add">			
+						<input name="wp_ulike_bp_activity_add" id="wp_ulike_bp_activity_add" type="checkbox" value="1" <?php checked( '1', get_option( 'wp_ulike_bp_activity_add' ) ); ?> />
+						<?php _e('Activate', 'alimir'); ?>
+						</label>
+						<p class="description"><?php _e('insert new likes in buddyPress activity page', 'alimir'); ?></p>
 					</td>
 				</tr>		
 				<tr>

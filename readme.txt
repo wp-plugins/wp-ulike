@@ -5,15 +5,15 @@ Author: Ali Mirzaei
 Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WP ULike plugin allows to integrate Ajax Like Button into your WordPress website to allow your visitors to like and dislike pages and posts.
+WP ULike plugin allows to integrate Ajax Like Button into your WordPress website to allow your visitors to like and dislike pages, posts and comments.
 
 == Description ==
 
-WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and dislike pages and posts. Its very simple to use and support a widget to display the most liked posts. 
+WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and dislike pages, posts and comments. Its very simple to use and support a widget to display the most liked posts. 
 
 = Demo =
 
@@ -27,6 +27,8 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   Compatible with WP version 3.0 & above.
 *   Added automatically (no Code required).
 *   Shortcode support.
+*   Comment likes support.
+*   BuddyPress activity support.
 *   Simple user like box with avatar support.
 *   Custom Like-Dislike Texts.
 *   Simple custom style with color picker settings.
@@ -64,6 +66,11 @@ Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" 
 
 == Changelog ==
 
+= 1.6 =
+* Added: Comment likes support.
+* Added: BuddyPress activity support.
+* Updated: language files.
+
 = 1.5 =
 * Added: Number format option to convert numbers of Likes with string (kilobyte) format.
 * Updated: Persian language.
@@ -92,6 +99,9 @@ Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" 
 * The initial version
 
 == Upgrade Notice ==
+
+= 1.6 =
+After plugin update: If the new database table won't fixed, try deactivating the plugin and reactivating that one at a time.
 
 = 1.0 =
 The initial version

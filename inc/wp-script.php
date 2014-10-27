@@ -11,6 +11,8 @@ function enqueueScripts() {
     ));
 	add_action('wp_ajax_ulikeprocess','wp_ulike_process');
 	add_action('wp_ajax_nopriv_ulikeprocess', 'wp_ulike_process');
+	add_action('wp_ajax_ulikecommentprocess','wp_ulike_comments_process');
+	add_action('wp_ajax_nopriv_ulikecommentprocess', 'wp_ulike_comments_process');
 }
 
 function enqueueStyle() {

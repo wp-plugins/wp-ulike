@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP ULike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-02 18:47+0330\n"
+"POT-Creation-Date: 2014-10-25 01:51+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: \n"
@@ -23,63 +23,47 @@ msgstr ""
 #: ../wp-ulike.php:17
 msgid ""
 "WP ULike plugin allows to integrate Like Button into your WordPress website "
-"to allow your visitors to like pages and posts. Its very simple to use and "
-"support a widget to display the most liked posts."
+"to allow your visitors to like pages, posts AND comments. Its very simple to "
+"use and support a widget to display the most liked posts."
 msgstr ""
 
-#: ../wp-ulike.php:56 ../inc/wp-widget.php:106
+#: ../wp-ulike.php:80 ../inc/wp-widget.php:106
 msgid "Like"
 msgstr ""
 
-#: ../wp-ulike.php:57
+#: ../wp-ulike.php:81
 msgid "You Like This"
 msgstr ""
 
-#: ../wp-ulike.php:58
+#: ../wp-ulike.php:82
 msgid "You Dislike This"
-msgstr ""
-
-#: ../wp-ulike.php:118 ../wp-ulike.php:134
-msgid "Already Voted"
-msgstr ""
-
-#: ../wp-ulike.php:146
-msgid "Users who have LIKED this post:"
-msgstr ""
-
-#: ../wp-ulike.php:158
-msgid "You need to login in order to like this post: "
-msgstr ""
-
-#: ../wp-ulike.php:158
-msgid "click here"
 msgstr ""
 
 #: ../inc/wp-options.php:4
 msgid "WP Ulike"
 msgstr ""
 
-#: ../inc/wp-options.php:31
+#: ../inc/wp-options.php:33
 msgid "Configuration"
 msgstr "Configuration"
 
-#: ../inc/wp-options.php:37
+#: ../inc/wp-options.php:39
 msgid "Image or text?"
 msgstr "Image ou texte?"
 
-#: ../inc/wp-options.php:52
+#: ../inc/wp-options.php:54
 msgid "Like Text"
 msgstr ""
 
-#: ../inc/wp-options.php:60
+#: ../inc/wp-options.php:62
 msgid "Dislike Text?"
 msgstr ""
 
-#: ../inc/wp-options.php:68
+#: ../inc/wp-options.php:70
 msgid "Automatic display"
 msgstr "Affichage automatique"
 
-#: ../inc/wp-options.php:72
+#: ../inc/wp-options.php:74
 msgid ""
 "<strong>On all posts</strong> (home, archives, search) at the bottom of the "
 "post"
@@ -87,86 +71,130 @@ msgstr ""
 "<strong>Pour tous les articles</strong> (accueil, archives, recherche) au "
 "fond de l'article."
 
-#: ../inc/wp-options.php:74
+#: ../inc/wp-options.php:76
 msgid "If you disable this option, you have to put manually the code"
 msgstr ""
 "Si vous désactivez cette option, vous devez ajouter manuellement le code"
 
-#: ../inc/wp-options.php:74
+#: ../inc/wp-options.php:76
 msgid "wherever you want in your template."
 msgstr "n'importe où vous le souhaitez dans votre thème."
 
-#: ../inc/wp-options.php:78
-msgid "Only registered Users"
-msgstr ""
-
-#: ../inc/wp-options.php:82
-msgid "<strong>Active</strong> this option."
+#: ../inc/wp-options.php:80
+msgid "Comment likes"
 msgstr ""
 
 #: ../inc/wp-options.php:84
-msgid "<strong>Only</strong> registered users have permission to like posts."
+msgid "<strong>On all comments</strong> at the bottom of the comment"
+msgstr "<strong>Pour tous les commentaires</strong> au fond de commentaire."
+
+#: ../inc/wp-options.php:86
+msgid ""
+"If you disable this option, you have to put manually this code on comments "
+"text"
 msgstr ""
 
-#: ../inc/wp-options.php:88
-msgid "Show Users Like Box"
+#: ../inc/wp-options.php:90
+msgid "Only registered Users"
 msgstr ""
 
-#: ../inc/wp-options.php:92 ../inc/wp-options.php:102
+#: ../inc/wp-options.php:94 ../inc/wp-options.php:104
+#: ../inc/wp-options.php:114 ../inc/wp-options.php:124
 msgid "Activate"
 msgstr ""
 
-#: ../inc/wp-options.php:94
+#: ../inc/wp-options.php:96
+msgid "<strong>Only</strong> registered users have permission to like posts."
+msgstr ""
+
+#: ../inc/wp-options.php:100
+msgid "Show Users Like Box"
+msgstr ""
+
+#: ../inc/wp-options.php:106
 msgid "Active this option to show users avatar in like box."
 msgstr ""
 
-#: ../inc/wp-options.php:98
+#: ../inc/wp-options.php:110
+msgid "Format Number"
+msgstr ""
+
+#: ../inc/wp-options.php:116
+msgid "Convert numbers of Likes with string (kilobyte) format."
+msgstr ""
+
+#: ../inc/wp-options.php:120
 msgid "Custom Style"
 msgstr ""
 
-#: ../inc/wp-options.php:104
+#: ../inc/wp-options.php:126
 msgid "Active this option to see custom color settings."
 msgstr ""
 
-#: ../inc/wp-options.php:108
+#: ../inc/wp-options.php:130
 msgid "Button style"
 msgstr ""
 
-#: ../inc/wp-options.php:113 ../inc/wp-options.php:130
+#: ../inc/wp-options.php:135 ../inc/wp-options.php:152
 msgid "Background"
 msgstr ""
 
-#: ../inc/wp-options.php:117 ../inc/wp-options.php:134
+#: ../inc/wp-options.php:139 ../inc/wp-options.php:156
 msgid "Border Color"
 msgstr ""
 
-#: ../inc/wp-options.php:121 ../inc/wp-options.php:138
+#: ../inc/wp-options.php:143 ../inc/wp-options.php:160
 msgid "Text Color"
 msgstr ""
 
-#: ../inc/wp-options.php:125
+#: ../inc/wp-options.php:147
 msgid "Counter Style"
 msgstr ""
 
-#: ../inc/wp-options.php:148
+#: ../inc/wp-options.php:170
 msgid "Like this plugin?"
 msgstr "Vous aimez ce plugin?"
 
-#: ../inc/wp-options.php:151
+#: ../inc/wp-options.php:173
 msgid ""
 "Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
 "wp-ulike\"> Plugin Directory reviews</a>"
 msgstr ""
 
-#: ../inc/wp-options.php:152
+#: ../inc/wp-options.php:174
 msgid ""
 "Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
 msgstr ""
 
-#: ../inc/wp-options.php:153
+#: ../inc/wp-options.php:175
 msgid ""
 "Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
 "World.</a>"
+msgstr ""
+
+#: ../inc/wp-ulike-comments.php:34 ../inc/wp-ulike-comments.php:50
+#: ../inc/wp-ulike-posts.php:35 ../inc/wp-ulike-posts.php:51
+msgid "Already Voted"
+msgstr ""
+
+#: ../inc/wp-ulike-comments.php:61
+msgid "Users who have LIKED this comment:"
+msgstr ""
+
+#: ../inc/wp-ulike-comments.php:73
+msgid "You need to login in order to like this comment: "
+msgstr ""
+
+#: ../inc/wp-ulike-comments.php:73 ../inc/wp-ulike-posts.php:75
+msgid "click here"
+msgstr ""
+
+#: ../inc/wp-ulike-posts.php:63
+msgid "Users who have LIKED this post:"
+msgstr ""
+
+#: ../inc/wp-ulike-posts.php:75
+msgid "You need to login in order to like this post: "
 msgstr ""
 
 #: ../inc/wp-widget.php:8

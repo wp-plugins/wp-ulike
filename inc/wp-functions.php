@@ -47,10 +47,39 @@
 
 	}
 	
+	//get users comments data and list their avatar
+	function get_user_comments_data($CommentID,$user_ID){
+		global $wpdb;
+		$users_list = '';
+		
+		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike_comments WHERE comment_id = '$CommentID'");
+		
+		foreach ( $get_users as $get_user ) 
+		{
+			if ($user_ID != $get_user->user_id):
+			$user_info = get_userdata($get_user->user_id);
+			$users_list .= '<li><a class="user-tooltip" title="'.$user_info->display_name.'">'.get_avatar( $user_info->user_email, 32, '' , 'avatar').'</a></li>';
+			endif;
+		}
+		
+		return $users_list;
+
+	}
+	
 	//get user status (like or dislike)
 	function get_user_status($post_ID,$user_ID){
 		global $wpdb;
 		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike WHERE post_id = '$post_ID' AND user_id = '$user_ID'");
+		if ($like_status == "like")
+		return "like";
+		else
+		return "dislike";
+	}
+	
+	//get user comment status (like or dislike)
+	function get_user_comments_status($CommentID,$user_ID){
+		global $wpdb;
+		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike_comments WHERE comment_id = '$CommentID' AND user_id = '$user_ID'");
 		if ($like_status == "like")
 		return "like";
 		else
@@ -100,6 +129,33 @@
 		";
 	}
 	
+	function wp_ulike_bp_activity_add($user_ID,$cp_ID,$type){
+		if (function_exists('bp_is_active') && get_option('wp_ulike_bp_activity_add') == '1') {
+			if($type=='comment'){
+				bp_activity_add( array(
+					'user_id' => $user_ID,
+					'action' => '<strong>'.bp_core_get_userlink($user_ID).'</strong> '.__('liked','alimir').' <strong>'.get_comment_author($cp_ID).'</strong> '.__('comment','alimir').'. (So far, '.get_comment_author($cp_ID).' has <span class="badge">'. get_comment_meta($cp_ID, '_commentliked', true) .'</span> likes for this comment)',
+					'component' => 'wp_like',
+					'type' => 'wp_like_group',
+					'item_id' => $cp_ID
+				));
+			}
+			else if($type=='post'){
+				$parent_title = get_the_title($cp_ID);
+				bp_activity_add( array(
+					'user_id' => $user_ID,
+					'action' => '<strong>'.bp_core_get_userlink($user_ID).'</strong> '.__('liked','alimir').' <a href="'.get_permalink($cp_ID). '" title="'.$parent_title.'">'.$parent_title.'</a>. (So far, This post has <span class="badge">'.get_post_meta($cp_ID, '_liked', true).'</span> likes)',
+					'component' => 'wp_like',
+					'type' => 'wp_like_group',
+					'item_id' => $cp_ID
+				));
+			}
+		}
+		else{
+			return '';
+		}
+	}
+	
 	//Convert numbers of Likes with string (kilobyte) format.
 	function wp_ulike_format_number($num){
 		if ($num >= 1000 && get_option('wp_ulike_format_number') == '1'){
@@ -107,7 +163,7 @@
 		}
 		else
 		return $num . '+';
-	}	
+	}
 	
 	//Shortcode function
 	function  wp_ulike_shortcode(){
@@ -125,4 +181,14 @@
 		}
 
 		add_filter('the_content', 'wp_put_ulike');
+	}
+	
+	//add ULike button to the comments
+	if (get_option('wp_ulike_onComments') == '1' && !is_admin()) {
+		function wp_put_ulike_comments($content) {
+			$content.= wp_ulike_comments('put');
+			return $content;
+		}
+		
+		add_filter('comment_text', 'wp_put_ulike_comments');
 	}
