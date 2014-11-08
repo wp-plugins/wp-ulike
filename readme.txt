@@ -40,10 +40,12 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 
 = How To Use? =
 Just install the plugin and activate the "automatic display" in plugin configuration panel. (WP ULike has three auto options for the post, comments and buddypress activities.)
+
 Also you can use this function and shortcode for the post likes:
-<strong>Function:</strong> 
+
+*   Function:
 `<?php if(function_exists('wp_ulike')) wp_ulike('get'); ?>`
-<strong>Shortcode:</strong> this shortcode:
+*   Shortcode:
 `[wp_ulike]`
 
 = Translations =
@@ -73,10 +75,12 @@ Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" 
 
 = How To Use this plugin? =
 Just install the plugin and activate the "automatic display" in plugin configuration panel. (WP ULike has three auto options for the post, comments and buddypress activities.)
+
 Also you can use this function and shortcode for the post likes:
-<strong>Function:</strong> 
+
+*   Function:
 `<?php if(function_exists('wp_ulike')) wp_ulike('get'); ?>`
-<strong>Shortcode:</strong> this shortcode:
+*   Shortcode:
 `[wp_ulike]`
 
 = How To Change Format Number Function? =
