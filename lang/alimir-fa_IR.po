@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP ULike\n"
-"POT-Creation-Date: 2014-11-09 00:53+0330\n"
-"PO-Revision-Date: 2014-11-09 00:56+0330\n"
+"POT-Creation-Date: 2014-11-09 01:48+0330\n"
+"PO-Revision-Date: 2014-11-09 01:49+0330\n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: alimir.ir <info@alimir.ir>\n"
 "Language: fa_IR\n"
@@ -116,85 +116,93 @@ msgstr " پسندید"
 msgid "comment"
 msgstr " را در دیدگاهش"
 
-#: ../inc/wp-logs.php:34 ../inc/wp-logs.php:146 ../inc/wp-logs.php:258
+#: ../inc/wp-logs.php:35 ../inc/wp-logs.php:148 ../inc/wp-logs.php:261
 msgid "WP ULike Logs"
 msgstr "وقایع اتفاقیه در وردپرس یولایک"
 
-#: ../inc/wp-logs.php:35 ../inc/wp-options.php:10
+#: ../inc/wp-logs.php:36 ../inc/wp-options.php:10
 msgid "Post Likes Logs"
 msgstr "وقایع لایک در نوشتارها"
 
-#: ../inc/wp-logs.php:44 ../inc/wp-logs.php:156 ../inc/wp-logs.php:268
+#: ../inc/wp-logs.php:45 ../inc/wp-logs.php:158 ../inc/wp-logs.php:271
 msgid "ID"
 msgstr ""
 
-#: ../inc/wp-logs.php:45 ../inc/wp-logs.php:157 ../inc/wp-logs.php:269
+#: ../inc/wp-logs.php:46 ../inc/wp-logs.php:159 ../inc/wp-logs.php:272
 msgid "Username"
 msgstr "نام کاربری"
 
-#: ../inc/wp-logs.php:46 ../inc/wp-logs.php:158 ../inc/wp-logs.php:270
+#: ../inc/wp-logs.php:47 ../inc/wp-logs.php:160 ../inc/wp-logs.php:273
 msgid "Status"
 msgstr "وضعیت"
 
-#: ../inc/wp-logs.php:47
+#: ../inc/wp-logs.php:48
 msgid "Post ID"
 msgstr "شناسه نوشتار"
 
-#: ../inc/wp-logs.php:48
+#: ../inc/wp-logs.php:49
 msgid "Post Title"
 msgstr "عنوان نوشتار"
 
-#: ../inc/wp-logs.php:49 ../inc/wp-logs.php:161 ../inc/wp-logs.php:272
+#: ../inc/wp-logs.php:50 ../inc/wp-logs.php:163 ../inc/wp-logs.php:275
 msgid "Date / Time"
 msgstr "تاریخ / زمان"
 
-#: ../inc/wp-logs.php:50 ../inc/wp-logs.php:162 ../inc/wp-logs.php:273
+#: ../inc/wp-logs.php:51 ../inc/wp-logs.php:164 ../inc/wp-logs.php:276
 msgid "IP"
 msgstr "آدرس IP"
 
-#: ../inc/wp-logs.php:97
+#: ../inc/wp-logs.php:98
 msgid "Post Likes Logs Stats"
 msgstr "وضعیت وقایع لایک در نوشتارها"
 
-#: ../inc/wp-logs.php:101 ../inc/wp-logs.php:213 ../inc/wp-logs.php:321
+#: ../inc/wp-logs.php:102 ../inc/wp-logs.php:215 ../inc/wp-logs.php:324
 msgid "Total Users Liked:"
 msgstr "مجموع لایک کاربران:"
 
-#: ../inc/wp-logs.php:105 ../inc/wp-logs.php:217 ../inc/wp-logs.php:325
-msgid "Total Guests Liked:"
-msgstr "مجموع لایک کاربران مهمان:"
+#: ../inc/wp-logs.php:106
+msgid "Total Posts Liked:"
+msgstr "تعداد مطالب لایک شده:"
 
-#: ../inc/wp-logs.php:109 ../inc/wp-logs.php:221 ../inc/wp-logs.php:329
-msgid "Total Like:"
+#: ../inc/wp-logs.php:110 ../inc/wp-logs.php:223 ../inc/wp-logs.php:332
+msgid "Total Likes Sum:"
 msgstr "مجموع همه ی لایک ها:"
 
-#: ../inc/wp-logs.php:147 ../inc/wp-options.php:11
+#: ../inc/wp-logs.php:149 ../inc/wp-options.php:11
 msgid "Comment Likes Logs"
 msgstr "وقایع لایک در دیدگاه ها"
 
-#: ../inc/wp-logs.php:159
+#: ../inc/wp-logs.php:161
 msgid "Comment ID"
 msgstr "شناسه دیدگاه"
 
-#: ../inc/wp-logs.php:160
+#: ../inc/wp-logs.php:162
 msgid "Comment Author"
 msgstr "نویسنده دیدگاه"
 
-#: ../inc/wp-logs.php:209
+#: ../inc/wp-logs.php:211
 msgid "Comment Likes Logs Stats"
 msgstr "وضعیت وقایع لایک در دیدگاه ها"
 
-#: ../inc/wp-logs.php:259 ../inc/wp-options.php:12
+#: ../inc/wp-logs.php:219
+msgid "Total Comments Liked:"
+msgstr "تعداد دیدگاه های لایک شده:"
+
+#: ../inc/wp-logs.php:262 ../inc/wp-options.php:12
 msgid "Activity Likes Logs"
 msgstr "وقایع لایک در فعالیت ها"
 
-#: ../inc/wp-logs.php:271
+#: ../inc/wp-logs.php:274
 msgid "Activity ID"
 msgstr "شناسه فعالیت"
 
-#: ../inc/wp-logs.php:317
+#: ../inc/wp-logs.php:320
 msgid "Activity Likes Logs Stats"
 msgstr "وضعیت وقایع لایک در فعالیت های بادی پرس"
+
+#: ../inc/wp-logs.php:328
+msgid "Total Activities Liked:"
+msgstr "مجموع فعالیت های لایک شده:"
 
 #: ../inc/wp-options.php:49
 msgid "Configuration"
