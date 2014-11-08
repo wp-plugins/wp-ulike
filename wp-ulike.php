@@ -3,7 +3,7 @@
 Plugin Name:WP ULike
 Plugin URI: http://wordpress.org/plugins/wp-ulike
 Description: WP ULike plugin allows to integrate Like Button into your WordPress website to allow your visitors to like pages, posts AND comments. Its very simple to use and support a widget to display the most liked posts.
-Version: 1.6
+Version: 1.7
 Author: Ali Mirzaei
 Author URI: http://about.alimir.ir
 Text Domain: alimir
@@ -17,7 +17,7 @@ License: GPL2
 	__('WP ULike plugin allows to integrate Like Button into your WordPress website to allow your visitors to like pages, posts AND comments. Its very simple to use and support a widget to display the most liked posts.', 'alimir');
 	
 	//Do not change this value
-	define('WP_ULIKE_DB_VERSION', '1.1');
+	define('WP_ULIKE_DB_VERSION', '1.2');
 	
 	//register activation hook
 	function wp_ulike_options() {
@@ -59,8 +59,27 @@ License: GPL2
 			update_option('wp_ulike_dbVersion', WP_ULIKE_DB_VERSION);
 		}
 		
+		$table_name_3 = $wpdb->prefix . "ulike_activities";
+		if($wpdb->get_var("show tables like '$table_name_3'") != $table_name_3) {
+			$sql = "CREATE TABLE " . $table_name_3 . " (
+				`id` bigint(11) NOT NULL AUTO_INCREMENT,
+				`activity_id` int(11) NOT NULL,
+				`date_time` datetime NOT NULL,
+				`ip` varchar(30) NOT NULL,
+				`user_id` int(11) NOT NULL,
+				`status` varchar(15) NOT NULL,
+				PRIMARY KEY (`id`)
+			);";
+
+			require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+			dbDelta($sql);
+			
+			update_option('wp_ulike_dbVersion', WP_ULIKE_DB_VERSION);
+		}
+		
 		add_option('wp_ulike_onPage', '1', '', 'yes');
 		add_option('wp_ulike_onComments', '1', '', 'yes');
+		add_option('wp_ulike_onActivities', '0', '', 'yes');
 		add_option('wp_ulike_onlyRegistered', '0', '', 'yes');
 		add_option('wp_ulike_bp_activity_add', '0', '', 'yes');
 		add_option('wp_ulike_user_like_box', '1', '', 'yes');
@@ -85,6 +104,7 @@ License: GPL2
 	function wp_ulike_unset_options() {
 		delete_option('wp_ulike_onPage');
 		delete_option('wp_ulike_onComments');
+		delete_option('wp_ulike_onActivities');
 		delete_option('wp_ulike_onlyRegistered');
 		delete_option('wp_ulike_bp_activity_add');
 		delete_option('wp_ulike_user_like_box');
@@ -97,6 +117,13 @@ License: GPL2
 	}
 	register_uninstall_hook(__FILE__, 'wp_ulike_unset_options');
 	
+	//get the plugin version
+	function wp_ulike_get_version() {
+		$plugin_data = get_plugin_data( __FILE__ );
+		$plugin_version = $plugin_data['Version'];
+		return $plugin_version;
+	}
+	
 	//Load plugin widget
 	include( plugin_dir_path( __FILE__ ) . 'inc/wp-widget.php');
 	//Load plugin setting panel
@@ -108,4 +135,6 @@ License: GPL2
 	//Load WP ULike posts functions
 	include( plugin_dir_path( __FILE__ ) . 'inc/wp-ulike-posts.php');
 	//Load WP ULike comments functions
-	include( plugin_dir_path( __FILE__ ) . 'inc/wp-ulike-comments.php');		
+	include( plugin_dir_path( __FILE__ ) . 'inc/wp-ulike-comments.php');
+	//Load WP ULike buddypress functions
+	include( plugin_dir_path( __FILE__ ) . 'inc/wp-ulike-buddypress.php');		

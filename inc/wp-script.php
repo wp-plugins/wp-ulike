@@ -13,6 +13,8 @@ function enqueueScripts() {
 	add_action('wp_ajax_nopriv_ulikeprocess', 'wp_ulike_process');
 	add_action('wp_ajax_ulikecommentprocess','wp_ulike_comments_process');
 	add_action('wp_ajax_nopriv_ulikecommentprocess', 'wp_ulike_comments_process');
+	add_action('wp_ajax_ulikebuddypressprocess','wp_ulike_buddypress_process');
+	add_action('wp_ajax_nopriv_ulikebuddypressprocess', 'wp_ulike_buddypress_process');
 }
 
 function enqueueStyle() {
