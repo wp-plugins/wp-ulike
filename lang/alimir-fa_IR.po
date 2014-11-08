@@ -1,0 +1,484 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP ULike\n"
+"POT-Creation-Date: 2014-11-09 00:53+0330\n"
+"PO-Revision-Date: 2014-11-09 00:56+0330\n"
+"Last-Translator: Alimir <info@alimir.ir>\n"
+"Language-Team: alimir.ir <info@alimir.ir>\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../wp-ulike.php:16 ../inc/wp-options.php:9
+msgid "WP ULike"
+msgstr "وردپرس یولایک"
+
+#: ../wp-ulike.php:17
+msgid ""
+"WP ULike plugin allows to integrate Like Button into your WordPress website "
+"to allow your visitors to like pages, posts AND comments. Its very simple to "
+"use and support a widget to display the most liked posts."
+msgstr ""
+" افزونه ایرانی یولایک، یک سیستم آژاکسی ساده و کاربردی برای ایجاد قابلیت لایک "
+"(LIKE) در مطالب و دیدگاه های وردپرسی شماست و با بهره گیری از پنل تنظیمات، "
+"پشتیبانی کامل از شیوه نامه  rtl، نمایش بیشترین مطالب لایک شده، قابلیت سفارشی "
+"سازی استایل ها و… تمامی قابلیت های یک سیستم خوب و حرفه ای رو در اختیار شما "
+"قرار میده."
+
+#: ../wp-ulike.php:87 ../inc/wp-widget.php:106
+msgid "Like"
+msgstr "لایک"
+
+#: ../wp-ulike.php:88
+msgid "You Like This"
+msgstr "این را پسندیده اید"
+
+#: ../wp-ulike.php:89
+msgid "You Dislike This"
+msgstr "لغو پسندیدن"
+
+#: ../inc/about-page.php:39
+msgid "Welcome to WP ULike"
+msgstr "به وردپرس یولایک خوش آمدید"
+
+#: ../inc/about-page.php:41
+msgid ""
+"Thanks for updating! This version is our leanest and most powerful version "
+"yet."
+msgstr ""
+"با تشکر از بروز رسانی شما! نسخه جدید قویترین و کامل ترین نسخه منتشر شده از "
+"این افزونه است."
+
+#: ../inc/about-page.php:45
+msgid "What’s New"
+msgstr "موارد تازه"
+
+#: ../inc/about-page.php:50 ../inc/wp-options.php:13
+msgid "About WP ULike"
+msgstr "درباره وردپرس یولایک"
+
+#: ../inc/about-page.php:52
+msgid ""
+"WP ULike enables you to add Ajax Like button into your WordPress site and "
+"allowing your visitors to like and dislike posts, pages, comments AND "
+"buddypress activities. It features: Clean Design, Ajax feature to update the "
+"data without reloading, Custom Like-Dislike Texts, Simple custom style with "
+"color picker settings, BuddyPress activity support, Widget to show Most "
+"Liked Posts And Most Liked Users avatars, Added automatically, RTL language "
+"support, Simple configuration panel and many more..."
+msgstr ""
+" افزونه ایرانی یولایک، یک سیستم آژاکسی ساده و کاربردی برای ایجاد قابلیت لایک "
+"(LIKE) در مطالب و دیدگاه های وردپرسی شماست و با بهره گیری از پنل تنظیمات، "
+"پشتیبانی کامل از شیوه نامه  rtl، نمایش بیشترین مطالب لایک شده، قابلیت سفارشی "
+"سازی استایل ها و… تمامی قابلیت های یک سیستم خوب و حرفه ای رو در اختیار شما "
+"قرار میده."
+
+#: ../inc/about-page.php:58
+msgid "New Administrative Tools"
+msgstr "قابلیت های جدید مدیریتی"
+
+#: ../inc/about-page.php:76
+msgid "Credits"
+msgstr ""
+
+#: ../inc/about-page.php:85
+msgid "Translations"
+msgstr "ترجمه ها"
+
+#: ../inc/about-page.php:88
+msgid "Like this plugin?"
+msgstr "این پلاگین چندتا لایک داره؟!؟ :)"
+
+#: ../inc/about-page.php:89
+msgid ""
+"Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
+"wp-ulike\"> Plugin Directory reviews</a>"
+msgstr ""
+"حمایتتون رو از این افزونه، با امتیاز 5 ستاره در <a href=\"http://wordpress."
+"org/plugins/wp-ulike\">مخزن وردپرس</a> مشخص کنید..."
+
+#: ../inc/wp-functions.php:157
+msgid "WP ULike Activity"
+msgstr ""
+
+#: ../inc/wp-functions.php:168 ../inc/wp-functions.php:178
+msgid "liked"
+msgstr " پسندید"
+
+#: ../inc/wp-functions.php:168
+msgid "comment"
+msgstr " را در دیدگاهش"
+
+#: ../inc/wp-logs.php:34 ../inc/wp-logs.php:146 ../inc/wp-logs.php:258
+msgid "WP ULike Logs"
+msgstr "وقایع اتفاقیه در وردپرس یولایک"
+
+#: ../inc/wp-logs.php:35 ../inc/wp-options.php:10
+msgid "Post Likes Logs"
+msgstr "وقایع لایک در نوشتارها"
+
+#: ../inc/wp-logs.php:44 ../inc/wp-logs.php:156 ../inc/wp-logs.php:268
+msgid "ID"
+msgstr ""
+
+#: ../inc/wp-logs.php:45 ../inc/wp-logs.php:157 ../inc/wp-logs.php:269
+msgid "Username"
+msgstr "نام کاربری"
+
+#: ../inc/wp-logs.php:46 ../inc/wp-logs.php:158 ../inc/wp-logs.php:270
+msgid "Status"
+msgstr "وضعیت"
+
+#: ../inc/wp-logs.php:47
+msgid "Post ID"
+msgstr "شناسه نوشتار"
+
+#: ../inc/wp-logs.php:48
+msgid "Post Title"
+msgstr "عنوان نوشتار"
+
+#: ../inc/wp-logs.php:49 ../inc/wp-logs.php:161 ../inc/wp-logs.php:272
+msgid "Date / Time"
+msgstr "تاریخ / زمان"
+
+#: ../inc/wp-logs.php:50 ../inc/wp-logs.php:162 ../inc/wp-logs.php:273
+msgid "IP"
+msgstr "آدرس IP"
+
+#: ../inc/wp-logs.php:97
+msgid "Post Likes Logs Stats"
+msgstr "وضعیت وقایع لایک در نوشتارها"
+
+#: ../inc/wp-logs.php:101 ../inc/wp-logs.php:213 ../inc/wp-logs.php:321
+msgid "Total Users Liked:"
+msgstr "مجموع لایک کاربران:"
+
+#: ../inc/wp-logs.php:105 ../inc/wp-logs.php:217 ../inc/wp-logs.php:325
+msgid "Total Guests Liked:"
+msgstr "مجموع لایک کاربران مهمان:"
+
+#: ../inc/wp-logs.php:109 ../inc/wp-logs.php:221 ../inc/wp-logs.php:329
+msgid "Total Like:"
+msgstr "مجموع همه ی لایک ها:"
+
+#: ../inc/wp-logs.php:147 ../inc/wp-options.php:11
+msgid "Comment Likes Logs"
+msgstr "وقایع لایک در دیدگاه ها"
+
+#: ../inc/wp-logs.php:159
+msgid "Comment ID"
+msgstr "شناسه دیدگاه"
+
+#: ../inc/wp-logs.php:160
+msgid "Comment Author"
+msgstr "نویسنده دیدگاه"
+
+#: ../inc/wp-logs.php:209
+msgid "Comment Likes Logs Stats"
+msgstr "وضعیت وقایع لایک در دیدگاه ها"
+
+#: ../inc/wp-logs.php:259 ../inc/wp-options.php:12
+msgid "Activity Likes Logs"
+msgstr "وقایع لایک در فعالیت ها"
+
+#: ../inc/wp-logs.php:271
+msgid "Activity ID"
+msgstr "شناسه فعالیت"
+
+#: ../inc/wp-logs.php:317
+msgid "Activity Likes Logs Stats"
+msgstr "وضعیت وقایع لایک در فعالیت های بادی پرس"
+
+#: ../inc/wp-options.php:49
+msgid "Configuration"
+msgstr "پیکربندی"
+
+#: ../inc/wp-options.php:52
+msgid "Settings saved."
+msgstr "تنظیمات ذخیره شد"
+
+#: ../inc/wp-options.php:59
+msgid "Image or text?"
+msgstr "متن یا تصویر؟"
+
+#: ../inc/wp-options.php:74
+msgid "Like Text"
+msgstr "متن دکمه لایک"
+
+#: ../inc/wp-options.php:82
+msgid "Dislike Text?"
+msgstr "متن دکمه دیسلایک"
+
+#: ../inc/wp-options.php:90
+msgid "Automatic display"
+msgstr "نمایش خودکار"
+
+#: ../inc/wp-options.php:94
+msgid ""
+"<strong>On all posts</strong> (home, archives, search) at the bottom of the "
+"post"
+msgstr ""
+"<strong>نمایش در تمامی پست ها</strong> (خانه, بایگانی, جستجو)در بخش زیرین "
+"مطالب."
+
+#: ../inc/wp-options.php:96
+msgid "If you disable this option, you have to put manually the code"
+msgstr "اگر این قابلیت را غیر فعال کنید، باید به صورت دستی این کد را "
+
+#: ../inc/wp-options.php:96
+msgid "wherever you want in your template."
+msgstr "در قالب خود قرار دهید."
+
+#: ../inc/wp-options.php:100
+msgid "Comment likes"
+msgstr "لایک در دیدگاه ها"
+
+#: ../inc/wp-options.php:104
+msgid "<strong>On all comments</strong> at the bottom of the comment"
+msgstr "<strong>نمایش در تمامی دیدگاه ها</strong> در زیر متن هر دیدگاه"
+
+#: ../inc/wp-options.php:106
+msgid ""
+"If you disable this option, you have to put manually this code on comments "
+"text"
+msgstr ""
+"اگر این قابلیت را غیر فعال کنید، باید به صورت دستی این کد را در متن دیدگاه "
+"ها قرار دهید "
+
+#: ../inc/wp-options.php:110
+msgid "Activity likes"
+msgstr "لایک در فعالیت ها"
+
+#: ../inc/wp-options.php:114
+msgid "<strong>On all buddypress activities</strong> at the top of activity"
+msgstr ""
+"<strong>نمایش در تمامی فعالیت های بادی پرس</strong> در بخش بالایی هر فعالیت"
+
+#: ../inc/wp-options.php:116
+msgid ""
+"If you disable this option, you have to put manually this code on buddypres "
+"activities content"
+msgstr ""
+"اگر این قابلیت را غیر فعال کنید، باید به صورت دستی این کد را در متن فعالیت "
+"ها قرار دهید "
+
+#: ../inc/wp-options.php:120
+msgid "Only registered Users"
+msgstr "محدودسازی لایک کاربران"
+
+#: ../inc/wp-options.php:124 ../inc/wp-options.php:134
+#: ../inc/wp-options.php:144 ../inc/wp-options.php:154
+#: ../inc/wp-options.php:164
+msgid "Activate"
+msgstr "فعال سازی"
+
+#: ../inc/wp-options.php:126
+msgid "<strong>Only</strong> registered users have permission to like posts."
+msgstr ""
+"با فعال سازی این گزینه، <strong>تنها</strong> کاربران عضو شده، می توانند "
+"مطالب را لایک کنند."
+
+#: ../inc/wp-options.php:130
+msgid "BuddyPress Activity"
+msgstr "فعالیت های بادی پرس"
+
+#: ../inc/wp-options.php:136
+msgid "insert new likes in buddyPress activity page"
+msgstr ""
+"با فعال سازی این گزینه، اطلاعات جدیدترین لایک ها به بخش فعالیت های بادی پرس "
+"اضافه خواهد شد."
+
+#: ../inc/wp-options.php:140
+msgid "Show Users Like Box"
+msgstr "نمایش باکس کاربران لایک کرده"
+
+#: ../inc/wp-options.php:146
+msgid "Active this option to show users avatar in like box."
+msgstr ""
+"با فعال سازی این گزینه، می توانید آواتار کاربران لایک کرده، را در زیر هر "
+"مطلب، نمایش دهید."
+
+#: ../inc/wp-options.php:150
+msgid "Format Number"
+msgstr "فرمت اعداد"
+
+#: ../inc/wp-options.php:156
+msgid "Convert numbers of Likes with string (kilobyte) format."
+msgstr ""
+"با فعال سازی این گزینه، می توانید اعداد بالای 1000 را با فرمت رشته ای "
+"(کیلوبایت) نمایش دهید."
+
+#: ../inc/wp-options.php:160
+msgid "Custom Style"
+msgstr "سفارشی سازی"
+
+#: ../inc/wp-options.php:166
+msgid "Active this option to see custom color settings."
+msgstr ""
+"با فعال سازی این گزینه، می توانید رنگ های دلخواه خود را در افزونه به کار "
+"ببرید."
+
+#: ../inc/wp-options.php:170
+msgid "Button style"
+msgstr "دکمه لایک"
+
+#: ../inc/wp-options.php:175 ../inc/wp-options.php:192
+msgid "Background"
+msgstr "رنگ پس زمینه"
+
+#: ../inc/wp-options.php:179 ../inc/wp-options.php:196
+msgid "Border Color"
+msgstr "رنگ حاشیه"
+
+#: ../inc/wp-options.php:183 ../inc/wp-options.php:200
+msgid "Text Color"
+msgstr "رنگ متن"
+
+#: ../inc/wp-options.php:187
+msgid "Counter Style"
+msgstr "باکس شمارنده"
+
+#: ../inc/wp-ulike-buddypress.php:34 ../inc/wp-ulike-buddypress.php:50
+#: ../inc/wp-ulike-comments.php:34 ../inc/wp-ulike-comments.php:50
+#: ../inc/wp-ulike-posts.php:35 ../inc/wp-ulike-posts.php:51
+msgid "Already Voted"
+msgstr "قبلا لایک کرده اید"
+
+#: ../inc/wp-ulike-buddypress.php:61
+msgid "Users who have liked this activity:"
+msgstr "کاربرانی که این فعالیت را پسندیده اند:"
+
+#: ../inc/wp-ulike-buddypress.php:73
+msgid "You need to login in order to like this activity: "
+msgstr "برای امتیاز دهی به این فعالیت، لطفا وارد شوید: "
+
+#: ../inc/wp-ulike-buddypress.php:73 ../inc/wp-ulike-comments.php:73
+#: ../inc/wp-ulike-posts.php:75
+msgid "click here"
+msgstr "برای ورود کلیک کنید"
+
+#: ../inc/wp-ulike-comments.php:61
+msgid "Users who have LIKED this comment:"
+msgstr "کاربرانی که این دیدگاه را پسندیده اند:"
+
+#: ../inc/wp-ulike-comments.php:73
+msgid "You need to login in order to like this comment: "
+msgstr "برای امتیاز دهی به این دیدگاه، لطفا وارد شوید: "
+
+#: ../inc/wp-ulike-posts.php:63
+msgid "Users who have LIKED this post:"
+msgstr "کاربرانی که این مطلب را پسندیده اند:"
+
+#: ../inc/wp-ulike-posts.php:75
+msgid "You need to login in order to like this post: "
+msgstr "برای امتیاز دهی به این مطلب، لطفا وارد شوید: "
+
+#: ../inc/wp-widget.php:8
+msgid "WP Ulike - Most Liked Posts"
+msgstr "وردپرس یولایک - نمایش پرلایک ترین مطالب"
+
+#: ../inc/wp-widget.php:9
+msgid "This widget allows you to show most liked posts."
+msgstr ""
+"با استفاده از این ابزارک، میتونید لیستی از پرلایک ترین مطالب سایتتون رو به "
+"همراه تعداد لایک هر نوشته، نمایش بدید."
+
+#: ../inc/wp-widget.php:51
+msgid "Most Liked Posts"
+msgstr "پرلایک ترین مطالب"
+
+#: ../inc/wp-widget.php:55 ../inc/wp-widget.php:136
+msgid "Title:"
+msgstr "عنوان:"
+
+#: ../inc/wp-widget.php:60
+msgid "Number of posts to show:"
+msgstr "تعداد مطالب قابل نمایش:"
+
+#: ../inc/wp-widget.php:66
+msgid "Activate post like count"
+msgstr "تعداد لایک های هر نوشته رو نمایش بد:"
+
+#: ../inc/wp-widget.php:87
+msgid "WP Ulike - Most Liked Users"
+msgstr "وردپرس یولایک - نمایش پرلایک ترین کاربران"
+
+#: ../inc/wp-widget.php:88
+msgid "This widget allows you to show most liked users avatars."
+msgstr ""
+"با استفاده از این ابزارک، میتونید لیستی از پرلایک ترین کاربران سایتتون رو به "
+"همراه تصویر آواتار و تعداد لایکشون، نمایش بدید."
+
+#: ../inc/wp-widget.php:132
+msgid "Most Liked Users"
+msgstr "پرلایک ترین کاربران"
+
+#: ../inc/wp-widget.php:141
+msgid "Number of users to show:"
+msgstr "تعداد کاربران قابل نمایش:"
+
+#: ../inc/wp-widget.php:146
+msgid "User avatar size:"
+msgstr "سایز آواتار کاربران:"
+
+#: ../inc/wp-widget.php:152
+msgid "Activate user like count"
+msgstr "تعداد لایک های هر کاربر رو نمایش بده"
+
+#~ msgid ""
+#~ "Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
+#~ msgstr ""
+#~ "دنیای وردپرس و برنامه نویسی را در  <a href=\"https://www.facebook.com/"
+#~ "alimir.ir\"> فیسبوک</a> دنبال کنید..."
+
+#~ msgid ""
+#~ "Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
+#~ "World.</a>"
+#~ msgstr ""
+#~ "صفحه سازنده افزونه <a href=\"http://alimir.ir\"> دنیای وردپرس و برنامه "
+#~ "نویسی</a>."
+
+#~ msgid "WP Ulike"
+#~ msgstr "تنظیمات افزونه یولایک"
+
+#~ msgid "<strong>Active</strong> this option."
+#~ msgstr "می خواهم این قابلیت را<strong>فعال</strong> کنم"
+
+#~ msgid "Show post count"
+#~ msgstr "نمایش شمارشگر"
+
+#~ msgid "WP Ulike Widget"
+#~ msgstr "ابزارک یولایک"
+
+#~ msgid ""
+#~ "This plugin allows your visitors to simply like your posts instead of "
+#~ "comment it."
+#~ msgstr "یک پلاگین ساده و سبک برای راه اندازی سیستم لایک در وبلاگ شما"
+
+#~ msgid "Save Options"
+#~ msgstr "ذخیره تغییرات"
+
+#~ msgid "jQuery framework"
+#~ msgstr "چارچوب جی کوئری"
+
+#~ msgid "Enabled"
+#~ msgstr "فعال"
+
+#~ msgid "Disabled"
+#~ msgstr "غیر فعال"
+
+#~ msgid ""
+#~ "Disable it if you already have the jQuery framework enabled in your theme."
+#~ msgstr ""
+#~ "اگر پیش ازاین، از چارچوب جی کوئری در قالب خود استفاده کرده اید، این "
+#~ "قابلیت را غیر فعال کنید."
+
+#~ msgid "wp and programming world"
+#~ msgstr "دنیای وردپرس و برنامه نویسی"
