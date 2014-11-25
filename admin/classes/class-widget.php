@@ -63,7 +63,7 @@ class wp_ulike_posts_widget extends WP_Widget {
 
 		<p>
 			<input class="checkbox" type="checkbox" id="<?php echo $this->get_field_id( 'show_count' ); ?>" name="<?php echo $this->get_field_name( 'show_count' ); ?>" <?php if($instance['show_count'] == true) echo 'checked="checked"'; ?> /> 
-			<label for="<?php echo $this->get_field_id( 'show_count' ); ?>"><?php _e('Activate post like count', 'alimir'); ?></label>
+			<label for="<?php echo $this->get_field_id( 'show_count' ); ?>"><?php _e('Activate Like Counter', 'alimir'); ?></label>
 		</p>	
 		<?php 
 	}
@@ -149,7 +149,7 @@ class wp_ulike_users_widget extends WP_Widget {
 
 		<p>
 			<input class="checkbox" type="checkbox" id="<?php echo $this->get_field_id( 'show_count' ); ?>" name="<?php echo $this->get_field_name( 'show_count' ); ?>" <?php if($instance['show_count'] == true) echo 'checked="checked"'; ?> /> 
-			<label for="<?php echo $this->get_field_id( 'show_count' ); ?>"><?php _e('Activate user like count', 'alimir'); ?></label>
+			<label for="<?php echo $this->get_field_id( 'show_count' ); ?>"><?php _e('Activate Like Counter', 'alimir'); ?></label>
 		</p>	
 		<?php 
 	}
@@ -165,10 +165,4 @@ class wp_ulike_users_widget extends WP_Widget {
 		return $instance;
 	}
 }
-
-function wp_ulike_load_widget() {
-	register_widget( 'wp_ulike_posts_widget' );
-	register_widget( 'wp_ulike_users_widget' );
-}
-add_action( 'widgets_init', 'wp_ulike_load_widget' );
 ?>

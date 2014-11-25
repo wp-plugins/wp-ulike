@@ -2,8 +2,8 @@
 /*
 Plugin Name:WP ULike
 Plugin URI: http://wordpress.org/plugins/wp-ulike
-Description: WP ULike plugin allows to integrate Like Button into your WordPress website to allow your visitors to like pages, posts AND comments. Its very simple to use and support a widget to display the most liked posts.
-Version: 1.7
+Description: WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and unlike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options.
+Version: 1.8
 Author: Ali Mirzaei
 Author URI: http://about.alimir.ir
 Text Domain: alimir
@@ -14,13 +14,13 @@ License: GPL2
 	//Load Translations
 	load_plugin_textdomain( 'alimir', false, dirname( plugin_basename( __FILE__ ) ) .'/lang/' );
 	__('WP ULike', 'alimir');
-	__('WP ULike plugin allows to integrate Like Button into your WordPress website to allow your visitors to like pages, posts AND comments. Its very simple to use and support a widget to display the most liked posts.', 'alimir');
+	__('WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and unlike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options.', 'alimir');
 	
 	//Do not change this value
 	define('WP_ULIKE_DB_VERSION', '1.2');
 	
 	//register activation hook
-	function wp_ulike_options() {
+	function wp_ulike_install() {
 		global $wpdb;
 		
 		$table_name = $wpdb->prefix . "ulike";
@@ -77,45 +77,16 @@ License: GPL2
 			update_option('wp_ulike_dbVersion', WP_ULIKE_DB_VERSION);
 		}
 		
-		add_option('wp_ulike_onPage', '1', '', 'yes');
-		add_option('wp_ulike_onComments', '1', '', 'yes');
-		add_option('wp_ulike_onActivities', '0', '', 'yes');
-		add_option('wp_ulike_onlyRegistered', '0', '', 'yes');
-		add_option('wp_ulike_bp_activity_add', '0', '', 'yes');
-		add_option('wp_ulike_user_like_box', '1', '', 'yes');
-		add_option('wp_ulike_textOrImage', 'image', '', 'yes');
-		add_option('wp_ulike_text', __('Like','alimir'), '', 'yes');
-		add_option('wp_ulike_btn_text', __('You Like This','alimir'), '', 'yes');
-		add_option('wp_ulike_dislike_text', __('You Dislike This','alimir'), '', 'yes');
-		add_option('wp_ulike_format_number', '0', '', 'yes');
-		add_option('wp_ulike_style', '0', '', 'yes');
 	}
-	register_activation_hook(__FILE__, 'wp_ulike_options');
+	register_activation_hook(__FILE__, 'wp_ulike_install');
 	
 	//plugin update check
+	add_action( 'plugins_loaded', 'wp_ulike_update_db_check' );
 	function wp_ulike_update_db_check() {
 		if ( get_site_option( 'wp_ulike_dbVersion' ) != WP_ULIKE_DB_VERSION ) {
-			wp_ulike_options();
+			wp_ulike_install();
 		}
 	}
-	add_action( 'plugins_loaded', 'wp_ulike_update_db_check' );	
-	
-	//register uninstall hook
-	function wp_ulike_unset_options() {
-		delete_option('wp_ulike_onPage');
-		delete_option('wp_ulike_onComments');
-		delete_option('wp_ulike_onActivities');
-		delete_option('wp_ulike_onlyRegistered');
-		delete_option('wp_ulike_bp_activity_add');
-		delete_option('wp_ulike_user_like_box');
-		delete_option('wp_ulike_textOrImage');
-		delete_option('wp_ulike_text');
-		delete_option('wp_ulike_btn_text');
-		delete_option('wp_ulike_dislike_text');
-		delete_option('wp_ulike_format_number');
-		delete_option('wp_ulike_style');
-	}
-	register_uninstall_hook(__FILE__, 'wp_ulike_unset_options');
 	
 	//get the plugin version
 	function wp_ulike_get_version() {
@@ -124,17 +95,20 @@ License: GPL2
 		return $plugin_version;
 	}
 	
-	//Load plugin widget
-	include( plugin_dir_path( __FILE__ ) . 'inc/wp-widget.php');
 	//Load plugin setting panel
-	include( plugin_dir_path( __FILE__ ) . 'inc/wp-options.php');
+	include( plugin_dir_path( __FILE__ ) . 'admin/admin.php');
+	
+	//Load general functions
+	include( plugin_dir_path( __FILE__ ) . 'inc/wp-functions.php');	
+	
 	//Load plugin scripts
 	include( plugin_dir_path( __FILE__ ) . 'inc/wp-script.php');
-	//Load general functions
-	include( plugin_dir_path( __FILE__ ) . 'inc/wp-functions.php');
+	
 	//Load WP ULike posts functions
 	include( plugin_dir_path( __FILE__ ) . 'inc/wp-ulike-posts.php');
+	
 	//Load WP ULike comments functions
 	include( plugin_dir_path( __FILE__ ) . 'inc/wp-ulike-comments.php');
+	
 	//Load WP ULike buddypress functions
 	include( plugin_dir_path( __FILE__ ) . 'inc/wp-ulike-buddypress.php');		

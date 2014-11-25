@@ -2,18 +2,18 @@
 Contributors: alimir
 Donate link: http://alimir.ir
 Author: Ali Mirzaei
-Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin
-Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 1.7
+Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin, buddypress like system, buddypress votes, comment like system, voting button
+Requires at least: 3.5
+Tested up to: 4.0.1
+Stable tag: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WP ULike enables you to add Ajax Like button into your WordPress and allowing your visitors to like and dislike posts,comments AND BP activities.
+WP ULike enables you to add Ajax Like button into your WordPress and allowing your visitors to like and unlike posts,comments AND BP activities.
 
 == Description ==
 
-WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and dislike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options.
+WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and unlike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options.
 
 = Demo =
 
@@ -54,11 +54,12 @@ Also you can use this function and shortcode for the post likes:
 *   France
 *   Chinese (Thanks Changmeng Hu)
 *   Chinese Tradition (Thanks Arefly)
+*   Dutch (Thanks Joey)
 
 = Plugin Author =
 Website: <a href="http://about.alimir.ir" target="_blank">Ali Mirzaei</a><br />
-Follow on <a href="https://www.facebook.com/alimir.ir" target="_blank">Facebook</a>
-You can catch catch him on twitter as @alimirir
+Follow on <a href="https://www.facebook.com/alimir.ir" target="_blank">Facebook</a><br />
+You can catch me on twitter as @alimirir
 
 == Installation ==
 
@@ -111,6 +112,17 @@ endif;
 
 == Changelog ==
 
+= 1.8 =
+* Added: New setting system with separate tabs.
+* Added: Option to upload button icon.
+* Added: Option to upload loading animation.
+* Added: Dutch (nl_NL) language. (Thanks Joey)
+* Added: Avatar size option for the users liked box.
+* Modified: New names for some functions.
+* Modified: plugin dislike setting to unlike.
+* Updated: Persian language file.
+* Updated: Chinese language file.
+
 = 1.7 =
 * Added: Buddypress likes support.
 * Added: Post likes logs.
@@ -155,6 +167,9 @@ endif;
 * The initial version
 
 == Upgrade Notice ==
+
+= 1.8 =
+In this version, we have made many changes on plugin functions and settings. So if you lose your last settings, try to add them again. :)
 
 = 1.7 =
 After plugin update: If the new database table won't fixed, try deactivating the plugin and reactivating that one at a time.

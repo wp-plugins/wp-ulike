@@ -196,27 +196,27 @@ button.close {
 	opacity:1
 }
 
-#tiles,.mostlikedusers {
-  list-style-type: none;
-  position: relative;
-  margin: 10px 0;
-  padding: 0;
+.tiles,.mostlikedusers {
+  list-style-type: none !important;
+  position: relative !important;
+  margin: 10px 0 !important;
+  padding: 0 !important;
 }
-#tiles li,.mostlikedusers li{
-	display:inline-table;
-	cursor: pointer;
+.tiles li,.mostlikedusers li{
+	display:inline-table !important;
+	cursor: pointer !important;
 }
 .mostlikedusers li{
-	margin:0 2px;
+	margin:0 2px !important;
 }
 
-#tiles li.inactive,.mostlikedusers li.inactive {
-  visibility: hidden;
-  opacity: 0;
+.tiles li.inactive,.mostlikedusers li.inactive {
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-#tiles li img ,.mostlikedusers li img {
-  display: block;
+.tiles li img ,.mostlikedusers li img {
+  display: block !important;
 }
 
 .tooltip {
