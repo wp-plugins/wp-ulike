@@ -214,7 +214,7 @@
 					$counter = '<a onclick="likeThis('.$post_ID.', 1, 0);" class="text">'.wp_ulike_get_setting( 'wp_ulike_general', 'button_text').'</a><span class="count-box">'.$liked.'</span>';
 				}
 			}
-			else if($user_status != 0 && isset($_COOKIE['liked-'.$post_ID])){
+			else if($user_status != 0){
 				if(wp_ulike_get_user_post_status_byIP($post_ID,$user_IP) == "like"){
 					$counter = '<a onclick="likeThis('.$post_ID.', 1, 1);" class="text">'.wp_ulike_get_setting( 'wp_ulike_general', 'text_after_like').'</a><span class="count-box">'.$liked.'</span>';
 				}
@@ -253,7 +253,7 @@
 				echo wp_ulike_format_number($newLike);
 				
 			}
-			else if ($user_status != 0  && isset($_COOKIE['liked-'.$post_ID])) {
+			else if ($user_status != 0) {
 				if(wp_ulike_get_user_post_status_byIP($post_ID,$user_IP) == "like"){
 					$newLike = $get_like - 1;
 					update_post_meta($post_ID, '_liked', $newLike);

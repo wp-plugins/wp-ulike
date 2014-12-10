@@ -217,7 +217,7 @@
 					$counter = '<a onclick="likeThisComment('.$CommentID.', 1, 0);" class="text">'.wp_ulike_get_setting( 'wp_ulike_general', 'button_text').'</a><span class="count-box">'.$liked.'</span>';			
 				}
 			}
-			else if($user_status != 0 && isset($_COOKIE['comment-liked-'.$CommentID])){
+			else if($user_status != 0){
 				if(wp_ulike_get_user_comments_status_byIP($CommentID,$user_IP) == "like"){
 					$counter = '<a onclick="likeThisComment('.$CommentID.', 1, 1);" class="text">'.wp_ulike_get_setting( 'wp_ulike_general', 'text_after_like').'</a><span class="count-box">'.$liked.'</span>';
 				}
@@ -255,7 +255,7 @@
 				echo wp_ulike_format_number($newLike);
 				
 			}
-			else if ($user_status != 0  && isset($_COOKIE['comment-liked-'.$CommentID])) {
+			else if ($user_status != 0) {
 				if(wp_ulike_get_user_comments_status_byIP($CommentID,$user_IP) == "like"){
 					$newLike = $get_like - 1;
 					update_comment_meta($CommentID, '_commentliked', $newLike);
