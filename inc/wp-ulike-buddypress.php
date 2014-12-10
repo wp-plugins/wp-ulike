@@ -213,7 +213,7 @@
 					$counter = '<a onclick="likeThisActivity('.$activityID.', 1, 0);" class="text">'.wp_ulike_get_setting( 'wp_ulike_general', 'button_text').'</a><span class="count-box">'.$liked.'</span>';			
 				}
 			}
-			else if($user_status != 0 && isset($_COOKIE['activity-liked-'.$activityID])){
+			else if($user_status != 0){
 				if(wp_ulike_get_user_activities_status_byIP($activityID,$user_IP) == "like"){
 					$counter = '<a onclick="likeThisActivity('.$activityID.', 1, 1);" class="text">'.wp_ulike_get_setting( 'wp_ulike_general', 'text_after_like').'</a><span class="count-box">'.$liked.'</span>';
 				}
@@ -247,7 +247,7 @@
 				echo wp_ulike_format_number($newLike);
 				
 			}
-			else if ($user_status != 0  && isset($_COOKIE['activity-liked-'.$activityID])) {
+			else if ($user_status != 0) {
 				if(wp_ulike_get_user_activities_status_byIP($activityID,$user_IP) == "like"){
 					$newLike = $get_like - 1;
 					bp_activity_update_meta($activityID, '_activityliked', $newLike);

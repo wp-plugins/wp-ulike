@@ -25,10 +25,12 @@
 			//return by position
 			if($position=='bottom')
 			return $content . $button;
-			if($position=='top')
+			else if($position=='top')
 			return $button . $content;
-			if($position=='top_bottom')
+			else if($position=='top_bottom')
 			return $button . $content . $button;
+			else
+			return $content . $button;
 		}
 
 		add_filter('the_content', 'wp_ulike_put_posts');
@@ -84,7 +86,7 @@
 		global $wpdb;
 		$users_list = '';
 		
-		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike WHERE post_id = '$post_ID'");
+		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike WHERE post_id = '$post_ID' GROUP BY user_id");
 		
 		foreach ( $get_users as $get_user ) 
 		{
@@ -122,10 +124,12 @@
 			//return by position
 			if($position=='bottom')
 			return $content . $button;
-			if($position=='top')
+			else if($position=='top')
 			return $button . $content;
-			if($position=='top_bottom')
+			else if($position=='top_bottom')
 			return $button . $content . $button;
+			else
+			return $content . $button;
 		}
 		
 		add_filter('comment_text', 'wp_ulike_put_comments');
@@ -156,7 +160,7 @@
 		global $wpdb;
 		$users_list = '';
 		
-		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike_comments WHERE comment_id = '$CommentID'");
+		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike_comments WHERE comment_id = '$CommentID' GROUP BY user_id");
 		
 		foreach ( $get_users as $get_user ) 
 		{
@@ -191,7 +195,7 @@
 		global $wpdb;
 		$users_list = '';
 		
-		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike_activities WHERE activity_id = '$activityID'");
+		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike_activities WHERE activity_id = '$activityID' GROUP BY user_id");
 		
 		foreach ( $get_users as $get_user ) 
 		{
