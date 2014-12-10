@@ -321,3 +321,7 @@ button.close {
     background-color: #777;
     border-radius: 10px;
 }
+
+#buddypress ul.item-list li{
+	position:initial;
+}

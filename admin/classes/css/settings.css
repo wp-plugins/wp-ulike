@@ -4,7 +4,6 @@ form.wrap p.submit {
 	border-top: 1px solid #ddd;
 }
 form.wrap td .settings-error {
-	max-height: 200px;
 	overflow: scroll;
 }
 form.wrap td .settings-error p {

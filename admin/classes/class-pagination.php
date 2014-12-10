@@ -18,9 +18,9 @@ Author: Victor De la Rocha
 		var $urlF = false;//urlFriendly
 
 		/*Buttons next and previous*/
-		var $nextT = "Next";
+		var $nextT = "";
 		var $nextI = "&#187;"; //&#9658;
-		var $prevT = "Previous";
+		var $prevT = "";
 		var $prevI = "&#171;"; //&#9668;
 
 		/*****/

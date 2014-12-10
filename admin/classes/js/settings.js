@@ -160,7 +160,6 @@ jQuery(document).ready(function ($) {
 	
 	$('.wp_ulike_custom_style_activation').click(evaluate).each(evaluate);
 	
-	
 	$('#wp-ulike-settings_wp_ulike_general tr:nth-child(2)').addClass('button-text-show');
 	$('#wp-ulike-settings_wp_ulike_general tr:nth-child(3)').addClass('button-icon-show');
 
@@ -184,6 +183,10 @@ jQuery(document).ready(function ($) {
         if (!$(".wp_ulike_check_image").is(":checked")) {
             $('.button-icon-show').hide();
         }
-    }); 	
+    }); 
+	
+    $("#wp_ulike_posts_logging_method, #wp_ulike_comments_logging_method, #wp_ulike_buddypress_logging_method").change(function () {
+		$('.attention-message').fadeIn();
+    });
   
 });

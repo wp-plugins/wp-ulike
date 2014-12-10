@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP ULike\n"
-"POT-Creation-Date: 2014-11-23 10:52+0330\n"
-"PO-Revision-Date: 2014-11-23 10:53+0330\n"
+"POT-Creation-Date: 2014-12-10 16:36+0330\n"
+"PO-Revision-Date: 2014-12-10 16:36+0330\n"
 "Last-Translator: Alimir <info@alimir.ir>\n"
 "Language-Team: \n"
 "Language: en_PW\n"
@@ -17,391 +17,803 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../inc/about-page.php:39
+#: ../admin/about.php:56
 msgid "Welcome to WP ULike"
 msgstr ""
 
-#: ../inc/about-page.php:41
+#: ../admin/about.php:58
 msgid ""
-"Thanks for updating! This version is our leanest and most powerful version "
-"yet."
+"Thank you for choosing WP ULike! This version is our leanest and most "
+"powerful version yet."
 msgstr ""
 
-#: ../inc/about-page.php:45
-msgid "What’s New"
+#: ../admin/about.php:59
+msgid "Visit our homepage"
 msgstr ""
 
-#: ../inc/about-page.php:50 ../inc/wp-options.php:13
-msgid "About WP ULike"
+#: ../admin/about.php:64
+msgid "Getting Started"
 msgstr ""
 
-#: ../inc/about-page.php:52
-msgid ""
-"WP ULike enables you to add Ajax Like button into your WordPress site and "
-"allowing your visitors to like and dislike posts, pages, comments AND "
-"buddypress activities. It features: Clean Design, Ajax feature to update the "
-"data without reloading, Custom Like-Dislike Texts, Simple custom style with "
-"color picker settings, BuddyPress activity support, Widget to show Most "
-"Liked Posts And Most Liked Users avatars, Added automatically, RTL language "
-"support, Simple configuration panel and many more..."
-msgstr ""
-
-#: ../inc/about-page.php:58
-msgid "New Administrative Tools"
-msgstr ""
-
-#: ../inc/about-page.php:76
+#: ../admin/about.php:65
 msgid "Credits"
 msgstr ""
 
-#: ../inc/about-page.php:85
+#: ../admin/about.php:66
+msgid "Support"
+msgstr ""
+
+#: ../admin/about.php:67
+msgid "FAQ"
+msgstr ""
+
+#: ../admin/about.php:68
+msgid "Reviews"
+msgstr ""
+
+#: ../admin/about.php:69
+msgid "Contact"
+msgstr ""
+
+#: ../admin/about.php:81
+msgid "Novelty Of WP ULike"
+msgstr ""
+
+#: ../admin/about.php:85 ../admin/classes/class-widget.php:134
+msgid "Most Liked Comments"
+msgstr ""
+
+#: ../admin/about.php:90 ../admin/admin.php:146 ../admin/admin.php:214
+#: ../admin/admin.php:272
+msgid "Logging Method"
+msgstr ""
+
+#: ../admin/about.php:97
+msgid "New setting panel"
+msgstr ""
+
+#: ../admin/about.php:102
+msgid "Better coding on plugin files"
+msgstr ""
+
+#: ../admin/about.php:109
+msgid "Buddypress likes support"
+msgstr ""
+
+#: ../admin/about.php:114
+msgid "Likes logs support"
+msgstr ""
+
+#: ../admin/about.php:123
+msgid "WP ULike is created by many love and time. Enjoy it :)"
+msgstr ""
+
+#: ../admin/about.php:124
+msgid "Project Leaders"
+msgstr ""
+
+#: ../admin/about.php:129
+msgid "Project Lead & Developer"
+msgstr ""
+
+#: ../admin/about.php:133
 msgid "Translations"
 msgstr ""
 
-#: ../inc/about-page.php:88
+#: ../admin/about.php:143
 msgid "Like this plugin?"
 msgstr ""
 
-#: ../inc/about-page.php:89
+#: ../admin/about.php:144
 msgid ""
 "Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
 "wp-ulike\"> Plugin Directory reviews</a>"
 msgstr ""
 
-#: ../inc/wp-functions.php:157
-msgid "WP ULike Activity"
+#: ../admin/admin.php:36
+msgid "WP ULike Settings"
 msgstr ""
 
-#: ../inc/wp-functions.php:168 ../inc/wp-functions.php:178
-msgid "liked"
-msgstr ""
-
-#: ../inc/wp-functions.php:168
-msgid "comment"
-msgstr ""
-
-#: ../inc/wp-logs.php:32 ../inc/wp-logs.php:145 ../inc/wp-logs.php:258
-msgid "WP ULike Logs"
-msgstr ""
-
-#: ../inc/wp-logs.php:33 ../inc/wp-options.php:10
-msgid "Post Likes Logs"
-msgstr ""
-
-#: ../inc/wp-logs.php:42 ../inc/wp-logs.php:155 ../inc/wp-logs.php:268
-msgid "ID"
-msgstr ""
-
-#: ../inc/wp-logs.php:43 ../inc/wp-logs.php:156 ../inc/wp-logs.php:269
-msgid "Username"
-msgstr ""
-
-#: ../inc/wp-logs.php:44 ../inc/wp-logs.php:157 ../inc/wp-logs.php:270
-msgid "Status"
-msgstr ""
-
-#: ../inc/wp-logs.php:45
-msgid "Post ID"
-msgstr ""
-
-#: ../inc/wp-logs.php:46
-msgid "Post Title"
-msgstr ""
-
-#: ../inc/wp-logs.php:47 ../inc/wp-logs.php:160 ../inc/wp-logs.php:272
-msgid "Date / Time"
-msgstr ""
-
-#: ../inc/wp-logs.php:48 ../inc/wp-logs.php:161 ../inc/wp-logs.php:273
-msgid "IP"
-msgstr ""
-
-#: ../inc/wp-logs.php:95
-msgid "Post Likes Logs Stats"
-msgstr ""
-
-#: ../inc/wp-logs.php:99 ../inc/wp-logs.php:212 ../inc/wp-logs.php:321
-msgid "Total Users Liked:"
-msgstr ""
-
-#: ../inc/wp-logs.php:103
-msgid "Total Posts Liked:"
-msgstr ""
-
-#: ../inc/wp-logs.php:107 ../inc/wp-logs.php:220 ../inc/wp-logs.php:329
-msgid "Total Likes Sum:"
-msgstr ""
-
-#: ../inc/wp-logs.php:146 ../inc/wp-options.php:11
-msgid "Comment Likes Logs"
-msgstr ""
-
-#: ../inc/wp-logs.php:158
-msgid "Comment ID"
-msgstr ""
-
-#: ../inc/wp-logs.php:159
-msgid "Comment Author"
-msgstr ""
-
-#: ../inc/wp-logs.php:208
-msgid "Comment Likes Logs Stats"
-msgstr ""
-
-#: ../inc/wp-logs.php:216
-msgid "Total Comments Liked:"
-msgstr ""
-
-#: ../inc/wp-logs.php:259 ../inc/wp-options.php:12
-msgid "Activity Likes Logs"
-msgstr ""
-
-#: ../inc/wp-logs.php:271
-msgid "Activity ID"
-msgstr ""
-
-#: ../inc/wp-logs.php:317
-msgid "Activity Likes Logs Stats"
-msgstr ""
-
-#: ../inc/wp-logs.php:325
-msgid "Total Activities Liked:"
-msgstr ""
-
-#: ../inc/wp-options.php:9 ../wp-ulike.php:16
+#: ../admin/admin.php:39 ../wp-ulike.php:16
 msgid "WP ULike"
 msgstr ""
 
-#: ../inc/wp-options.php:49
-msgid "Configuration"
+#: ../admin/admin.php:44
+msgid "General"
 msgstr ""
 
-#: ../inc/wp-options.php:52
+#: ../admin/admin.php:48
+msgid "Button Type"
+msgstr ""
+
+#: ../admin/admin.php:51
+msgid "Icon"
+msgstr ""
+
+#: ../admin/admin.php:52
+msgid "Text"
+msgstr ""
+
+#: ../admin/admin.php:56 ../admin/classes/class-widget.php:189
+msgid "Like"
+msgstr ""
+
+#: ../admin/admin.php:57
+msgid "Button Text"
+msgstr ""
+
+#: ../admin/admin.php:61
+msgid "Button Icon"
+msgstr ""
+
+#: ../admin/admin.php:62 ../admin/admin.php:359
+msgid "Best size: 16x16"
+msgstr ""
+
+#: ../admin/admin.php:67
+msgid "Format Number"
+msgstr ""
+
+#: ../admin/admin.php:68 ../admin/admin.php:79 ../admin/admin.php:108
+#: ../admin/admin.php:140 ../admin/admin.php:169 ../admin/admin.php:191
+#: ../admin/admin.php:208 ../admin/admin.php:237 ../admin/admin.php:266
+#: ../admin/admin.php:295 ../admin/admin.php:302 ../admin/admin.php:324
+#: ../admin/admin.php:370 ../admin/admin.php:377 ../admin/admin.php:384
+msgid "Activate"
+msgstr ""
+
+#: ../admin/admin.php:69
+msgid "Convert numbers of Likes with string (kilobyte) format."
+msgstr ""
+
+#: ../admin/admin.php:72
+msgid "Unlike"
+msgstr ""
+
+#: ../admin/admin.php:73
+msgid "Text After Like"
+msgstr ""
+
+#: ../admin/admin.php:78
+msgid "Return To The Initial"
+msgstr ""
+
+#: ../admin/admin.php:80
+msgid ""
+"Return to the initial Like button after Unlike. (Not Showing text after "
+"unlike)"
+msgstr ""
+
+#: ../admin/admin.php:83
+msgid "Like Me Again!"
+msgstr ""
+
+#: ../admin/admin.php:84
+msgid "Text After Unlike"
+msgstr ""
+
+#: ../admin/admin.php:87
+msgid "You have not permission to unlike"
+msgstr ""
+
+#: ../admin/admin.php:88
+msgid "Permission Text"
+msgstr ""
+
+#: ../admin/admin.php:95
 msgid "Settings saved."
 msgstr ""
 
-#: ../inc/wp-options.php:59
-msgid "Image or text?"
+#: ../admin/admin.php:102
+msgid "Posts"
 msgstr ""
 
-#: ../inc/wp-options.php:74
-msgid "Like Text"
-msgstr ""
-
-#: ../inc/wp-options.php:82
-msgid "Dislike Text?"
-msgstr ""
-
-#: ../inc/wp-options.php:90
+#: ../admin/admin.php:107 ../admin/admin.php:190 ../admin/admin.php:258
 msgid "Automatic display"
 msgstr ""
 
-#: ../inc/wp-options.php:94
+#: ../admin/admin.php:109
 msgid ""
-"<strong>On all posts</strong> (home, archives, search) at the bottom of the "
-"post"
+"If you disable this option, you have to put manually this code on wordpress "
+"while loop"
 msgstr ""
 
-#: ../inc/wp-options.php:96
-msgid "If you disable this option, you have to put manually the code"
+#: ../admin/admin.php:113 ../admin/admin.php:196
+msgid "Auto Display Position"
 msgstr ""
 
-#: ../inc/wp-options.php:96
-msgid "wherever you want in your template."
+#: ../admin/admin.php:116 ../admin/admin.php:199
+msgid "Top of Content"
 msgstr ""
 
-#: ../inc/wp-options.php:100
-msgid "Comment likes"
+#: ../admin/admin.php:117 ../admin/admin.php:200
+msgid "Bottom of Content"
 msgstr ""
 
-#: ../inc/wp-options.php:104
-msgid "<strong>On all comments</strong> at the bottom of the comment"
+#: ../admin/admin.php:118 ../admin/admin.php:201
+msgid "Top and Bottom"
 msgstr ""
 
-#: ../inc/wp-options.php:106
+#: ../admin/admin.php:123
+msgid "Auto Display Filter"
+msgstr ""
+
+#: ../admin/admin.php:125
+msgid "Home"
+msgstr ""
+
+#: ../admin/admin.php:126
+msgid "Single Posts"
+msgstr ""
+
+#: ../admin/admin.php:127
+msgid "Pages"
+msgstr ""
+
+#: ../admin/admin.php:128
+msgid "Archives"
+msgstr ""
+
+#: ../admin/admin.php:129
+msgid "Categories"
+msgstr ""
+
+#: ../admin/admin.php:130
+msgid "Search Results"
+msgstr ""
+
+#: ../admin/admin.php:131
+msgid "Tags"
+msgstr ""
+
+#: ../admin/admin.php:132
+msgid "Author Page"
+msgstr ""
+
+#: ../admin/admin.php:134
+msgid "You can filter theses pages on auto display option."
+msgstr ""
+
+#: ../admin/admin.php:139 ../admin/admin.php:207 ../admin/admin.php:265
+msgid "Only registered Users"
+msgstr ""
+
+#: ../admin/admin.php:141
+msgid "<strong>Only</strong> registered users have permission to like posts."
+msgstr ""
+
+#: ../admin/admin.php:148 ../admin/admin.php:216 ../admin/admin.php:274
+msgid "Do Not Log"
+msgstr ""
+
+#: ../admin/admin.php:149 ../admin/admin.php:217 ../admin/admin.php:275
+msgid "Logged By Cookie"
+msgstr ""
+
+#: ../admin/admin.php:150 ../admin/admin.php:218 ../admin/admin.php:276
+msgid "Logged By IP"
+msgstr ""
+
+#: ../admin/admin.php:151 ../admin/admin.php:219 ../admin/admin.php:277
+msgid "Logged By Cookie & IP"
+msgstr ""
+
+#: ../admin/admin.php:152 ../admin/admin.php:220 ../admin/admin.php:278
+msgid "Logged By Username"
+msgstr ""
+
+#: ../admin/admin.php:156 ../admin/admin.php:224 ../admin/admin.php:282
+msgid "Attention!"
+msgstr ""
+
+#: ../admin/admin.php:158 ../admin/admin.php:226 ../admin/admin.php:284
+msgid ""
+"If you select <strong>\"Do Not Log\"</strong> method: Any data logs can't "
+"save, There is no limitation in the like/dislike, unlike/undislike capacity "
+"do not work"
+msgstr ""
+
+#: ../admin/admin.php:159 ../admin/admin.php:227 ../admin/admin.php:285
+msgid ""
+"If you select <strong>\"Logged By Cookie\"</strong> method: Any data logs "
+"can't save, The like/dislike condition will be limited by SetCookie, unlike/"
+"undislike capacity do not work"
+msgstr ""
+
+#: ../admin/admin.php:160 ../admin/admin.php:228 ../admin/admin.php:286
+msgid ""
+"If you select <strong>\"Logged By IP\"</strong> method: Data logs will save "
+"for all users, the convey of like/dislike condition will check by user IP"
+msgstr ""
+
+#: ../admin/admin.php:161 ../admin/admin.php:229 ../admin/admin.php:287
+msgid ""
+"If you select <strong>\"Logged By Cookie & IP\"</strong> method: Data logs "
+"will save for all users, the convey of like/dislike condition will check by "
+"user IP & SetCookie"
+msgstr ""
+
+#: ../admin/admin.php:162 ../admin/admin.php:230 ../admin/admin.php:288
+msgid ""
+"If you select <strong>\"Logged By Username\"</strong> method: data logs only "
+"is saved for registered users, the convey of like/dislike condition will "
+"check by username, There is no permission for guest users to unlike/undislike"
+msgstr ""
+
+#: ../admin/admin.php:168 ../admin/admin.php:236 ../admin/admin.php:301
+msgid "Show Liked Users Box"
+msgstr ""
+
+#: ../admin/admin.php:170 ../admin/admin.php:238 ../admin/admin.php:303
+msgid ""
+"Active this option to show liked users avatars in the bottom of button like."
+msgstr ""
+
+#: ../admin/admin.php:175 ../admin/admin.php:243 ../admin/admin.php:308
+msgid "Size of Gravatars"
+msgstr ""
+
+#: ../admin/admin.php:176 ../admin/admin.php:244 ../admin/admin.php:309
+msgid "Size of Gravatars to return (max is 512)"
+msgstr ""
+
+#: ../admin/admin.php:179
+msgid "Users who have LIKED this post:"
+msgstr ""
+
+#: ../admin/admin.php:180 ../admin/admin.php:248 ../admin/admin.php:313
+msgid "Users Like Box Title"
+msgstr ""
+
+#: ../admin/admin.php:185
+msgid "Comments"
+msgstr ""
+
+#: ../admin/admin.php:192
 msgid ""
 "If you disable this option, you have to put manually this code on comments "
 "text"
 msgstr ""
 
-#: ../inc/wp-options.php:110
-msgid "Activity likes"
+#: ../admin/admin.php:209
+msgid ""
+"<strong>Only</strong> registered users have permission to like comments."
 msgstr ""
 
-#: ../inc/wp-options.php:114
+#: ../admin/admin.php:247
+msgid "Users who have LIKED this comment:"
+msgstr ""
+
+#: ../admin/admin.php:253
+msgid "BuddyPress"
+msgstr ""
+
+#: ../admin/admin.php:259
 msgid "<strong>On all buddypress activities</strong> at the top of activity"
 msgstr ""
 
-#: ../inc/wp-options.php:116
+#: ../admin/admin.php:260
 msgid ""
 "If you disable this option, you have to put manually this code on buddypres "
 "activities content"
 msgstr ""
 
-#: ../inc/wp-options.php:120
-msgid "Only registered Users"
+#: ../admin/admin.php:267
+msgid ""
+"<strong>Only</strong> registered users have permission to like activities."
 msgstr ""
 
-#: ../inc/wp-options.php:124 ../inc/wp-options.php:134
-#: ../inc/wp-options.php:144 ../inc/wp-options.php:154
-#: ../inc/wp-options.php:164
-msgid "Activate"
-msgstr ""
-
-#: ../inc/wp-options.php:126
-msgid "<strong>Only</strong> registered users have permission to like posts."
-msgstr ""
-
-#: ../inc/wp-options.php:130
+#: ../admin/admin.php:294
 msgid "BuddyPress Activity"
 msgstr ""
 
-#: ../inc/wp-options.php:136
+#: ../admin/admin.php:296
 msgid "insert new likes in buddyPress activity page"
 msgstr ""
 
-#: ../inc/wp-options.php:140
-msgid "Show Users Like Box"
-msgstr ""
-
-#: ../inc/wp-options.php:146
-msgid "Active this option to show users avatar in like box."
-msgstr ""
-
-#: ../inc/wp-options.php:150
-msgid "Format Number"
-msgstr ""
-
-#: ../inc/wp-options.php:156
-msgid "Convert numbers of Likes with string (kilobyte) format."
-msgstr ""
-
-#: ../inc/wp-options.php:160
-msgid "Custom Style"
-msgstr ""
-
-#: ../inc/wp-options.php:166
-msgid "Active this option to see custom color settings."
-msgstr ""
-
-#: ../inc/wp-options.php:170
-msgid "Button style"
-msgstr ""
-
-#: ../inc/wp-options.php:175 ../inc/wp-options.php:192
-msgid "Background"
-msgstr ""
-
-#: ../inc/wp-options.php:179 ../inc/wp-options.php:196
-msgid "Border Color"
-msgstr ""
-
-#: ../inc/wp-options.php:183 ../inc/wp-options.php:200
-msgid "Text Color"
-msgstr ""
-
-#: ../inc/wp-options.php:187
-msgid "Counter Style"
-msgstr ""
-
-#: ../inc/wp-ulike-buddypress.php:34 ../inc/wp-ulike-buddypress.php:50
-#: ../inc/wp-ulike-comments.php:34 ../inc/wp-ulike-comments.php:50
-#: ../inc/wp-ulike-posts.php:35 ../inc/wp-ulike-posts.php:51
-msgid "Already Voted"
-msgstr ""
-
-#: ../inc/wp-ulike-buddypress.php:61
+#: ../admin/admin.php:312
 msgid "Users who have liked this activity:"
 msgstr ""
 
-#: ../inc/wp-ulike-buddypress.php:73
-msgid "You need to login in order to like this activity: "
+#: ../admin/admin.php:318
+msgid "Customize"
 msgstr ""
 
-#: ../inc/wp-ulike-buddypress.php:73 ../inc/wp-ulike-comments.php:73
-#: ../inc/wp-ulike-posts.php:75
-msgid "click here"
+#: ../admin/admin.php:323
+msgid "Custom Style"
 msgstr ""
 
-#: ../inc/wp-ulike-comments.php:61
-msgid "Users who have LIKED this comment:"
+#: ../admin/admin.php:328
+msgid "Active this option to see the custom style settings."
 msgstr ""
 
-#: ../inc/wp-ulike-comments.php:73
-msgid "You need to login in order to like this comment: "
+#: ../admin/admin.php:332
+msgid "Button style"
 msgstr ""
 
-#: ../inc/wp-ulike-posts.php:63
-msgid "Users who have LIKED this post:"
+#: ../admin/admin.php:333 ../admin/admin.php:346
+msgid "Background"
 msgstr ""
 
-#: ../inc/wp-ulike-posts.php:75
-msgid "You need to login in order to like this post: "
+#: ../admin/admin.php:337 ../admin/admin.php:350
+msgid "Border Color"
 msgstr ""
 
-#: ../inc/wp-widget.php:8
+#: ../admin/admin.php:341 ../admin/admin.php:354
+msgid "Text Color"
+msgstr ""
+
+#: ../admin/admin.php:345
+msgid "Counter Style"
+msgstr ""
+
+#: ../admin/admin.php:358
+msgid "Loading Animation"
+msgstr ""
+
+#: ../admin/admin.php:364
+msgid "Dashboard"
+msgstr ""
+
+#: ../admin/admin.php:369
+msgid "Visit Post Logs Menu"
+msgstr ""
+
+#: ../admin/admin.php:371
+msgid "If you deactivate this option, \"Post Likes Logs\" Menu will hidden."
+msgstr ""
+
+#: ../admin/admin.php:376
+msgid "Visit Comment Logs Menu"
+msgstr ""
+
+#: ../admin/admin.php:378
+msgid "If you deactivate this option, \"Comment Likes Logs\" Menu will hidden."
+msgstr ""
+
+#: ../admin/admin.php:383
+msgid "Visit Activity Logs Menu"
+msgstr ""
+
+#: ../admin/admin.php:385
+msgid ""
+"If you deactivate this option, \"Activity Likes Logs\" Menu will hidden."
+msgstr ""
+
+#: ../admin/admin.php:397 ../admin/logs.php:34
+msgid "Post Likes Logs"
+msgstr ""
+
+#: ../admin/admin.php:401 ../admin/logs.php:155
+msgid "Comment Likes Logs"
+msgstr ""
+
+#: ../admin/admin.php:405 ../admin/logs.php:280
+msgid "Activity Likes Logs"
+msgstr ""
+
+#: ../admin/admin.php:408
+msgid "About WP ULike"
+msgstr ""
+
+#: ../admin/classes/class-settings.php:16
+msgid "Custom Settings"
+msgstr ""
+
+#: ../admin/classes/class-settings.php:27
+msgid "Save Settings"
+msgstr ""
+
+#: ../admin/classes/class-settings.php:28
+msgid "Reset Settings"
+msgstr ""
+
+#: ../admin/classes/class-settings.php:91
+msgid "Default settings have been reset."
+msgstr ""
+
+#: ../admin/classes/class-settings.php:167
+msgid ""
+"Do you really want to reset all these settings to their default values ?"
+msgstr ""
+
+#: ../admin/classes/class-settings.php:232
+#: ../admin/classes/class-settings.php:243
+#: ../admin/classes/class-settings.php:267
+msgid "No options defined."
+msgstr ""
+
+#: ../admin/classes/class-settings.php:254
+#, php-format
+msgid "Select %s"
+msgstr ""
+
+#: ../admin/classes/class-settings.php:255
+#, php-format
+msgid "Remove %s"
+msgstr ""
+
+#: ../admin/classes/class-settings.php:279
+msgid "No action defined."
+msgstr ""
+
+#: ../admin/classes/class-widget.php:8
 msgid "WP Ulike - Most Liked Posts"
 msgstr ""
 
-#: ../inc/wp-widget.php:9
+#: ../admin/classes/class-widget.php:9
 msgid "This widget allows you to show most liked posts."
 msgstr ""
 
-#: ../inc/wp-widget.php:51
+#: ../admin/classes/class-widget.php:51
 msgid "Most Liked Posts"
 msgstr ""
 
-#: ../inc/wp-widget.php:55 ../inc/wp-widget.php:136
+#: ../admin/classes/class-widget.php:55 ../admin/classes/class-widget.php:138
+#: ../admin/classes/class-widget.php:220
 msgid "Title:"
 msgstr ""
 
-#: ../inc/wp-widget.php:60
+#: ../admin/classes/class-widget.php:60
 msgid "Number of posts to show:"
 msgstr ""
 
-#: ../inc/wp-widget.php:66
-msgid "Activate post like count"
+#: ../admin/classes/class-widget.php:66 ../admin/classes/class-widget.php:149
+#: ../admin/classes/class-widget.php:236
+msgid "Activate Like Counter"
 msgstr ""
 
-#: ../inc/wp-widget.php:87
+#: ../admin/classes/class-widget.php:88
+msgid "WP ULike - Most Liked Comments"
+msgstr ""
+
+#: ../admin/classes/class-widget.php:89
+msgid "This widget allows you to show most liked comments."
+msgstr ""
+
+#: ../admin/classes/class-widget.php:109
+msgid "on"
+msgstr ""
+
+#: ../admin/classes/class-widget.php:143
+msgid "Number of comments to show:"
+msgstr ""
+
+#: ../admin/classes/class-widget.php:170
 msgid "WP Ulike - Most Liked Users"
 msgstr ""
 
-#: ../inc/wp-widget.php:88
+#: ../admin/classes/class-widget.php:171
 msgid "This widget allows you to show most liked users avatars."
 msgstr ""
 
-#: ../inc/wp-widget.php:106 ../wp-ulike.php:87
-msgid "Like"
-msgstr ""
-
-#: ../inc/wp-widget.php:132
+#: ../admin/classes/class-widget.php:216
 msgid "Most Liked Users"
 msgstr ""
 
-#: ../inc/wp-widget.php:141
+#: ../admin/classes/class-widget.php:225
 msgid "Number of users to show:"
 msgstr ""
 
-#: ../inc/wp-widget.php:146
+#: ../admin/classes/class-widget.php:230
 msgid "User avatar size:"
 msgstr ""
 
-#: ../inc/wp-widget.php:152
-msgid "Activate user like count"
+#: ../admin/logs.php:33 ../admin/logs.php:154 ../admin/logs.php:279
+msgid "WP ULike Logs"
+msgstr ""
+
+#: ../admin/logs.php:43 ../admin/logs.php:164 ../admin/logs.php:289
+msgid "ID"
+msgstr ""
+
+#: ../admin/logs.php:44 ../admin/logs.php:165 ../admin/logs.php:290
+msgid "Username"
+msgstr ""
+
+#: ../admin/logs.php:45 ../admin/logs.php:166 ../admin/logs.php:291
+msgid "Status"
+msgstr ""
+
+#: ../admin/logs.php:46
+msgid "Post ID"
+msgstr ""
+
+#: ../admin/logs.php:47
+msgid "Post Title"
+msgstr ""
+
+#: ../admin/logs.php:48 ../admin/logs.php:170 ../admin/logs.php:293
+msgid "Date / Time"
+msgstr ""
+
+#: ../admin/logs.php:49 ../admin/logs.php:171 ../admin/logs.php:294
+msgid "IP"
+msgstr ""
+
+#: ../admin/logs.php:67 ../admin/logs.php:189 ../admin/logs.php:312
+msgid "Guest User"
+msgstr ""
+
+#: ../admin/logs.php:104
+msgid "Post Likes Logs Stats"
+msgstr ""
+
+#: ../admin/logs.php:108 ../admin/logs.php:233 ../admin/logs.php:350
+msgid "Total Users Liked:"
+msgstr ""
+
+#: ../admin/logs.php:112
+msgid "Total Posts Liked:"
+msgstr ""
+
+#: ../admin/logs.php:116 ../admin/logs.php:241 ../admin/logs.php:358
+msgid "Total Likes Sum:"
+msgstr ""
+
+#: ../admin/logs.php:123 ../admin/logs.php:248 ../admin/logs.php:365
+msgid ""
+"<strong>ERROR:</strong> No Record Found. (This problem is created because "
+"you don't have any data on this table)"
+msgstr ""
+
+#: ../admin/logs.php:167
+msgid "Comment ID"
+msgstr ""
+
+#: ../admin/logs.php:168
+msgid "Comment Author"
+msgstr ""
+
+#: ../admin/logs.php:169
+msgid "Comment Text"
+msgstr ""
+
+#: ../admin/logs.php:229
+msgid "Comment Likes Logs Stats"
+msgstr ""
+
+#: ../admin/logs.php:237
+msgid "Total Comments Liked:"
+msgstr ""
+
+#: ../admin/logs.php:292
+msgid "Activity ID"
+msgstr ""
+
+#: ../admin/logs.php:346
+msgid "Activity Likes Logs Stats"
+msgstr ""
+
+#: ../admin/logs.php:354
+msgid "Total Activities Liked:"
+msgstr ""
+
+#: ../inc/wp-functions.php:236
+msgid "WP ULike Activity"
+msgstr ""
+
+#: ../inc/wp-functions.php:246 ../inc/wp-functions.php:256
+msgid "liked"
+msgstr ""
+
+#: ../inc/wp-functions.php:246
+msgid "comment"
+msgstr ""
+
+#: ../inc/wp-strings.php:3
+msgid "WP ULike - Most Liked Activities"
+msgstr ""
+
+#: ../inc/wp-strings.php:4
+msgid "This widget allows you to show most liked activities."
+msgstr ""
+
+#: ../inc/wp-strings.php:5
+msgid "Most Liked Activities"
+msgstr ""
+
+#: ../inc/wp-strings.php:6
+msgid "Users Login Text"
+msgstr ""
+
+#: ../inc/wp-strings.php:7
+msgid "Allow To Like"
+msgstr ""
+
+#: ../inc/wp-strings.php:8
+msgid "Guests Only"
+msgstr ""
+
+#: ../inc/wp-strings.php:9
+msgid "Registered Users Only"
+msgstr ""
+
+#: ../inc/wp-strings.php:10
+msgid "Registered Users And Guests"
+msgstr ""
+
+#: ../inc/wp-strings.php:11
+msgid "Who Is Allowed To Like?"
+msgstr ""
+
+#: ../inc/wp-strings.php:12
+msgid "Filter Options:"
+msgstr ""
+
+#: ../inc/wp-strings.php:13
+msgid "Sort Options:"
+msgstr ""
+
+#: ../inc/wp-strings.php:14
+msgid "Themes"
+msgstr ""
+
+#: ../inc/wp-strings.php:15
+msgid "Dislike"
+msgstr ""
+
+#: ../inc/wp-strings.php:16
+msgid "Dislike Support"
+msgstr ""
+
+#: ../inc/wp-strings.php:17
+msgid "Text After Dislike"
+msgstr ""
+
+#: ../inc/wp-strings.php:18
+msgid "Show Counter"
+msgstr ""
+
+#: ../inc/wp-strings.php:19
+msgid "Show tooltips"
+msgstr ""
+
+#: ../inc/wp-strings.php:20
+msgid "Alignment"
+msgstr ""
+
+#: ../inc/wp-strings.php:21
+msgid "Left"
+msgstr ""
+
+#: ../inc/wp-strings.php:22
+msgid "Center"
+msgstr ""
+
+#: ../inc/wp-strings.php:23
+msgid "Right"
+msgstr ""
+
+#: ../inc/wp-strings.php:24
+msgid "Cookie Life time"
+msgstr ""
+
+#: ../inc/wp-strings.php:25
+msgid "BuddyPress Notifications"
+msgstr ""
+
+#: ../inc/wp-ulike-buddypress.php:45
+msgid "You need to login in order to like this activity: "
+msgstr ""
+
+#: ../inc/wp-ulike-buddypress.php:45 ../inc/wp-ulike-comments.php:45
+#: ../inc/wp-ulike-posts.php:46
+msgid "click here"
+msgstr ""
+
+#: ../inc/wp-ulike-comments.php:45
+msgid "You need to login in order to like this comment: "
+msgstr ""
+
+#: ../inc/wp-ulike-posts.php:46
+msgid "You need to login in order to like this post: "
 msgstr ""
 
 #: ../wp-ulike.php:17
 msgid ""
-"WP ULike plugin allows to integrate Like Button into your WordPress website "
-"to allow your visitors to like pages, posts AND comments. Its very simple to "
-"use and support a widget to display the most liked posts."
-msgstr ""
-
-#: ../wp-ulike.php:88
-msgid "You Like This"
-msgstr ""
-
-#: ../wp-ulike.php:89
-msgid "You Dislike This"
+"WP ULike plugin allows to integrate a beautiful Ajax Like Button into your "
+"wordPress website to allow your visitors to like and unlike pages, posts, "
+"comments AND buddypress activities. Its very simple to use and supports many "
+"options."
 msgstr ""

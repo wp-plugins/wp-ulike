@@ -5,7 +5,7 @@ Author: Ali Mirzaei
 Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin, buddypress like system, buddypress votes, comment like system, voting button
 Requires at least: 3.5
 Tested up to: 4.0.1
-Stable tag: 1.8
+Stable tag: 1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,7 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   Visitors do not have to register or log in to use the Like Button.
 *   Compatible with WP version 3.0 & above.
 *   Added automatically (no Code required).
+*   Logging method options.
 *   Shortcode support.
 *   Comment likes support.
 *   Full likes logs support.
@@ -33,8 +34,8 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   Simple user like box with avatar support.
 *   Custom Like-Dislike Texts.
 *   Simple custom style with color picker settings.
-*   Widget to show 'Most Liked Posts' And 'Most Liked Users' avatars.
-*   Simple configuration panel.
+*   Widget to show 'Most Liked Posts','Most Liked Comments' And 'Most Liked Users Avatars'.
+*   Powerful configuration panel.
 *   Support RTL & language file.
 *   And so on...
 
@@ -52,7 +53,7 @@ Also you can use this function and shortcode for the post likes:
 *   English
 *   Persian
 *   France
-*   Chinese (Thanks Changmeng Hu)
+*   Chinese (Thanks Changmeng Hu & cmhello)
 *   Chinese Tradition (Thanks Arefly)
 *   Dutch (Thanks Joey)
 
@@ -110,7 +111,36 @@ endif;
 ?>
 </code>
 
+= How To Sort Most Liked Posts?  =
+* Use this query on your theme:
+<code> 
+<?php
+	$the_query = new WP_Query(array(
+	'post_status' =>'published',
+	'post_type' =>'post',
+	'orderby' => 'meta_value_num',
+	'meta_key' => '_liked',
+	'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1
+	));
+?>
+</code>
+
 == Changelog ==
+
+= 1.9 =
+* Added: New logging method options.
+* Added: Option for auto display position.
+* Added: Most liked comments widget.
+* Added: Option to return initial like button after unlike.
+* Added: unlike ability for the guest users.
+* Added: Comment text column to the comments logs page.
+* Added: supporting the date (date_i18n) in localized format. (Logs Pages)
+* Added: New changes in to the logs pages.
+* Fixed: ToolTip problem with BuddyPress activities in the chrome browser.
+* Updated: Plugin FAQ page.
+* Updated: Persian language file. (Thanks Me :))
+* Updated: Chinese language file. (Thanks cmhello)
+* Updated: Dutch language file. (Thanks Joey)
 
 = 1.8 =
 * Added: New setting system with separate tabs.

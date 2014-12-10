@@ -12,11 +12,23 @@
 		
 	//Insert ULike button to the posts
 	if (wp_ulike_get_setting( 'wp_ulike_posts', 'auto_display' ) == '1') {
-		function wp_ulike_put_posts($content) {		
+		function wp_ulike_put_posts($content) {
+			//auto display position
+			$position = wp_ulike_get_setting( 'wp_ulike_posts', 'auto_display_position');
+			$button = '';
+			
+			//add wp_ulike function
 			if(	!is_feed() && wp_ulike_post_auto_display_filters()){
-				$content.= wp_ulike('put');
+				$button = wp_ulike('put');
 			}
-			return $content;
+			
+			//return by position
+			if($position=='bottom')
+			return $content . $button;
+			if($position=='top')
+			return $button . $content;
+			if($position=='top_bottom')
+			return $button . $content . $button;
 		}
 
 		add_filter('the_content', 'wp_ulike_put_posts');
@@ -45,7 +57,7 @@
 		return 1;
 	}
 	
-	//get user status (like or unlike)
+	//get user status by user_ID (like or unlike)
 	function wp_ulike_get_user_post_status($post_ID,$user_ID){
 		global $wpdb;
 		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike WHERE post_id = '$post_ID' AND user_id = '$user_ID'");
@@ -54,6 +66,18 @@
 		else
 		return "unlike";
 	}
+	
+	//get user status by user_IP (like or unlike)
+	function wp_ulike_get_user_post_status_byIP($post_ID,$user_IP){
+		global $wpdb;
+		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike WHERE post_id = '$post_ID' AND ip = '$user_IP'");
+		if ($like_status == "like")
+		return "like";
+		else
+		return "unlike";
+	}
+	
+	
 	
 	//get users data and list their avatar
 	function wp_ulike_get_user_posts_data($post_ID,$user_ID){
@@ -64,8 +88,8 @@
 		
 		foreach ( $get_users as $get_user ) 
 		{
-			if ($user_ID != $get_user->user_id):
 			$user_info = get_userdata($get_user->user_id);
+			if ($user_ID != $get_user->user_id && $user_info):
 			$avatar_size = wp_ulike_get_setting( 'wp_ulike_posts', 'users_liked_box_avatar_size');
 			$users_list .= '<li><a class="user-tooltip" title="'.$user_info->display_name.'">'.get_avatar( $user_info->user_email, $avatar_size, '' , 'avatar').'</a></li>';
 			endif;
@@ -87,10 +111,21 @@
 *******************************************************/	
 	
 	//Insert ULike button to the comments
-	if (wp_ulike_get_setting( 'wp_ulike_comments', 'auto_display' ) == '1') {
+	if (wp_ulike_get_setting( 'wp_ulike_comments', 'auto_display' ) == '1'  && !is_admin()) {
 		function wp_ulike_put_comments($content) {
-			$content.= wp_ulike_comments('put');
-			return $content;
+			//auto display position
+			$position = wp_ulike_get_setting( 'wp_ulike_comments', 'auto_display_position');
+			
+			//add wp_ulike_comments function
+			$button = wp_ulike_comments('put');
+			
+			//return by position
+			if($position=='bottom')
+			return $content . $button;
+			if($position=='top')
+			return $button . $content;
+			if($position=='top_bottom')
+			return $button . $content . $button;
 		}
 		
 		add_filter('comment_text', 'wp_ulike_put_comments');
@@ -106,6 +141,16 @@
 		return "unlike";
 	}
 	
+	//get user status by user_IP (like or unlike)
+	function wp_ulike_get_user_comments_status_byIP($CommentID,$user_IP){
+		global $wpdb;
+		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike_comments WHERE comment_id = '$CommentID' AND ip = '$user_IP'");
+		if ($like_status == "like")
+		return "like";
+		else
+		return "unlike";
+	}
+	
 	//get users data and list their avatar
 	function wp_ulike_get_user_comments_data($CommentID,$user_ID){
 		global $wpdb;
@@ -115,8 +160,8 @@
 		
 		foreach ( $get_users as $get_user ) 
 		{
-			if ($user_ID != $get_user->user_id):
 			$user_info = get_userdata($get_user->user_id);
+			if ($user_ID != $get_user->user_id && $user_info):
 			$avatar_size = wp_ulike_get_setting( 'wp_ulike_comments', 'users_liked_box_avatar_size');
 			$users_list .= '<li><a class="user-tooltip" title="'.$user_info->display_name.'">'.get_avatar( $user_info->user_email, $avatar_size, '' , 'avatar').'</a></li>';
 			endif;
@@ -150,8 +195,8 @@
 		
 		foreach ( $get_users as $get_user ) 
 		{
-			if ($user_ID != $get_user->user_id):
 			$user_info = get_userdata($get_user->user_id);
+			if ($user_ID != $get_user->user_id && $user_info):
 			$avatar_size = wp_ulike_get_setting( 'wp_ulike_buddypress', 'users_liked_box_avatar_size');
 			$users_list .= '<li><a class="user-tooltip" title="'.$user_info->display_name.'">'.get_avatar( $user_info->user_email, $avatar_size, '' , 'avatar').'</a></li>';
 			endif;
@@ -170,6 +215,16 @@
 		else
 		return "unlike";
 	}
+	
+	//get user status by user_IP (like or unlike)
+	function wp_ulike_get_user_activities_status_byIP($activityID,$user_IP){
+		global $wpdb;
+		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike_activities WHERE activity_id = '$activityID' AND ip = '$user_IP'");
+		if ($like_status == "like")
+		return "like";
+		else
+		return "unlike";
+	}	
 	
 	//register activity action
 	add_action( 'bp_register_activity_actions', 'wp_ulike_register_activity_actions' );	
@@ -233,6 +288,16 @@
 		}
 		
 		return $ip;
+	}
+
+	function wp_ulike_reutrn_userID($user_ID){		
+		if(!is_user_logged_in()){
+			$ip = wp_ulike_get_real_ip();
+			$user_ip = ip2long($ip);
+			return $user_ip;
+		}
+		else
+			return $user_ID;
 	}	
 	
 	//get custom style settings

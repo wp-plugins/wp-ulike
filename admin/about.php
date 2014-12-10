@@ -25,6 +25,17 @@ function wp_ulike_about_page() {
     background-color: #FFF;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
 }
+.wp_ulike_version {
+    display: inline-block;
+    position: absolute;
+    top: 54px;
+	left:0;
+    padding: 5px 10px;
+    background: #e74c3c;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: normal;
+}
 <?php if(is_rtl()): ?>
 .about-wrap .ulike-badge {
     position: absolute;
@@ -71,24 +82,43 @@ function wp_ulike_about_page() {
 
 		<div class="feature-section col two-col">
 			<div>
-				<h4><?php echo _e('New setting panel','alimir'); ?> (WP ULike 1.8)</h4>
-				<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/new-setting.png" alt="WP ULike" />
+				<h4><?php echo _e('Most Liked Comments','alimir'); ?> <div class="wp_ulike_version">WP ULike 1.9</div></h4>
+				<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/most-liked-comments-widget.jpg" alt="WP ULike" />
 			</div>
 
 			<div class="last-feature">
-				<h4><?php echo _e('Better coding on plugin files','alimir'); ?> (WP ULike 1.8)</h4>
-				<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/new-coding.png" alt="WP ULike" />
+				<h4><?php echo _e('Logging Method','alimir'); ?> <div class="wp_ulike_version">WP ULike 1.9</div></h4>
+				<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/loggin-method-option.jpg" alt="WP ULike" />
 			</div>
 		</div>	
 		
 		<div class="feature-section col two-col">
+
 			<div>
-				<h4><?php echo _e('Buddypress likes support','alimir'); ?> (WP ULike 1.7)</h4>
+				<h4><?php echo _e('New options in logs pages','alimir'); ?> <small class="wp_ulike_version">WP ULike 1.9</small></h4>
+				<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/logs-pages-options.jpg" alt="WP ULike" />
+			</div>
+			
+			<div class="last-feature">
+				<h4><?php echo _e('New setting panel','alimir'); ?> <small class="wp_ulike_version">WP ULike 1.8</small></h4>
+				<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/new-setting.png" alt="WP ULike" />
+			</div>
+
+		</div>	
+		
+		<div class="feature-section col three-col">
+			<div>
+				<h4><?php echo _e('Better coding on plugin files','alimir'); ?> <small class="wp_ulike_version">WP ULike 1.8</small></h4>
+				<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/new-coding.png" alt="WP ULike" />
+			</div>		
+		
+			<div>
+				<h4><?php echo _e('Buddypress likes support','alimir'); ?> <small class="wp_ulike_version">WP ULike 1.7</small></h4>
 				<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/activity-likes.png" alt="WP ULike" />
 			</div>
 
 			<div class="last-feature">
-				<h4><?php echo _e('Likes logs support','alimir'); ?> (WP ULike 1.7)</h4>
+				<h4><?php echo _e('Likes logs support','alimir'); ?> <small class="wp_ulike_version">WP ULike 1.7</small></h4>
 				<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/likes-logs.png" alt="WP ULike" />
 			</div>
 		</div>
@@ -112,7 +142,7 @@ function wp_ulike_about_page() {
 	<li>English</li>
 	<li>Persian</li>
 	<li>France</li>
-	<li>Chinese (Thanks Changmeng Hu)</li>
+	<li>Chinese (Thanks "Changmeng Hu" AND "CMHello")</li>
 	<li>Chinese Tradition (Thanks Arefly)</li>
 	<li>Dutch (Thanks Joey)</li>
 	</ul>

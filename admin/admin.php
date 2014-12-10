@@ -10,6 +10,7 @@
 
 	function wp_ulike_load_widget() {
 		register_widget( 'wp_ulike_posts_widget' );
+		register_widget( 'wp_ulike_comments_widget' );
 		register_widget( 'wp_ulike_users_widget' );
 	}
 	add_action( 'widgets_init', 'wp_ulike_load_widget' );
@@ -66,11 +67,18 @@
 			  'label' => __('Format Number', 'alimir'),
 			  'checkboxlabel' => __('Activate', 'alimir'),
 			  'description' => __('Convert numbers of Likes with string (kilobyte) format.', 'alimir') . '<strong> (WHEN? likes>=1000)</strong>'
-			),
+			),	
 			'text_after_like'    => array(
 			  'default'	=> __('Unlike','alimir'),
 			  'label' => __( 'Text After Like', 'alimir')
-			),		
+			),
+		    'return_initial_after_unlike'  => array(
+			  'type'  => 'checkbox',
+			  'default'	=> 0,
+			  'label' => __('Return To The Initial', 'alimir'),
+			  'checkboxlabel' => __('Activate', 'alimir'),
+			  'description' => __('Return to the initial Like button after Unlike. (Not Showing text after unlike)', 'alimir')
+		    ),			
 			'text_after_unlike'    => array(
 			  'default'	=> __('Like Me Again!','alimir'),
 			  'label' => __( 'Text After Unlike', 'alimir')
@@ -87,7 +95,7 @@
 		'updated'     => __('Settings saved.','alimir')
 	  )
 	);
-
+	
 	//activate other settings panels
 	$wp_ulike_setting->apply_settings( array(
 	  'wp_ulike_posts' => array(
@@ -100,6 +108,16 @@
 			'checkboxlabel' => __('Activate', 'alimir'),
 			'description' => __('If you disable this option, you have to put manually this code on wordpress while loop', 'alimir') . '<code dir="ltr">&lt;?php if(function_exists(\'wp_ulike\')) wp_ulike(\'get\'); ?&gt;</code>'
 		  ),
+		  'auto_display_position'  => array(
+			'type'    => 'radio',
+			'label'   => __( 'Auto Display Position','alimir'),
+			'default'	=> 'bottom',
+			'options' => array(
+			  'top'   => __('Top of Content', 'alimir'),
+			  'bottom'   => __('Bottom of Content', 'alimir'),
+			  'top_bottom' => __('Top and Bottom', 'alimir')
+			)
+		  ),		  
 		  'auto_display_filter'  => array(
 			'type'    => 'multi',
 			'label'   => __( 'Auto Display Filter','alimir' ),
@@ -121,6 +139,28 @@
 			'label' => __('Only registered Users', 'alimir'),
 			'checkboxlabel' => __('Activate', 'alimir'),
 			'description' => __('<strong>Only</strong> registered users have permission to like posts.', 'alimir')
+		  ),
+		  'logging_method' => array(
+			'type'    => 'select',
+			'default'	=> 'by_username',
+			'label'   => __( 'Logging Method','alimir'),
+			'options' => array(
+			  'do_not_log'   => __('Do Not Log', 'alimir'),
+			  'by_cookie'   => __('Logged By Cookie', 'alimir'),
+			  'by_ip' => __('Logged By IP', 'alimir'),
+			  'by_cookie_ip' => __('Logged By Cookie & IP', 'alimir'),
+			  'by_username' => __('Logged By Username', 'alimir')
+			),
+			'description' => '
+			<div class="warning settings-error attention-message" style="overflow:hidden; max-width:600px; display:none"><p>'.
+			'<strong>'.__('Attention!', 'alimir').'</strong>'.
+			'<ol>'.
+			'<li>'.__('If you select <strong>"Do Not Log"</strong> method: Any data logs can\'t save, There is no limitation in the like/dislike, unlike/undislike capacity do not work', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By Cookie"</strong> method: Any data logs can\'t save, The like/dislike condition will be limited by SetCookie, unlike/undislike capacity do not work', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By Cookie & IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP & SetCookie', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By Username"</strong> method: data logs only is saved for registered users, the convey of like/dislike condition will check by username, There is no permission for guest users to unlike/undislike', 'alimir').'</li>'.
+			'</ol></p></div>' 
 		  ),
 		  'users_liked_box'  => array(
 			'type'  => 'checkbox',
@@ -148,9 +188,19 @@
 			'type'  => 'checkbox',
 			'default'	=> 1,
 			'label' => __('Automatic display', 'alimir'),
-			'checkboxlabel' => __('<strong>On all comments</strong> at the bottom of the comment', 'alimir'),
+			'checkboxlabel' => __('Activate', 'alimir'),
 			'description' => __('If you disable this option, you have to put manually this code on comments text', 'alimir') . '<code dir="ltr">&lt;?php if(function_exists(\'wp_ulike_comments\')) wp_ulike_comments(\'get\'); ?&gt;</code>'
 		  ),
+		  'auto_display_position'  => array(
+			'type'    => 'radio',
+			'label'   => __( 'Auto Display Position','alimir'),
+			'default'	=> 'bottom',
+			'options' => array(
+			  'top'   => __('Top of Content', 'alimir'),
+			  'bottom'   => __('Bottom of Content', 'alimir'),
+			  'top_bottom' => __('Top and Bottom', 'alimir')
+			)
+		  ),			  
 		  'only_registered_users'  => array(
 			'type'  => 'checkbox',
 			'default'	=> 0,
@@ -158,6 +208,28 @@
 			'checkboxlabel' => __('Activate', 'alimir'),
 			'description' => __('<strong>Only</strong> registered users have permission to like comments.', 'alimir')
 		  ),
+		  'logging_method' => array(
+			'type'    => 'select',
+			'default'	=> 'by_username',
+			'label'   => __( 'Logging Method','alimir'),
+			'options' => array(
+			  'do_not_log'   => __('Do Not Log', 'alimir'),
+			  'by_cookie'   => __('Logged By Cookie', 'alimir'),
+			  'by_ip' => __('Logged By IP', 'alimir'),
+			  'by_cookie_ip' => __('Logged By Cookie & IP', 'alimir'),
+			  'by_username' => __('Logged By Username', 'alimir')
+			),
+			'description' => '
+			<div class="warning settings-error attention-message" style="overflow:hidden; max-width:600px; display:none"><p>'.
+			'<strong>'.__('Attention!', 'alimir').'</strong>'.
+			'<ol>'.
+			'<li>'.__('If you select <strong>"Do Not Log"</strong> method: Any data logs can\'t save, There is no limitation in the like/dislike, unlike/undislike capacity do not work', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By Cookie"</strong> method: Any data logs can\'t save, The like/dislike condition will be limited by SetCookie, unlike/undislike capacity do not work', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By Cookie & IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP & SetCookie', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By Username"</strong> method: data logs only is saved for registered users, the convey of like/dislike condition will check by username, There is no permission for guest users to unlike/undislike', 'alimir').'</li>'.
+			'</ol></p></div>' 
+		  ),		  
 		  'users_liked_box'  => array(
 			'type'  => 'checkbox',
 			'default'	=> 1,
@@ -194,6 +266,28 @@
 			'checkboxlabel' => __('Activate', 'alimir'),
 			'description' => __('<strong>Only</strong> registered users have permission to like activities.', 'alimir')
 		  ),
+		  'logging_method' => array(
+			'type'    => 'select',
+			'default'	=> 'by_cookie_ip',
+			'label'   => __( 'Logging Method','alimir'),
+			'options' => array(
+			  'do_not_log'   => __('Do Not Log', 'alimir'),
+			  'by_cookie'   => __('Logged By Cookie', 'alimir'),
+			  'by_ip' => __('Logged By IP', 'alimir'),
+			  'by_cookie_ip' => __('Logged By Cookie & IP', 'alimir'),
+			  'by_username' => __('Logged By Username', 'alimir')
+			),
+			'description' => '
+			<div class="warning settings-error attention-message" style="overflow:hidden; max-width:600px; display:none"><p>'.
+			'<strong>'.__('Attention!', 'alimir').'</strong>'.
+			'<ol>'.
+			'<li>'.__('If you select <strong>"Do Not Log"</strong> method: Any data logs can\'t save, There is no limitation in the like/dislike, unlike/undislike capacity do not work', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By Cookie"</strong> method: Any data logs can\'t save, The like/dislike condition will be limited by SetCookie, unlike/undislike capacity do not work', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By Cookie & IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP & SetCookie', 'alimir').'</li>'.
+			'<li>'.__('If you select <strong>"Logged By Username"</strong> method: data logs only is saved for registered users, the convey of like/dislike condition will check by username, There is no permission for guest users to unlike/undislike', 'alimir').'</li>'.
+			'</ol></p></div>' 
+		  ),		  
 		  'new_likes_activity'  => array(
 			'type'  => 'checkbox',
 			'default'	=> 0,

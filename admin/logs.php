@@ -41,12 +41,12 @@
 			<thead>
 				<tr>
 					<th width="2%"><?php _e('ID', 'alimir'); ?></th>
-					<th width="15%"><?php _e('Username', 'alimir'); ?></th>
-					<th width="10%"><?php _e('Status', 'alimir'); ?></th>
-					<th width="8%"><?php _e('Post ID', 'alimir'); ?></th>
-					<th width="35%"><?php _e('Post Title', 'alimir'); ?></th>
-					<th width="15%"><?php _e('Date / Time', 'alimir'); ?></th>
-					<th width="15%"><?php _e('IP', 'alimir'); ?></th>
+					<th width="10%"><?php _e('Username', 'alimir'); ?></th>
+					<th><?php _e('Status', 'alimir'); ?></th>
+					<th width="4%"><?php _e('Post ID', 'alimir'); ?></th>
+					<th><?php _e('Post Title', 'alimir'); ?></th>
+					<th width="20%"><?php _e('Date / Time', 'alimir'); ?></th>
+					<th><?php _e('IP', 'alimir'); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -61,20 +61,33 @@
 				<td>
 				<?php
 				$user_info = get_userdata($get_ulike_log->user_id);
+				if($user_info)
 				echo get_avatar( $user_info->user_email, 16, '' , 'avatar') . '<em> @' . $user_info->user_login . '</em>';
+				else
+				echo '<em> #'. __('Guest User','alimir') .'</em>';
 				?>
 				</td>
 				<td>
-				<?php echo $get_ulike_log->status; ?>
+				<?php
+				$get_the_status = $get_ulike_log->status;
+				if($get_the_status == 'like')
+				echo '<img src="'.plugin_dir_url( __FILE__ ).'/classes/img/like.png" alt="like" width="24"/>';
+				else
+				echo '<img src="'.plugin_dir_url( __FILE__ ).'/classes/img/unlike.png" alt="unlike" width="24"/>';
+				?>
 				</td>
 				<td>
 				<?php echo $get_ulike_log->post_id; ?>
 				</td>
 				<td>
-				<?php echo get_the_title($get_ulike_log->post_id); ?> 
+				<?php echo '<a href="'.get_permalink($get_ulike_log->post_id).'" title="'.get_the_title($get_ulike_log->post_id).'">'.get_the_title($get_ulike_log->post_id).'</a>'; ?> 
 				</td>
 				<td>
-				<?php echo $get_ulike_log->date_time; ?> 
+				<?php
+				$get_the_date = $get_ulike_log->date_time;
+				$get_the_date_timestamp = strtotime($get_the_date);
+				echo date_i18n(get_option( 'date_format' ) . ' @ ' . get_option( 'time_format' ), $get_the_date_timestamp );
+				?> 
 				</td>
 				<td>
 				<?php echo $get_ulike_log->ip; ?> 
@@ -154,12 +167,13 @@
 			<thead>
 				<tr>
 					<th width="2%"><?php _e('ID', 'alimir'); ?></th>
-					<th width="15%"><?php _e('Username', 'alimir'); ?></th>
-					<th width="10%"><?php _e('Status', 'alimir'); ?></th>
-					<th width="8%"><?php _e('Comment ID', 'alimir'); ?></th>
-					<th width="15%"><?php _e('Comment Author', 'alimir'); ?></th>
-					<th width="15%"><?php _e('Date / Time', 'alimir'); ?></th>
-					<th width="15%"><?php _e('IP', 'alimir'); ?></th>
+					<th width="10%"><?php _e('Username', 'alimir'); ?></th>
+					<th width="5%"><?php _e('Status', 'alimir'); ?></th>
+					<th width="3%"><?php _e('Comment ID', 'alimir'); ?></th>
+					<th><?php _e('Comment Author', 'alimir'); ?></th>
+					<th><?php _e('Comment Text', 'alimir'); ?></th>
+					<th width="20%"><?php _e('Date / Time', 'alimir'); ?></th>
+					<th><?php _e('IP', 'alimir'); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -174,11 +188,20 @@
 				<td>
 				<?php
 				$user_info = get_userdata($get_ulike_log->user_id);
+				if($user_info)
 				echo get_avatar( $user_info->user_email, 16, '' , 'avatar') . '<em> @' . $user_info->user_login . '</em>';
+				else
+				echo '<em> #'. __('Guest User','alimir') .'</em>';
 				?>
 				</td>
 				<td>
-				<?php echo $get_ulike_log->status; ?>
+				<?php
+				$get_the_status = $get_ulike_log->status;
+				if($get_the_status == 'like')
+				echo '<img src="'.plugin_dir_url( __FILE__ ).'/classes/img/like.png" alt="like" width="24"/>';
+				else
+				echo '<img src="'.plugin_dir_url( __FILE__ ).'/classes/img/unlike.png" alt="unlike" width="24"/>';
+				?>
 				</td>
 				<td>
 				<?php echo $get_ulike_log->comment_id; ?>
@@ -187,7 +210,14 @@
 				<?php echo get_comment_author($get_ulike_log->comment_id) ?> 
 				</td>
 				<td>
-				<?php echo $get_ulike_log->date_time; ?> 
+				<?php echo get_comment_text($get_ulike_log->comment_id) ?> 
+				</td>
+				<td>	
+				<?php
+				$get_the_date = $get_ulike_log->date_time;
+				$get_the_date_timestamp = strtotime($get_the_date);
+				echo date_i18n(get_option( 'date_format' ) . ' @ ' . get_option( 'time_format' ), $get_the_date_timestamp );			
+				?> 
 				</td>
 				<td>
 				<?php echo $get_ulike_log->ip; ?> 
@@ -266,10 +296,11 @@
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th><?php _e('ID', 'alimir'); ?></th>
-						<th><?php _e('Username', 'alimir'); ?></th>
+						<th width="3%"><?php _e('ID', 'alimir'); ?></th>
+						<th width="13%"><?php _e('Username', 'alimir'); ?></th>
 						<th><?php _e('Status', 'alimir'); ?></th>
-						<th><?php _e('Activity ID', 'alimir'); ?></th>
+						<th width="3%"><?php _e('Activity ID', 'alimir'); ?></th>
+						<th><?php _e('Permalink', 'alimir'); ?></th>
 						<th><?php _e('Date / Time', 'alimir'); ?></th>
 						<th><?php _e('IP', 'alimir'); ?></th>
 					</tr>
@@ -286,17 +317,33 @@
 					<td>
 					<?php
 					$user_info = get_userdata($get_ulike_log->user_id);
+					if($user_info)
 					echo get_avatar( $user_info->user_email, 16, '' , 'avatar') . '<em> @' . $user_info->user_login . '</em>';
+					else
+					echo '<em> #'. __('Guest User','alimir') .'</em>';
 					?>
 					</td>
 					<td>
-					<?php echo $get_ulike_log->status; ?>
+					<?php
+					$get_the_status = $get_ulike_log->status;
+					if($get_the_status == 'like')
+					echo '<img src="'.plugin_dir_url( __FILE__ ).'/classes/img/like.png" alt="like" width="24"/>';
+					else
+					echo '<img src="'.plugin_dir_url( __FILE__ ).'/classes/img/unlike.png" alt="unlike" width="24"/>';
+					?>
 					</td>
 					<td>
 					<?php echo $get_ulike_log->activity_id; ?>
 					</td>
 					<td>
-					<?php echo $get_ulike_log->date_time; ?> 
+					<?php printf( __( '<a href="%1$s">Activity Permalink</a>', 'alimir' ), bp_activity_get_permalink( $get_ulike_log->activity_id ) ); ?>
+					</td>
+					<td>
+					<?php
+					$get_the_date = $get_ulike_log->date_time;
+					$get_the_date_timestamp = strtotime($get_the_date);
+					echo date_i18n(get_option( 'date_format' ) . ' @ ' . get_option( 'time_format' ), $get_the_date_timestamp );			
+					?>
 					</td>
 					<td>
 					<?php echo $get_ulike_log->ip; ?> 

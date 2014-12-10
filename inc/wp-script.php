@@ -4,12 +4,16 @@
 add_action('init', 'wp_ulike_enqueue_scripts');
 function wp_ulike_enqueue_scripts() {
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script('wp_ulike', plugins_url('assets/js/wp-ulike.js', dirname(__FILE__)), array('jquery'));	
+	wp_enqueue_script('wp_ulike', plugins_url('assets/js/wp-ulike-scripts.js', dirname(__FILE__)), array('jquery'), '1.0.0');
+	wp_enqueue_script('wp_ulike_plugins', plugins_url('assets/js/wp-ulike-plugins.js', dirname(__FILE__)), array('jquery'), '1.0.0');	
 
     wp_localize_script( 'wp_ulike', 'ulike_obj', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'text_after_like' => wp_ulike_get_setting( 'wp_ulike_general', 'text_after_like'),
-        'text_after_unlike' => wp_ulike_get_setting( 'wp_ulike_general', 'text_after_unlike')
+        'text_after_unlike' => wp_ulike_get_setting( 'wp_ulike_general', 'text_after_unlike'),
+        'button_text' => wp_ulike_get_setting( 'wp_ulike_general', 'button_text'),
+        'button_type' => wp_ulike_get_setting( 'wp_ulike_general', 'button_type'),
+		'return_initial_after_unlike' => wp_ulike_get_setting( 'wp_ulike_general', 'return_initial_after_unlike')
     ));
 	add_action('wp_ajax_ulikeprocess','wp_ulike_process');
 	add_action('wp_ajax_nopriv_ulikeprocess', 'wp_ulike_process');
