@@ -1,0 +1,770 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP ULike\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-25 12:58+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Alimir <info@alimir.ir>\n"
+"Language-Team: 倡萌@WordPress大学 <admin@cmhello.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../admin/about.php:45
+msgid "Welcome to WP ULike"
+msgstr "欢迎使用 WP ULike"
+
+#: ../admin/about.php:47
+msgid ""
+"Thank you for choosing WP ULike! This version is our leanest and most "
+"powerful version yet."
+msgstr "感谢您选择 WP ULike！这个版本是我们目前最轻巧、最强大的版本哦！"
+
+#: ../admin/about.php:48
+msgid "Visit our homepage"
+msgstr "访问我们的主页"
+
+#: ../admin/about.php:53
+msgid "Getting Started"
+msgstr "开始"
+
+#: ../admin/about.php:54
+msgid "Credits"
+msgstr "积分"
+
+#: ../admin/about.php:55
+msgid "Support"
+msgstr "支持"
+
+#: ../admin/about.php:56
+msgid "FAQ"
+msgstr "常见问答"
+
+#: ../admin/about.php:57
+msgid "Reviews"
+msgstr "点评"
+
+#: ../admin/about.php:58
+msgid "Contact"
+msgstr "联系"
+
+#: ../admin/about.php:70
+msgid "Novelty Of WP ULike"
+msgstr "WP ULike 的新特色"
+
+#: ../admin/about.php:74
+msgid "New setting panel"
+msgstr "新设置面板"
+
+#: ../admin/about.php:79
+msgid "Better coding on plugin files"
+msgstr "更好的文件编码"
+
+#: ../admin/about.php:86
+msgid "Buddypress likes support"
+msgstr "Buddypress 喜欢支持"
+
+#: ../admin/about.php:91
+msgid "Likes logs support"
+msgstr "喜欢日志支持"
+
+#: ../admin/about.php:100
+msgid "WP ULike is created by many love and time. Enjoy it :)"
+msgstr "WP ULike 已经使用了很多关爱和时间来创建，好好享用吧 :)"
+
+#: ../admin/about.php:101
+msgid "Project Leaders"
+msgstr "项目负责人"
+
+#: ../admin/about.php:106
+msgid "Project Lead & Developer"
+msgstr "项目主管和开发"
+
+#: ../admin/about.php:110
+msgid "Translations"
+msgstr "翻译"
+
+#: ../admin/about.php:120
+msgid "Like this plugin?"
+msgstr "喜欢这个插件？"
+
+#: ../admin/about.php:121
+msgid ""
+"Show your support by Rating 5 Star in <a href=\"http://wordpress.org/plugins/"
+"wp-ulike\"> Plugin Directory reviews</a>"
+msgstr ""
+"支持本插件，请在 <a href=\"http://wordpress.org/plugins/wp-ulike\"> 插件目录"
+"评论 </a> 提交 5 星级投票"
+
+#: ../admin/admin.php:35
+msgid "WP ULike Settings"
+msgstr "WP ULike 设置"
+
+#: ../admin/admin.php:38 ../wp-ulike.php:16
+msgid "WP ULike"
+msgstr "WP ULike"
+
+#: ../admin/admin.php:43
+msgid "General"
+msgstr "常规"
+
+#: ../admin/admin.php:47
+msgid "Button Type"
+msgstr "按钮样式"
+
+#: ../admin/admin.php:50
+msgid "Icon"
+msgstr "图标"
+
+#: ../admin/admin.php:51
+msgid "Text"
+msgstr "文本"
+
+#: ../admin/admin.php:55 ../admin/classes/class-widget.php:106
+msgid "Like"
+msgstr "喜欢"
+
+#: ../admin/admin.php:56
+msgid "Button Text"
+msgstr "按钮文本"
+
+#: ../admin/admin.php:60
+msgid "Button Icon"
+msgstr "按钮图标"
+
+#: ../admin/admin.php:61 ../admin/admin.php:250
+msgid "Best size: 16x16"
+msgstr "最适合的大小： 16x16"
+
+#: ../admin/admin.php:66
+msgid "Format Number"
+msgstr "格式化数字"
+
+#: ../admin/admin.php:67 ../admin/admin.php:107 ../admin/admin.php:114
+#: ../admin/admin.php:143 ../admin/admin.php:150 ../admin/admin.php:179
+#: ../admin/admin.php:186 ../admin/admin.php:193 ../admin/admin.php:215
+#: ../admin/admin.php:261 ../admin/admin.php:268 ../admin/admin.php:275
+msgid "Activate"
+msgstr "激活"
+
+#: ../admin/admin.php:68
+msgid "Convert numbers of Likes with string (kilobyte) format."
+msgstr "使用字符串（千字节）格式化喜欢数目"
+
+#: ../admin/admin.php:71
+msgid "Unlike"
+msgstr "不喜欢"
+
+#: ../admin/admin.php:72
+msgid "Text After Like"
+msgstr "[喜欢]后的文字"
+
+#: ../admin/admin.php:75
+msgid "Like Me Again!"
+msgstr "再喜欢一次！"
+
+#: ../admin/admin.php:76
+msgid "Text After Unlike"
+msgstr "[不喜欢]后的文字"
+
+#: ../admin/admin.php:79
+msgid "You have not permission to unlike"
+msgstr "您没有权限选择不喜欢"
+
+#: ../admin/admin.php:80
+msgid "Permission Text"
+msgstr "权限文本"
+
+#: ../admin/admin.php:87
+msgid "Settings saved."
+msgstr "设置已保存"
+
+#: ../admin/admin.php:94
+msgid "Posts"
+msgstr "文章"
+
+#: ../admin/admin.php:99 ../admin/admin.php:135 ../admin/admin.php:171
+msgid "Automatic display"
+msgstr "自动显示"
+
+#: ../admin/admin.php:100
+msgid ""
+"<strong>On all posts</strong> (home, archives, search) at the bottom of the "
+"post"
+msgstr "<strong>在所有文章</strong>（首页、存档、搜索）文章的底部"
+
+#: ../admin/admin.php:101
+msgid ""
+"If you disable this option, you have to put manually this code on wordpress "
+"while loop"
+msgstr "如果你禁用这个选项，你必须手动添加这个代码到WordPress的循环代码中"
+
+#: ../admin/admin.php:106 ../admin/admin.php:142 ../admin/admin.php:178
+msgid "Only registered Users"
+msgstr "只有已注册的用户"
+
+#: ../admin/admin.php:108
+msgid "<strong>Only</strong> registered users have permission to like posts."
+msgstr "<strong>只有</strong> 已注册的用户才有权限喜欢文章。"
+
+#: ../admin/admin.php:113 ../admin/admin.php:149 ../admin/admin.php:192
+msgid "Show Liked Users Box"
+msgstr "显示已喜欢的用户盒子"
+
+#: ../admin/admin.php:115 ../admin/admin.php:151 ../admin/admin.php:194
+msgid ""
+"Active this option to show liked users avatars in the bottom of button like."
+msgstr "启用这个选项，可以在喜欢按钮的底部显示已喜欢的用户头像"
+
+#: ../admin/admin.php:120 ../admin/admin.php:156 ../admin/admin.php:199
+msgid "Size of Gravatars"
+msgstr "头像大小"
+
+#: ../admin/admin.php:121 ../admin/admin.php:157 ../admin/admin.php:200
+msgid "Size of Gravatars to return (max is 512)"
+msgstr "头像大小（最大为 512）"
+
+#: ../admin/admin.php:124
+msgid "Users who have LIKED this post:"
+msgstr "喜欢该文章的用户："
+
+#: ../admin/admin.php:125 ../admin/admin.php:161 ../admin/admin.php:204
+msgid "Users Like Box Title"
+msgstr "用户喜欢盒子的标题"
+
+#: ../admin/admin.php:130
+msgid "Comments"
+msgstr "评论"
+
+#: ../admin/admin.php:136
+msgid "<strong>On all comments</strong> at the bottom of the comment"
+msgstr "<strong>在所有评论</strong>的评论底部"
+
+#: ../admin/admin.php:137
+msgid ""
+"If you disable this option, you have to put manually this code on comments "
+"text"
+msgstr "如果禁用此选项，你必须手动添加这个代码到评论文本"
+
+#: ../admin/admin.php:144
+msgid ""
+"<strong>Only</strong> registered users have permission to like comments."
+msgstr "<strong>只有</strong> 已注册的用户才有权限喜欢评论。"
+
+#: ../admin/admin.php:160
+msgid "Users who have LIKED this comment:"
+msgstr "谁也喜欢这个评论用户："
+
+#: ../admin/admin.php:166
+msgid "BuddyPress"
+msgstr "BuddyPress"
+
+#: ../admin/admin.php:172
+msgid "<strong>On all buddypress activities</strong> at the top of activity"
+msgstr "<strong>在所有 buddypress 活动</strong>的活动顶部"
+
+#: ../admin/admin.php:173
+msgid ""
+"If you disable this option, you have to put manually this code on buddypres "
+"activities content"
+msgstr "如果你禁用这个选项，你必须手动添加这个代码到buddypres活动内容"
+
+#: ../admin/admin.php:180
+msgid ""
+"<strong>Only</strong> registered users have permission to like activities."
+msgstr "<strong>只有</strong> 已注册的用户才有权限喜欢活动。"
+
+#: ../admin/admin.php:185
+msgid "BuddyPress Activity"
+msgstr "BuddyPress 活动"
+
+#: ../admin/admin.php:187
+msgid "insert new likes in buddyPress activity page"
+msgstr "插入喜欢按钮到buddyPress活动页面"
+
+#: ../admin/admin.php:203
+msgid "Users who have liked this activity:"
+msgstr "喜欢该活动的用户："
+
+#: ../admin/admin.php:209
+msgid "Customize"
+msgstr "定制"
+
+#: ../admin/admin.php:214
+msgid "Custom Style"
+msgstr "自定义样式"
+
+#: ../admin/admin.php:219
+msgid "Active this option to see the custom style settings."
+msgstr "启用这个选项可以看到自定义样式设置。"
+
+#: ../admin/admin.php:223
+msgid "Button style"
+msgstr "按钮样式"
+
+#: ../admin/admin.php:224 ../admin/admin.php:237
+msgid "Background"
+msgstr "背景"
+
+#: ../admin/admin.php:228 ../admin/admin.php:241
+msgid "Border Color"
+msgstr "背景颜色"
+
+#: ../admin/admin.php:232 ../admin/admin.php:245
+msgid "Text Color"
+msgstr "文本颜色"
+
+#: ../admin/admin.php:236
+msgid "Counter Style"
+msgstr "计数样式"
+
+#: ../admin/admin.php:249
+msgid "Loading Animation"
+msgstr "加载动画"
+
+#: ../admin/admin.php:255
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#: ../admin/admin.php:260
+msgid "Visit Post Logs Menu"
+msgstr "访问文章日志菜单"
+
+#: ../admin/admin.php:262
+msgid "If you deactivate this option, \"Post Likes Logs\" Menu will hidden."
+msgstr "如果你禁用这个选项，\"文章喜欢日志\"菜单将被隐藏。"
+
+#: ../admin/admin.php:267
+msgid "Visit Comment Logs Menu"
+msgstr "访问评论日志菜单"
+
+#: ../admin/admin.php:269
+msgid "If you deactivate this option, \"Comment Likes Logs\" Menu will hidden."
+msgstr "如果你禁用这个选项，\"评论喜欢日志\"菜单将被隐藏。"
+
+#: ../admin/admin.php:274
+msgid "Visit Activity Logs Menu"
+msgstr "访问活动日志菜单"
+
+#: ../admin/admin.php:276
+msgid ""
+"If you deactivate this option, \"Activity Likes Logs\" Menu will hidden."
+msgstr "如果你禁用这个选项，\"活动喜欢日志\"菜单将被隐藏。"
+
+#: ../admin/admin.php:288 ../admin/logs.php:34
+msgid "Post Likes Logs"
+msgstr "文章喜欢日志"
+
+#: ../admin/admin.php:292 ../admin/logs.php:147
+msgid "Comment Likes Logs"
+msgstr "评论喜欢日志"
+
+#: ../admin/admin.php:296 ../admin/logs.php:260
+msgid "Activity Likes Logs"
+msgstr "活动喜欢日志"
+
+#: ../admin/admin.php:299
+msgid "About WP ULike"
+msgstr "关于 WP ULike"
+
+#: ../admin/classes/class-settings.php:16
+msgid "Custom Settings"
+msgstr "自定义设置"
+
+#: ../admin/classes/class-settings.php:27
+msgid "Save Settings"
+msgstr "保存设置"
+
+#: ../admin/classes/class-settings.php:28
+msgid "Reset Settings"
+msgstr "恢复默认设置"
+
+#: ../admin/classes/class-settings.php:91
+msgid "Default settings have been reset."
+msgstr "已恢复为默认设置。"
+
+#: ../admin/classes/class-settings.php:167
+msgid ""
+"Do you really want to reset all these settings to their default values ?"
+msgstr "您确定要恢复所有设置为默认设置吗？"
+
+#: ../admin/classes/class-settings.php:232
+#: ../admin/classes/class-settings.php:243
+#: ../admin/classes/class-settings.php:267
+msgid "No options defined."
+msgstr "没有定义任何选项。"
+
+#: ../admin/classes/class-settings.php:254
+#, php-format
+msgid "Select %s"
+msgstr "选择 %s"
+
+#: ../admin/classes/class-settings.php:255
+#, php-format
+msgid "Remove %s"
+msgstr "移除 %s"
+
+#: ../admin/classes/class-settings.php:279
+msgid "No action defined."
+msgstr "没有定义任何操作。"
+
+#: ../admin/classes/class-widget.php:8
+msgid "WP Ulike - Most Liked Posts"
+msgstr "WP Ulike -最多人喜欢的文章"
+
+#: ../admin/classes/class-widget.php:9
+msgid "This widget allows you to show most liked posts."
+msgstr "该小工具可以显示最多人喜欢的文章。"
+
+#: ../admin/classes/class-widget.php:51
+msgid "Most Liked Posts"
+msgstr "最多人喜欢的文章"
+
+#: ../admin/classes/class-widget.php:55 ../admin/classes/class-widget.php:136
+msgid "Title:"
+msgstr "标题："
+
+#: ../admin/classes/class-widget.php:60
+msgid "Number of posts to show:"
+msgstr "要显示的文章数量："
+
+#: ../admin/classes/class-widget.php:66 ../admin/classes/class-widget.php:152
+msgid "Activate Like Counter"
+msgstr "启用喜欢计数"
+
+#: ../admin/classes/class-widget.php:87
+msgid "WP Ulike - Most Liked Users"
+msgstr "WP Ulike - 最多人喜欢的用户"
+
+#: ../admin/classes/class-widget.php:88
+msgid "This widget allows you to show most liked users avatars."
+msgstr "该小工具可以显示最多人喜欢的用户头像。"
+
+#: ../admin/classes/class-widget.php:132
+msgid "Most Liked Users"
+msgstr "最多人喜欢的用户"
+
+#: ../admin/classes/class-widget.php:141
+msgid "Number of users to show:"
+msgstr "要显示的用户数："
+
+#: ../admin/classes/class-widget.php:146
+msgid "User avatar size:"
+msgstr "用户头像大小："
+
+#: ../admin/logs.php:33 ../admin/logs.php:146 ../admin/logs.php:259
+msgid "WP ULike Logs"
+msgstr "WP ULike 日志"
+
+#: ../admin/logs.php:43 ../admin/logs.php:156 ../admin/logs.php:269
+msgid "ID"
+msgstr "ID"
+
+#: ../admin/logs.php:44 ../admin/logs.php:157 ../admin/logs.php:270
+msgid "Username"
+msgstr "用户名"
+
+#: ../admin/logs.php:45 ../admin/logs.php:158 ../admin/logs.php:271
+msgid "Status"
+msgstr "状态"
+
+#: ../admin/logs.php:46
+msgid "Post ID"
+msgstr "文章ID"
+
+#: ../admin/logs.php:47
+msgid "Post Title"
+msgstr "文章标题"
+
+#: ../admin/logs.php:48 ../admin/logs.php:161 ../admin/logs.php:273
+msgid "Date / Time"
+msgstr "日期/时间"
+
+#: ../admin/logs.php:49 ../admin/logs.php:162 ../admin/logs.php:274
+msgid "IP"
+msgstr "IP"
+
+#: ../admin/logs.php:96
+msgid "Post Likes Logs Stats"
+msgstr "文章喜欢日志统计"
+
+#: ../admin/logs.php:100 ../admin/logs.php:213 ../admin/logs.php:322
+msgid "Total Users Liked:"
+msgstr "所有喜欢的用户："
+
+#: ../admin/logs.php:104
+msgid "Total Posts Liked:"
+msgstr "所有喜欢的文章："
+
+#: ../admin/logs.php:108 ../admin/logs.php:221 ../admin/logs.php:330
+msgid "Total Likes Sum:"
+msgstr "喜欢总数："
+
+#: ../admin/logs.php:115 ../admin/logs.php:228 ../admin/logs.php:337
+msgid ""
+"<strong>ERROR:</strong> No Record Found. (This problem is created because "
+"you don't have any data on this table)"
+msgstr ""
+"<strong>错误：</strong> 没有找到相关记录 (发生这个问题，是由于这个数据表中没"
+"有任何数据)"
+
+#: ../admin/logs.php:159
+msgid "Comment ID"
+msgstr "评论ID"
+
+#: ../admin/logs.php:160
+msgid "Comment Author"
+msgstr "评论作者"
+
+#: ../admin/logs.php:209
+msgid "Comment Likes Logs Stats"
+msgstr "评论喜欢日志统计"
+
+#: ../admin/logs.php:217
+msgid "Total Comments Liked:"
+msgstr "所有喜欢的评论："
+
+#: ../admin/logs.php:272
+msgid "Activity ID"
+msgstr "活动ID"
+
+#: ../admin/logs.php:318
+msgid "Activity Likes Logs Stats"
+msgstr "活动喜欢日志统计"
+
+#: ../admin/logs.php:326
+msgid "Total Activities Liked:"
+msgstr "所有喜欢的活动："
+
+#: ../inc/wp-functions.php:158
+msgid "WP ULike Activity"
+msgstr "WP ULike 活动"
+
+#: ../inc/wp-functions.php:168 ../inc/wp-functions.php:178
+msgid "liked"
+msgstr "已喜欢"
+
+#: ../inc/wp-functions.php:168
+msgid "comment"
+msgstr "评论"
+
+#: ../inc/wp-strings.php:3
+msgid "WP Ulike - Most Liked Comments"
+msgstr "WP Ulike - 最多人喜欢的评论"
+
+#: ../inc/wp-strings.php:4
+msgid "This widget allows you to show most liked comments."
+msgstr "这个小工具允许你显示最多人喜欢的评论。"
+
+#: ../inc/wp-strings.php:5
+msgid "Most Liked Comments"
+msgstr "最多人喜欢的评论"
+
+#: ../inc/wp-strings.php:6
+msgid "WP Ulike - Most Liked Activities"
+msgstr "WP Ulike - 最多人喜欢的活动"
+
+#: ../inc/wp-strings.php:7
+msgid "This widget allows you to show most liked activities."
+msgstr "这个小工具允许你显示最多人喜欢的活动。"
+
+#: ../inc/wp-strings.php:8
+msgid "Most Liked Activities"
+msgstr "最多人喜欢的活动"
+
+#: ../inc/wp-strings.php:9
+msgid "Users Login Text"
+msgstr "用户登录文本"
+
+#: ../inc/wp-strings.php:10
+msgid "Allow To Like"
+msgstr "允许喜欢"
+
+#: ../inc/wp-strings.php:11
+msgid "Guests Only"
+msgstr "仅仅游客"
+
+#: ../inc/wp-strings.php:12
+msgid "Registered Users Only"
+msgstr "仅仅已注册用户"
+
+#: ../inc/wp-strings.php:13
+msgid "Registered Users And Guests"
+msgstr "已注册用户和游客"
+
+#: ../inc/wp-strings.php:14
+msgid "Who Is Allowed To Like?"
+msgstr "谁将被允许喜欢？"
+
+#: ../inc/wp-strings.php:15
+msgid "Filter Options:"
+msgstr "过滤选项："
+
+#: ../inc/wp-strings.php:16
+msgid "Sort Options:"
+msgstr "排序选项："
+
+#: ../inc/wp-strings.php:17
+msgid "Logging Method"
+msgstr "记录方法"
+
+#: ../inc/wp-strings.php:18
+msgid "Do Not Log"
+msgstr "不记录"
+
+#: ../inc/wp-strings.php:19
+msgid "Logged By Cookie"
+msgstr "通过 Cookie 记录"
+
+#: ../inc/wp-strings.php:20
+msgid "Logged By IP"
+msgstr "通过 IP 记录"
+
+#: ../inc/wp-strings.php:21
+msgid "Logged By Cookie & IP"
+msgstr "通过 Cookie 和 IP 记录"
+
+#: ../inc/wp-strings.php:22
+msgid "Logged By Username"
+msgstr "通过用户名记录"
+
+#: ../inc/wp-strings.php:23
+msgid "Wp ULike Template"
+msgstr "Wp ULike 模板"
+
+#: ../inc/wp-strings.php:24
+msgid "Dislike"
+msgstr "不喜欢"
+
+#: ../inc/wp-strings.php:25
+msgid "Dislike Support"
+msgstr "[不喜欢]支持"
+
+#: ../inc/wp-strings.php:26
+msgid "Text After Dislike"
+msgstr "不喜欢后的文字"
+
+#: ../inc/wp-ulike-buddypress.php:73
+msgid "You need to login in order to like this activity: "
+msgstr "你需要登录后才能喜欢这个活动："
+
+#: ../inc/wp-ulike-buddypress.php:73 ../inc/wp-ulike-comments.php:73
+#: ../inc/wp-ulike-posts.php:75
+msgid "click here"
+msgstr "点击这里"
+
+#: ../inc/wp-ulike-comments.php:73
+msgid "You need to login in order to like this comment: "
+msgstr "你需要为了喜欢这个评论登陆"
+
+#: ../inc/wp-ulike-posts.php:75
+msgid "You need to login in order to like this post: "
+msgstr "你需要登录后才能喜欢这篇文章："
+
+#: ../wp-ulike.php:17
+msgid ""
+"WP ULike plugin allows to integrate a beautiful Ajax Like Button into your "
+"wordPress website to allow your visitors to like and unlike pages, posts, "
+"comments AND buddypress activities. Its very simple to use and supports many "
+"options."
+msgstr ""
+"WP ULike 插件允许您集成一个漂亮的免刷新的喜欢按钮到你的 WordPress 站点，可以"
+"让访客喜欢或不喜欢页面、文章、评论和 buddypress 评论。它不仅简单易用，而且支"
+"持很多选项设置。"
+
+#~ msgid "Activate user like count"
+#~ msgstr "启用用户喜欢计数"
+
+#~ msgid "What’s New"
+#~ msgstr "更新了什么"
+
+#~ msgid ""
+#~ "WP ULike enables you to add Ajax Like button into your WordPress site and "
+#~ "allowing your visitors to like and dislike posts, pages, comments AND "
+#~ "buddypress activities. It features: Clean Design, Ajax feature to update "
+#~ "the data without reloading, Custom Like-Dislike Texts, Simple custom "
+#~ "style with color picker settings, BuddyPress activity support, Widget to "
+#~ "show Most Liked Posts And Most Liked Users avatars, Added automatically, "
+#~ "RTL language support, Simple configuration panel and many more..."
+#~ msgstr ""
+#~ "WP Ulike 可以添加Ajax的喜欢按钮到你的WordPress网站，让你的访问者喜欢和不喜"
+#~ "欢的文章、页面、评论和BuddyPress的活动。它的特点：清洁设计，Ajax特性，而无"
+#~ "需重新加载更新数据，自定义喜欢/不喜欢文本，用拾色器设置简单的自定义样式，"
+#~ "支持BuddyPress的活动，使用小工具显示最招人喜欢帖子和最招人喜欢的用户头像，"
+#~ "自动添加，RTL语言支持，简单的配置面板，还有更多..."
+
+#~ msgid "New Administrative Tools"
+#~ msgstr "新的管理工具"
+
+#~ msgid "Configuration"
+#~ msgstr "配置"
+
+#~ msgid "Image or text?"
+#~ msgstr "图片或文本？"
+
+#~ msgid "wherever you want in your template."
+#~ msgstr " 到模板中你想要添加的地方。"
+
+#~ msgid "Comment likes"
+#~ msgstr "评论喜欢"
+
+#~ msgid "Activity likes"
+#~ msgstr "活动喜欢"
+
+#~ msgid "Already Voted"
+#~ msgstr "已经投票"
+
+#~ msgid "You Like This"
+#~ msgstr "你喜欢这个"
+
+#~ msgid "You Dislike This"
+#~ msgstr "你不喜欢这个"
+
+#~ msgid ""
+#~ "Follow me on <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
+#~ msgstr ""
+#~ "关注我的 <a href=\"https://www.facebook.com/alimir.ir\"> Facebook</a>"
+
+#~ msgid ""
+#~ "Plugin Author Blog: <a href=\"http://alimir.ir\"> Wordpress & Programming "
+#~ "World.</a>"
+#~ msgstr ""
+#~ "插件作者博客：<a href=\"http://alimir.ir\"> Wordpress & Programming "
+#~ "World</a><br /> 感谢 <a href=\"http://www.wpdaxue.com\" target=\"_blank"
+#~ "\">WordPress大学</a> 提供简体中文支持"
+
+#~ msgid "<strong>Active</strong> this option."
+#~ msgstr "<strong>激活</strong>这个选项"
+
+#~ msgid "WP Ulike Widget"
+#~ msgstr "WP Ulike 小工具"
+
+#~ msgid ""
+#~ "This plugin allows your visitors to simply like your posts instead of "
+#~ "comment it."
+#~ msgstr "该插件允许你的访客简单地喜欢您的文章而不是评论它。"
+
+#~ msgid "Show post count"
+#~ msgstr "显示文章计数"
+
+#~ msgid "jQuery framework"
+#~ msgstr "Librairie jQuery"
+
+#~ msgid "Enabled"
+#~ msgstr "Activé"
+
+#~ msgid "Disabled"
+#~ msgstr "Désactivé"
+
+#~ msgid ""
+#~ "Disable it if you already have the jQuery framework enabled in your theme."
+#~ msgstr ""
+#~ "Désactivez cette option si vous avez déjà la librairie jQuery activée "
+#~ "dans votre thème."
