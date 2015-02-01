@@ -2,10 +2,10 @@
 Contributors: alimir
 Donate link: http://alimir.ir
 Author: Ali Mirzaei
-Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin, buddypress like system, buddypress votes, comment like system, voting button
+Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin, buddypress like system, buddypress votes, comment like system, voting button, wordpress, statistics, stats likes
 Requires at least: 3.5
-Tested up to: 4.0.1
-Stable tag: 1.9
+Tested up to: 4.1
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ WP ULike enables you to add Ajax Like button into your WordPress and allowing yo
 
 == Description ==
 
-WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and unlike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options.
+WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and unlike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options and full Statistics tools. And all of these are free :)
 
 = Demo =
 
@@ -22,19 +22,25 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 = Features =
 
 *   Clean Design.
+*   Support full Statistics tools.
 *   Ajax feature to update the data without reloading.
 *   Visitors do not have to register or log in to use the Like Button.
-*   Compatible with WP version 3.0 & above.
-*   Added automatically (no Code required).
-*   Logging method options.
+*   Compatible with WP version 3.5 & above.
+*   Added automatically with filtering options (no Code required).
+*   Different logging method options.
 *   Shortcode support.
+*   Support custom templates with separate variables.
 *   Comment likes support.
 *   Full likes logs support.
 *   BuddyPress activity support.
 *   Simple user like box with avatar support.
-*   Custom Like-Dislike Texts.
+*   Custom Like-UnLike Texts fields.
 *   Simple custom style with color picker settings.
-*   Widget to show 'Most Liked Posts','Most Liked Comments' And 'Most Liked Users Avatars'.
+*   Widget to show 'Most Liked Posts'.
+*   Widget to show 'Most Liked Comments'.
+*   Widget to show 'Most Liked Activities'.
+*   Widget to show 'Most Liked Users' with avatar.
+*   Widget to show 'Last Posts Liked By Current User'.
 *   Powerful configuration panel.
 *   Support RTL & language file.
 *   And so on...
@@ -59,6 +65,7 @@ Also you can use this function and shortcode for the post likes:
 
 = Plugin Author =
 Website: <a href="http://about.alimir.ir" target="_blank">Ali Mirzaei</a><br />
+Novelty: <a href="http://preview.alimir.ir/all-abilities-that-coming-with-wp-ulike-2-0/" target="_blank">All Abilities That Coming With WP ULike 2.0</a><br />
 Follow on <a href="https://www.facebook.com/alimir.ir" target="_blank">Facebook</a><br />
 You can catch me on twitter as @alimirir
 
@@ -125,7 +132,27 @@ endif;
 ?>
 </code>
 
+= How Can I Create Custom Template In Users Liked Box?  =
+* We have provided some variables in setting panel. You can use them in textarea and then save the new options. 
+* Attention: `%START_WHILE%` And `%END_WHILE%` variables are very important and you should use them out of the frequent string. (Such as `<li></li>` tags sample in default template)
+
 == Changelog ==
+
+= 2.0 =
+* Added: New Statistics Page with many useful tools ("Line Charts", "Pie Chart", "Summary Stats" ) :)
+* Added: New Class-based programming  :)
+* Added: Custom text option for BP Add Activity (Posts/Comments).
+* Added: Custom template setting for the "Users Like Box".
+* Added: New option to setting the "Number Of Users" in liked box.
+* Added: "Last Posts Liked By Current User" widget.
+* Added: "Most liked activities" widget.
+* Added: Logs menu links in the statistics page.
+* Added: New option for the "only registered users" with selecting login type.
+* Modified: Widgets in one packet.
+* Modified: "Most Liked Users" widget to get data from all the tables (posts/comments/activities).
+* Removed: Some old functions (Such as wp_ulike_reutrn_userID, get_status functions, get_user_data functions, ...)
+* Updated: Plugin FAQ page.
+* Updated: Persian language file. (Thanks Me :))
 
 = 1.9 =
 * Added: New logging method options.
@@ -197,6 +224,9 @@ endif;
 * The initial version
 
 == Upgrade Notice ==
+
+= 2.0 =
+In this version, we have mixed widgets in one packet. So you should upgrade your last widgets with new one. Have fun :) 
 
 = 1.8 =
 In this version, we have made many changes on plugin functions and settings. So if you lose your last settings, try to add them again. :)

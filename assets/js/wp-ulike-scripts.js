@@ -33,7 +33,7 @@ function likeThis(postId, n1, n2) {
 					jQuery('#wp-ulike-' + postId + ' .counter').html("<a class='image' title='You Liked This'></a><span class='count-box'>"+value+"</span>");	
 				}
 				else if(ulike_obj.button_type == 'text'){
-					jQuery('#wp-ulike-' + postId + ' .counter').html("<a class='text'> title='You Liked This'" + ulike_obj.button_text + "</a><span class='count-box'>"+value+"</span>");	
+					jQuery('#wp-ulike-' + postId + ' .counter').html("<a class='text' title='You Liked This'>" + ulike_obj.button_text + "</a><span class='count-box'>"+value+"</span>");	
 				}
 			}
 		  }

@@ -4,13 +4,27 @@
   Posts Likes Functions
 *******************************************************/
 
-	//Shortcode function for the post likes
+	/**
+	 * Create ShortCode: 	[wp_ulike]
+	 *
+	 * @author       	Alimir
+	 * @since           1.4
+	 * @return			wp_ulike button
+	 */
 	add_shortcode( 'wp_ulike', 'wp_ulike_shortcode' );	
 	function  wp_ulike_shortcode(){
 		return wp_ulike('put');
 	}
 		
-	//Insert ULike button to the posts
+	/**
+	 * Auto insert wp_ulike function in the posts/pages content
+	 *
+	 * @author       	Alimir	 	
+	 * @param           String $content	 
+	 * @since           1.0	 
+	 * @updated         1.9		  
+	 * @return			filter on "the_content"
+	 */		
 	if (wp_ulike_get_setting( 'wp_ulike_posts', 'auto_display' ) == '1') {
 		function wp_ulike_put_posts($content) {
 			//auto display position
@@ -36,7 +50,13 @@
 		add_filter('the_content', 'wp_ulike_put_posts');
 	}
 	
-	//check the auto display filters
+	/**
+	 * Auto display filtering on posts/pages content
+	 *
+	 * @author       	Alimir
+	 * @since           1.9
+	 * @return			boolean
+	 */		
 	function wp_ulike_post_auto_display_filters(){
 		$filter = wp_ulike_get_setting( 'wp_ulike_posts', 'auto_display_filter');
 		if(is_home() && $filter['home'] == '1')
@@ -58,49 +78,15 @@
 		else
 		return 1;
 	}
-	
-	//get user status by user_ID (like or unlike)
-	function wp_ulike_get_user_post_status($post_ID,$user_ID){
-		global $wpdb;
-		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike WHERE post_id = '$post_ID' AND user_id = '$user_ID'");
-		if ($like_status == "like")
-		return "like";
-		else
-		return "unlike";
-	}
-	
-	//get user status by user_IP (like or unlike)
-	function wp_ulike_get_user_post_status_byIP($post_ID,$user_IP){
-		global $wpdb;
-		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike WHERE post_id = '$post_ID' AND ip = '$user_IP'");
-		if ($like_status == "like")
-		return "like";
-		else
-		return "unlike";
-	}
-	
-	
-	
-	//get users data and list their avatar
-	function wp_ulike_get_user_posts_data($post_ID,$user_ID){
-		global $wpdb;
-		$users_list = '';
-		
-		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike WHERE post_id = '$post_ID' GROUP BY user_id");
-		
-		foreach ( $get_users as $get_user ) 
-		{
-			$user_info = get_userdata($get_user->user_id);
-			if ($user_ID != $get_user->user_id && $user_info):
-			$avatar_size = wp_ulike_get_setting( 'wp_ulike_posts', 'users_liked_box_avatar_size');
-			$users_list .= '<li><a class="user-tooltip" title="'.$user_info->display_name.'">'.get_avatar( $user_info->user_email, $avatar_size, '' , 'avatar').'</a></li>';
-			endif;
-		}
-		
-		return $users_list;
-	}
 
-	//get the post likes number
+	/**
+	 * Get The Post like number
+	 *
+	 * @author       	Alimir
+	 * @param           Integer $postID	 
+	 * @since           1.7 
+	 * @return          String
+	 */
 	function wp_ulike_get_post_likes($postID){
 		$val = get_post_meta($postID, '_liked', true);
 		return wp_ulike_format_number($val);
@@ -112,7 +98,15 @@
   Comments Likes Functions
 *******************************************************/	
 	
-	//Insert ULike button to the comments
+	/**
+	 * Auto insert wp_ulike_comments in the comments content
+	 *
+	 * @author       	Alimir
+	 * @param           String $content		 
+	 * @since           1.6		 
+	 * @updated         1.9	
+	 * @return          filter on "comment_text"
+	 */		
 	if (wp_ulike_get_setting( 'wp_ulike_comments', 'auto_display' ) == '1'  && !is_admin()) {
 		function wp_ulike_put_comments($content) {
 			//auto display position
@@ -135,52 +129,20 @@
 		add_filter('comment_text', 'wp_ulike_put_comments');
 	}
 	
-	//get user comment status (like or unlike)
-	function wp_ulike_get_user_comments_status($CommentID,$user_ID){
-		global $wpdb;
-		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike_comments WHERE comment_id = '$CommentID' AND user_id = '$user_ID'");
-		if ($like_status == "like")
-		return "like";
-		else
-		return "unlike";
-	}
 	
-	//get user status by user_IP (like or unlike)
-	function wp_ulike_get_user_comments_status_byIP($CommentID,$user_IP){
-		global $wpdb;
-		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike_comments WHERE comment_id = '$CommentID' AND ip = '$user_IP'");
-		if ($like_status == "like")
-		return "like";
-		else
-		return "unlike";
-	}
-	
-	//get users data and list their avatar
-	function wp_ulike_get_user_comments_data($CommentID,$user_ID){
-		global $wpdb;
-		$users_list = '';
-		
-		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike_comments WHERE comment_id = '$CommentID' GROUP BY user_id");
-		
-		foreach ( $get_users as $get_user ) 
-		{
-			$user_info = get_userdata($get_user->user_id);
-			if ($user_ID != $get_user->user_id && $user_info):
-			$avatar_size = wp_ulike_get_setting( 'wp_ulike_comments', 'users_liked_box_avatar_size');
-			$users_list .= '<li><a class="user-tooltip" title="'.$user_info->display_name.'">'.get_avatar( $user_info->user_email, $avatar_size, '' , 'avatar').'</a></li>';
-			endif;
-		}
-		
-		return $users_list;
-	}
-
-
 	
 /*******************************************************
   BuddyPress Likes Functions
 *******************************************************/	
 	
-	//Insert ULike button to the activities
+	/**
+	 * Auto insert wp_ulike_buddypress in the comments content
+	 *
+	 * @author       	Alimir	 
+	 * @param           String $content	 
+	 * @since           1.7		 
+	 * @return          filter on "bp_get_activity_action"
+	 */
 	if (wp_ulike_get_setting( 'wp_ulike_buddypress', 'auto_display' ) == '1' && !is_admin()) {
 		function wp_ulike_put_buddypress($content) {
 			$content.= wp_ulike_buddypress('put');
@@ -190,47 +152,13 @@
 		add_filter('bp_get_activity_action', 'wp_ulike_put_buddypress');
 	}
 	
-	//get users data and list their avatar
-	function wp_ulike_get_user_activities_data($activityID,$user_ID){
-		global $wpdb;
-		$users_list = '';
-		
-		$get_users = $wpdb->get_results("SELECT user_id FROM ".$wpdb->prefix."ulike_activities WHERE activity_id = '$activityID' GROUP BY user_id");
-		
-		foreach ( $get_users as $get_user ) 
-		{
-			$user_info = get_userdata($get_user->user_id);
-			if ($user_ID != $get_user->user_id && $user_info):
-			$avatar_size = wp_ulike_get_setting( 'wp_ulike_buddypress', 'users_liked_box_avatar_size');
-			$users_list .= '<li><a class="user-tooltip" title="'.$user_info->display_name.'">'.get_avatar( $user_info->user_email, $avatar_size, '' , 'avatar').'</a></li>';
-			endif;
-		}
-		
-		return $users_list;
-
-	}
-	
-	//get user activity status (like or unlike)
-	function wp_ulike_get_user_activities_status($activityID,$user_ID){
-		global $wpdb;
-		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike_activities WHERE activity_id = '$activityID' AND user_id = '$user_ID'");
-		if ($like_status == "like")
-		return "like";
-		else
-		return "unlike";
-	}
-	
-	//get user status by user_IP (like or unlike)
-	function wp_ulike_get_user_activities_status_byIP($activityID,$user_IP){
-		global $wpdb;
-		$like_status = $wpdb->get_var("SELECT status FROM ".$wpdb->prefix."ulike_activities WHERE activity_id = '$activityID' AND ip = '$user_IP'");
-		if ($like_status == "like")
-		return "like";
-		else
-		return "unlike";
-	}	
-	
-	//register activity action
+	/**
+	 * Register "WP ULike Activity" action
+	 *
+	 * @author       	Alimir
+	 * @since           1.7	 
+	 * @return          Add action on "bp_register_activity_actions"
+	 */
 	add_action( 'bp_register_activity_actions', 'wp_ulike_register_activity_actions' );	
 	function wp_ulike_register_activity_actions() {
 		global $bp;
@@ -241,23 +169,74 @@
 		);
 	}
 	
-	//add activity function
+	/**
+	 * Add new buddypress activities on each like. (Post/Comments)
+	 *
+	 * @author       	Alimir	 
+	 * @param           Integer $user_ID (User ID)	 
+	 * @param           Integer $cp_ID (Post/Comment ID)
+	 * @param           String $type (Simple Key for separate posts by comments) 
+	 * @since           1.6
+	 * @updated         2.0
+	 * @return          Void
+	 */
 	function wp_ulike_bp_activity_add($user_ID,$cp_ID,$type){
 		if (function_exists('bp_is_active') && wp_ulike_get_setting( 'wp_ulike_buddypress', 'new_likes_activity' ) == '1') {
-			if($type=='comment'){
+		
+			// Replace the post variables
+			$post_template = wp_ulike_get_setting( 'wp_ulike_buddypress', 'bp_post_activity_add_header' );
+			if($post_template == '')
+			$post_template = '<strong>%POST_LIKER%</strong> liked <a href="%POST_PERMALINK%" title="%POST_TITLE%">%POST_TITLE%</a>. (So far, This post has <span class="badge">%POST_COUNT%</span> likes)';
+			
+			if (strpos($post_template, '%POST_LIKER%') !== false) {
+				$POST_LIKER = bp_core_get_userlink($user_ID);
+				$post_template = str_replace("%POST_LIKER%", $POST_LIKER, $post_template);
+			}
+			if (strpos($post_template, '%POST_PERMALINK%') !== false) {
+				$POST_PERMALINK = get_permalink($cp_ID);
+				$post_template = str_replace("%POST_PERMALINK%", $POST_PERMALINK, $post_template);
+			}
+			if (strpos($post_template, '%POST_COUNT%') !== false) {
+				$POST_COUNT = get_post_meta($cp_ID, '_liked', true);
+				$post_template = str_replace("%POST_COUNT%", $POST_COUNT, $post_template);
+			}
+			if (strpos($post_template, '%POST_TITLE%') !== false) {
+				$POST_TITLE = get_the_title($cp_ID);
+				$post_template = str_replace("%POST_TITLE%", $POST_TITLE, $post_template);
+			}
+			
+			// Replace the comment variables
+			$comment_template = wp_ulike_get_setting( 'wp_ulike_buddypress', 'bp_comment_activity_add_header' );
+			if($comment_template == '')
+			$comment_template = '<strong>%COMMENT_LIKER%</strong> liked <strong>%COMMENT_AUTHOR%</strong> comment. (So far, %COMMENT_AUTHOR% has <span class="badge">%COMMENT_COUNT%</span> likes for this comment)';
+			
+			if (strpos($comment_template, '%COMMENT_LIKER%') !== false) {
+				$COMMENT_LIKER = bp_core_get_userlink($user_ID);
+				$comment_template = str_replace("%COMMENT_LIKER%", $COMMENT_LIKER, $comment_template);
+			}
+			if (strpos($comment_template, '%COMMENT_AUTHOR%') !== false) {
+				$COMMENT_AUTHOR = get_comment_author($cp_ID);
+				$comment_template = str_replace("%COMMENT_AUTHOR%", $COMMENT_AUTHOR, $comment_template);
+			}
+			if (strpos($comment_template, '%COMMENT_COUNT%') !== false) {
+				$COMMENT_COUNT = get_comment_meta($cp_ID, '_commentliked', true);
+				$comment_template = str_replace("%COMMENT_COUNT%", $COMMENT_COUNT, $comment_template);
+			}
+			
+			//create bp_activity_add
+			if($type=='_commentliked'){
 				bp_activity_add( array(
 					'user_id' => $user_ID,
-					'action' => '<strong>'.bp_core_get_userlink($user_ID).'</strong> '.__('liked','alimir').' <strong>'.get_comment_author($cp_ID).'</strong> '.__('comment','alimir').'. (So far, '.get_comment_author($cp_ID).' has <span class="badge">'. get_comment_meta($cp_ID, '_commentliked', true) .'</span> likes for this comment)',
+					'action' => $comment_template,
 					'component' => 'activity',
 					'type' => 'wp_like_group',
 					'item_id' => $cp_ID
 				));
 			}
-			else if($type=='post'){
-				$parent_title = get_the_title($cp_ID);
+			else if($type=='_liked'){
 				bp_activity_add( array(
 					'user_id' => $user_ID,
-					'action' => '<strong>'.bp_core_get_userlink($user_ID).'</strong> '.__('liked','alimir').' <a href="'.get_permalink($cp_ID). '" title="'.$parent_title.'">'.$parent_title.'</a>. (So far, This post has <span class="badge">'.get_post_meta($cp_ID, '_liked', true).'</span> likes)',
+					'action' => $post_template,
 					'component' => 'activity',
 					'type' => 'wp_like_group',
 					'item_id' => $cp_ID
@@ -275,7 +254,17 @@
   General Functions
 *******************************************************/
 
-	//get real IP
+	//Create global variable of user IP
+	global $wp_user_IP;
+	$wp_user_IP = wp_ulike_get_real_ip();
+	
+	/**
+	 * Get the real IP
+	 *
+	 * @author       	Alimir
+	 * @since           1.1
+	 * @return          Void
+	 */
 	function wp_ulike_get_real_ip() {
 		if (getenv('HTTP_CLIENT_IP')) {
 			$ip = getenv('HTTP_CLIENT_IP');
@@ -293,18 +282,15 @@
 		
 		return $ip;
 	}
-
-	function wp_ulike_reutrn_userID($user_ID){		
-		if(!is_user_logged_in()){
-			$ip = wp_ulike_get_real_ip();
-			$user_ip = ip2long($ip);
-			return $user_ip;
-		}
-		else
-			return $user_ID;
-	}	
 	
-	//get custom style settings
+	/**
+	 * Get custom style setting from customize options
+	 *
+	 * @author       	Alimir
+	 * @since           1.3
+	 * @updated         1.8
+	 * @return          Void (Print new CSS styles)
+	 */
 	function wp_ulike_get_custom_style(){
 		$btn_style = '';
 		$counter_style = '';
@@ -336,23 +322,23 @@
 		
 		
 		if($btn_bg != ''){
-		$btn_style .= "background-color:$btn_bg !important; ";
+			$btn_style .= "background-color:$btn_bg !important; ";
 		}			
 		if($btn_border != ''){
-		$btn_style .= "border-color:$btn_border !important; ";
+			$btn_style .= "border-color:$btn_border !important; ";
 		}			
 		if($btn_color != ''){
-		$btn_style .= "color:$btn_color !important;";
+			$btn_style .= "color:$btn_color !important;";
 		}
 
 		if($counter_bg != ''){
-		$counter_style .= "background-color:$counter_bg !important; ";
+			$counter_style .= "background-color:$counter_bg !important; ";
 		}			
 		if($counter_border != ''){
-		$counter_style .= "border-color:$counter_border !important; ";
+			$counter_style .= "border-color:$counter_border !important; ";
 		}			
 		if($counter_color != ''){
-		$counter_style .= "color:$counter_color !important;";
+			$counter_style .= "color:$counter_color !important;";
 		}
 		
 		}
@@ -395,9 +381,17 @@
 		}
 	}
 	
-	//Convert numbers of Likes with string (kilobyte) format.
+	/**
+	 * Convert numbers of Likes with string (kilobyte) format
+	 *
+	 * @author       	Alimir
+	 * @param           Integer $num (get like number)	 
+	 * @since           1.5
+	 * @updated         2.0
+	 * @return          String
+	 */
 	function wp_ulike_format_number($num){
-		$plus = '+';
+		$plus = $num != 0 ? '+' : '';
 		if ($num >= 1000 && wp_ulike_get_setting( 'wp_ulike_general', 'format_number' ) == '1')
 		$value = round($num/1000, 2) . 'K' . $plus;
 		else
@@ -405,3 +399,9 @@
 		$value = apply_filters( 'wp_ulike_format_number', $value, $num, $plus);
 		return $value;
 	}
+	
+	/*******************************************************
+	  WP ULike Class
+	*******************************************************/
+	
+	include( plugin_dir_path(__FILE__) . 'classes/class-ulike.php');	

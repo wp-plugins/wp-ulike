@@ -1,38 +1,59 @@
 <?php
 
-//JS
-add_action('init', 'wp_ulike_enqueue_scripts');
-function wp_ulike_enqueue_scripts() {
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script('wp_ulike', plugins_url('assets/js/wp-ulike-scripts.js', dirname(__FILE__)), array('jquery'), '1.0.0');
-	wp_enqueue_script('wp_ulike_plugins', plugins_url('assets/js/wp-ulike-plugins.js', dirname(__FILE__)), array('jquery'), '1.0.0');	
+	if ( ! defined( 'ABSPATH' ) ) exit; // No direct access allowed
 
-    wp_localize_script( 'wp_ulike', 'ulike_obj', array(
-		'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'text_after_like' => wp_ulike_get_setting( 'wp_ulike_general', 'text_after_like'),
-        'text_after_unlike' => wp_ulike_get_setting( 'wp_ulike_general', 'text_after_unlike'),
-        'button_text' => wp_ulike_get_setting( 'wp_ulike_general', 'button_text'),
-        'button_type' => wp_ulike_get_setting( 'wp_ulike_general', 'button_type'),
-		'return_initial_after_unlike' => wp_ulike_get_setting( 'wp_ulike_general', 'return_initial_after_unlike')
-    ));
-	add_action('wp_ajax_ulikeprocess','wp_ulike_process');
-	add_action('wp_ajax_nopriv_ulikeprocess', 'wp_ulike_process');
-	add_action('wp_ajax_ulikecommentprocess','wp_ulike_comments_process');
-	add_action('wp_ajax_nopriv_ulikecommentprocess', 'wp_ulike_comments_process');
-	add_action('wp_ajax_ulikebuddypressprocess','wp_ulike_buddypress_process');
-	add_action('wp_ajax_nopriv_ulikebuddypressprocess', 'wp_ulike_buddypress_process');
-}
-
-//CSS
-add_action('wp_print_styles', 'wp_ulike_enqueue_style');
-function wp_ulike_enqueue_style() {
-
-	//Plugin default style for RTL & LTR languages.
-	if(!is_rtl())
-	wp_enqueue_style( 'wp-ulike', plugins_url('assets/css/wp-ulike.css', dirname(__FILE__)) );
-	else
-	wp_enqueue_style( 'wp-ulike', plugins_url('assets/css/wp-ulike-rtl.css', dirname(__FILE__)) );
+	/**
+	 * Add Plugin script files + Creating Localize Objects
+	 *
+	 * @author       	Alimir
+	 * @since           1.0		 
+	 * @updated         1.9	 
+	 * @return          void
+	 */
+	add_action('init', 'wp_ulike_enqueue_scripts');
 	
-	//add your custom style from setting panel.
-	wp_ulike_get_custom_style();	
-}
+	function wp_ulike_enqueue_scripts() {
+		//enqueue JQuery script
+		wp_enqueue_script( 'jquery' );
+		//Add ulike script file with special functions.
+		wp_enqueue_script('wp_ulike', plugins_url('assets/js/wp-ulike-scripts.js', dirname(__FILE__)), array('jquery'), '1.0.0');
+		//Add ulike plugin file, such as: tooltip, transaction, ...
+		wp_enqueue_script('wp_ulike_plugins', plugins_url('assets/js/wp-ulike-plugins.js', dirname(__FILE__)), array('jquery'), '1.0.0', true);	
+		//localize script
+		wp_localize_script( 'wp_ulike', 'ulike_obj', array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'text_after_like' => wp_ulike_get_setting( 'wp_ulike_general', 'text_after_like'),
+			'text_after_unlike' => wp_ulike_get_setting( 'wp_ulike_general', 'text_after_unlike'),
+			'button_text' => wp_ulike_get_setting( 'wp_ulike_general', 'button_text'),
+			'button_type' => wp_ulike_get_setting( 'wp_ulike_general', 'button_type'),
+			'return_initial_after_unlike' => wp_ulike_get_setting( 'wp_ulike_general', 'return_initial_after_unlike')
+		));
+		//wp_ajax hooks for the custom AJAX requests
+		add_action('wp_ajax_ulikeprocess','wp_ulike_process');
+		add_action('wp_ajax_nopriv_ulikeprocess', 'wp_ulike_process');
+		add_action('wp_ajax_ulikecommentprocess','wp_ulike_comments_process');
+		add_action('wp_ajax_nopriv_ulikecommentprocess', 'wp_ulike_comments_process');
+		add_action('wp_ajax_ulikebuddypressprocess','wp_ulike_buddypress_process');
+		add_action('wp_ajax_nopriv_ulikebuddypressprocess', 'wp_ulike_buddypress_process');
+	}
+
+	/**
+	 * Add Plugin styles for RTL & LTR languages + Custom Style Support
+	 *
+	 * @author       	Alimir
+	 * @since           1.0		 
+	 * @updated         1.8	 
+	 * @return          Void (Enqueue CSS styles)
+	 */
+	add_action('wp_print_styles', 'wp_ulike_enqueue_style');
+	
+	function wp_ulike_enqueue_style() {
+		if(!is_rtl()){
+			wp_enqueue_style( 'wp-ulike', plugins_url('assets/css/wp-ulike.css', dirname(__FILE__)) );
+		}
+		else{
+			wp_enqueue_style( 'wp-ulike', plugins_url('assets/css/wp-ulike-rtl.css', dirname(__FILE__)) );
+		}
+		//add your custom style from setting panel.
+		wp_ulike_get_custom_style();	
+	}

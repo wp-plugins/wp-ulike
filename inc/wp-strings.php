@@ -1,9 +1,5 @@
 <?php
 $wp_ulike_string = array(
-    "4"  => __('WP ULike - Most Liked Activities', 'alimir'),
-    "5"  => __( 'This widget allows you to show most liked activities.', 'alimir' ),
-    "6"  => __('Most Liked Activities', 'alimir'),
-    "7"  => __('Users Login Text', 'alimir'),
     "8"  => __('Allow To Like', 'alimir'),
     "9"  => __('Guests Only', 'alimir'),
     "10" => __('Registered Users Only', 'alimir'),

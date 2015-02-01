@@ -325,7 +325,7 @@ class wp_ulike_settings {
               $text = '';
               $nl = "WM-SETTINGS-NEW-LINE";
               $tb = "WM-SETTINGS-TABULATION";
-              $lines = explode( $nl, sanitize_text_field( str_replace( "\t", $tb, str_replace( "\n", $nl, $input ) ) ) );
+              $lines = explode( $nl, str_replace( "\t", $tb, str_replace( "\n", $nl, $input ) ) );
               foreach ( $lines as $line ) {
                 $text .= str_replace( $tb, "\t", trim( $line ) ) . "\n";
               }

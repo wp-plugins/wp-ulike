@@ -1,4 +1,6 @@
 <?php
+if ( ! class_exists( 'pagination' ) ) {
+
 class pagination{
 /*
 Script Name: *Digg Style Paginator Class
@@ -199,4 +201,7 @@ Author: Victor De la Rocha
 				return true;
 			}
 	}
+	
+}
+
 ?>

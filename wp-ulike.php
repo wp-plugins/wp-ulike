@@ -3,7 +3,7 @@
 Plugin Name:WP ULike
 Plugin URI: http://wordpress.org/plugins/wp-ulike
 Description: WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and unlike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options.
-Version: 1.9
+Version: 2.0
 Author: Ali Mirzaei
 Author URI: http://about.alimir.ir
 Text Domain: alimir
@@ -13,13 +13,21 @@ License: GPL2
 
 	//Load Translations
 	load_plugin_textdomain( 'alimir', false, dirname( plugin_basename( __FILE__ ) ) .'/lang/' );
-	__('WP ULike', 'alimir');
+	
 	__('WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and unlike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options.', 'alimir');
 	
 	//Do not change this value
 	define('WP_ULIKE_DB_VERSION', '1.2');
 	
-	//register activation hook
+	/**
+	* When the plugin is activated, This function will install wp_ulike tables in database (If not exist table)
+	*
+	* @author       	Alimir	 	
+	* @since          	1.1
+	* @updated         	1.7
+	* @return			Void
+	*/
+	register_activation_hook(__FILE__, 'wp_ulike_install');
 	function wp_ulike_install() {
 		global $wpdb;
 		
@@ -78,9 +86,14 @@ License: GPL2
 		}
 		
 	}
-	register_activation_hook(__FILE__, 'wp_ulike_install');
 	
-	//plugin update check
+	/**
+	 * This hook is called once any activated plugins have been loaded.
+	 *
+	 * @author       	Alimir	 	
+	 * @since           1.7
+	 * @return			Void
+	 */
 	add_action( 'plugins_loaded', 'wp_ulike_update_db_check' );
 	function wp_ulike_update_db_check() {
 		if ( get_site_option( 'wp_ulike_dbVersion' ) != WP_ULIKE_DB_VERSION ) {
@@ -88,20 +101,26 @@ License: GPL2
 		}
 	}
 	
-	//get the plugin version
+	/**
+	 * This function is getting the plugin version
+	 *
+	 * @author       	Alimir	 	
+	 * @since           1.8
+	 * @return			String
+	 */
 	function wp_ulike_get_version() {
 		$plugin_data = get_plugin_data( __FILE__ );
 		$plugin_version = $plugin_data['Version'];
 		return $plugin_version;
 	}
 	
-	//Load plugin setting panel
+	//Include plugin setting file
 	include( plugin_dir_path( __FILE__ ) . 'admin/admin.php');
 	
-	//Load general functions
+	//Include general functions
 	include( plugin_dir_path( __FILE__ ) . 'inc/wp-functions.php');	
 	
-	//Load plugin scripts
+	//Include plugin scripts
 	include( plugin_dir_path( __FILE__ ) . 'inc/wp-script.php');
 	
 	//Load WP ULike posts functions

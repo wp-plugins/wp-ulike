@@ -195,26 +195,26 @@ button.close {
 	opacity:1
 }
 
-.tiles,.mostlikedusers {
+.tiles,.most_liked_users {
   list-style-type: none;
   position: relative;
   margin: 10px 0;
   padding: 0;
 }
-.tiles li,.mostlikedusers li{
+.tiles li,.most_liked_users li{
 	display:inline-table;
 	cursor: pointer;
 }
-.mostlikedusers li{
+.most_liked_users li{
 	margin:0 2px;
 }
 
-.tiles li.inactive,.mostlikedusers li.inactive {
+.tiles li.inactive,.most_liked_users li.inactive {
   visibility: hidden;
   opacity: 0;
 }
 
-.tiles li img ,.mostlikedusers li img {
+.tiles li img ,.most_liked_users li img {
   display: block;
 }
 
