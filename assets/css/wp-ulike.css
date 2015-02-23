@@ -48,7 +48,6 @@
 	border-radius: 3px;
     margin-left: 8px;
     font-size: 16px;
-    font-family: Tahoma;
 }
 
 .wpulike .count-box:before {
@@ -217,6 +216,7 @@ button.close {
 
 .tiles li img ,.most_liked_users li img {
   display: block !important;
+  float: none !important;
 }
 
 .tooltip {
@@ -322,6 +322,27 @@ button.close {
     border-radius: 10px;
 }
 
-#buddypress ul.item-list li{
+#buddypress .activity ul.item-list li{
 	position:initial;
+}
+
+#buddypress div.activity-meta .tiles li a{
+	padding:0;
+}
+
+#buddypress .activity-content .wpulike .count-box {
+    border: 1px solid #CCC;
+    font-size: small;
+	color: #777;
+    padding: 4px 10px;
+}
+
+#buddypress .activity-content .wpulike .counter a.image.button{
+	background: url(add.png) center center no-repeat;
+	padding: 4px 20px !important;
+}
+
+#buddypress .activity-content .wpulike .counter a.loading {
+	background: url(loading.GIF) center center no-repeat;
+	padding: 4px 20px !important;
 }

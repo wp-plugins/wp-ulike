@@ -12,8 +12,8 @@ form.wrap td .settings-error p {
 form.wrap .wm-settings-tabs h3 {
 	float: left;
 	padding: 10px 15px;
-	font-weight: 300;
-	background-color: #fff;
+	margin: 1em 0 0;
+	font-weight: 500;
 	border: 1px solid #ddd;
 	border-right: none;
 	border-bottom: none;
@@ -23,13 +23,14 @@ form.wrap .wm-settings-tabs h3:hover {
 	background-color: #f9f9f9;
 }
 form.wrap .wm-settings-tabs h3.active {
-	background-color: #f1f1f1;
+	background-color: #fff;
 }
 form.wrap .wm-settings-tabs h3:last-child {
 	border-right: 1px solid #ddd;
 }
 .wm-settings-tab {
-	padding-top: 0.5em;
+	padding: 1em 0.1em;
+	border-top: 1px solid #ddd;
 	clear: both;
 }
 .settings-error.info,

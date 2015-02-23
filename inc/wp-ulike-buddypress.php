@@ -38,11 +38,16 @@
 		);	
 	
 		//call wp_get_ulike function from class-ulike calss
-		$counter 		= $wp_ulike_class->wp_get_ulike($data);	
+		$counter 		= $wp_ulike_class->wp_get_ulike($data);
 		
-		$wp_ulike 		= '<div id="wp-ulike-activity-'.$activityID.'" class="wpulike">';
-		$wp_ulike 		.= '<div class="counter">'.$counter.'</div>';
-		$wp_ulike 		.= '</div>';
+		if (wp_ulike_get_setting( 'wp_ulike_buddypress', 'auto_display_position' ) == 'meta')
+		$html_tag = 'span';
+		else
+		$html_tag = 'div';
+		
+		$wp_ulike 		= '<'.$html_tag.' id="wp-ulike-activity-'.$activityID.'" class="wpulike">';
+		$wp_ulike 		.= '<'.$html_tag.' class="counter">'.$counter.'</'.$html_tag.'>';
+		$wp_ulike 		.= '</'.$html_tag.'>';
 		$wp_ulike  		.= $wp_ulike_class->get_liked_users($activityID,'ulike_activities','activity_id','wp_ulike_buddypress');
 		
 		if ($arg == 'put') {
@@ -59,10 +64,10 @@
 			if($login_type == "button"){
 				$template = $wp_ulike_class->get_template($activityID,'likeThisActivity',$get_like,1,0);
 				if (wp_ulike_get_setting( 'wp_ulike_general', 'button_type') == 'image') {
-					return '<div id="wp-ulike-activity-'.$activityID.'" class="wpulike"><div class="counter">' . $template['login_img'] . '</div></div>';		
+					return '<'.$html_tag.' id="wp-ulike-activity-'.$activityID.'" class="wpulike"><'.$html_tag.' class="counter">' . $template['login_img'] . '</'.$html_tag.'></'.$html_tag.'>';		
 				}
 				else {
-					return '<div id="wp-ulike-activity-'.$activityID.'" class="wpulike"><div class="counter">' . $template['login_text'] . '</div></div>';	
+					return '<'.$html_tag.' id="wp-ulike-activity-'.$activityID.'" class="wpulike"><'.$html_tag.' class="counter">' . $template['login_text'] . '</'.$html_tag.'></'.$html_tag.'>';	
 				}
 			}
 			else		

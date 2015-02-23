@@ -141,15 +141,19 @@
 	 * @author       	Alimir	 
 	 * @param           String $content	 
 	 * @since           1.7		 
+	 * @updated         2.1	 
 	 * @return          filter on "bp_get_activity_action"
 	 */
-	if (wp_ulike_get_setting( 'wp_ulike_buddypress', 'auto_display' ) == '1' && !is_admin()) {
-		function wp_ulike_put_buddypress($content) {
-			$content.= wp_ulike_buddypress('put');
-			return $content;
+	if (wp_ulike_get_setting( 'wp_ulike_buddypress', 'auto_display' ) == '1') {
+		function wp_ulike_put_buddypress() {
+			echo wp_ulike_buddypress('put');
 		}
 		
-		add_filter('bp_get_activity_action', 'wp_ulike_put_buddypress');
+		if (wp_ulike_get_setting( 'wp_ulike_buddypress', 'auto_display_position' ) == 'meta')
+		add_action( 'bp_activity_entry_meta', 'wp_ulike_put_buddypress' );
+		else	
+		add_action( 'bp_activity_entry_content', 'wp_ulike_put_buddypress' );
+
 	}
 	
 	/**

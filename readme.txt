@@ -4,8 +4,8 @@ Donate link: http://alimir.ir
 Author: Ali Mirzaei
 Tags: wp ulike, wordpress youlike plugin, like button, rating, vote, voting, most liked posts, wordpress like page, wordpress like post, wordpress vote page, wordpress vote post, wp like page, wp like post, wp like plugin, buddypress like system, buddypress votes, comment like system, voting button, wordpress, statistics, stats likes
 Requires at least: 3.5
-Tested up to: 4.1
-Stable tag: 2.0
+Tested up to: 4.1.1
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,9 +15,9 @@ WP ULike enables you to add Ajax Like button into your WordPress and allowing yo
 
 WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and unlike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options and full Statistics tools. And all of these are free :)
 
-= Demo =
+= Home & Demo =
 
-<a target="_blank" href="http://preview.alimir.ir/wp-ulike-plugin">Click Here</a>
+Visit <a target="_blank" href="http://preview.alimir.ir/developer/wp-ulike/">Home Page</a> & <a target="_blank" href="http://preview.alimir.ir/wp-ulike-plugin">Demo Page</a>
 
 = Features =
 
@@ -31,6 +31,7 @@ WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordP
 *   Shortcode support.
 *   Support custom templates with separate variables.
 *   Comment likes support.
+*   Supporting the date in localized format. (date_i18n)
 *   Full likes logs support.
 *   BuddyPress activity support.
 *   Simple user like box with avatar support.
@@ -62,6 +63,7 @@ Also you can use this function and shortcode for the post likes:
 *   Chinese (Thanks Changmeng Hu & cmhello)
 *   Chinese Tradition (Thanks Arefly)
 *   Dutch (Thanks Joey)
+*   Arabic (Thanks Ahmad Ahwazi)
 
 = Plugin Author =
 Website: <a href="http://about.alimir.ir" target="_blank">Ali Mirzaei</a><br />
@@ -78,7 +80,7 @@ You can catch me on twitter as @alimirir
 
 == Screenshots ==
 
-Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" target="_blank">here</a>
+Screenshots are available in <a href="http://preview.alimir.ir/wp-ulike-plugin" target="_blank">Here</a> & <a target="_blank" href="http://preview.alimir.ir/developer/wp-ulike/">Here</a>
 
 == Frequently Asked Questions ==
 
@@ -137,6 +139,21 @@ endif;
 * Attention: `%START_WHILE%` And `%END_WHILE%` variables are very important and you should use them out of the frequent string. (Such as `<li></li>` tags sample in default template)
 
 == Changelog ==
+
+= 2.1 =
+* Added: New statistics design with screen options.
+* Added: New "Auto Display Position" setting in the budypress activities.
+* Added: Days pick option in the statistics page.
+* Added: "Screen Options" in the logs page.
+* Added: Help screen tabs in the settings page.
+* Added: Ajax button to remove the items from log pages.
+* Added: supporting the date (date_i18n) in localized format. (Statistics Pages)
+* Added: Arabic Language File. (Thanks to Ahmad Ahwazi)
+* Fixes: Button visibility problem in the BuddyPress ajax loading.
+* Fixes: Toggle switch problem in admin area.
+* Fixes: Second parameter warning in json_encode()
+* Fixes: Small Bugs
+* Updated: Persian language file. (Thanks Me :))
 
 = 2.0 =
 * Added: New Statistics Page with many useful tools ("Line Charts", "Pie Chart", "Summary Stats" ) :)
@@ -224,6 +241,9 @@ endif;
 * The initial version
 
 == Upgrade Notice ==
+
+= 2.1 =
+In this version, we have made some changes in the plugin scripts! So, please clear your browser cache after the plugin update.
 
 = 2.0 =
 In this version, we have mixed widgets in one packet. So you should upgrade your last widgets with new one. Have fun :) 

@@ -19,10 +19,25 @@ if ( ! class_exists( 'wp_ulike_stats' ) ) {
 		 *
 		 * @author       	Alimir
 		 * @since           2.0
+		 * @updated         2.1
 		 * @return			Void
 		 */		
-		public function enqueue_script()
+		public function enqueue_script($hook)
 		{
+			$currentScreen 	= get_current_screen();
+			
+			if ( $currentScreen->id != $hook ) {
+				return;
+			}
+			
+			if(is_rtl())
+			wp_register_style( 'wp_ulike_stats_style', plugins_url( 'css/statistics-rtl.css' , __FILE__ ) );
+			else
+			wp_register_style( 'wp_ulike_stats_style', plugins_url( 'css/statistics.css' , __FILE__ ) );
+			
+			//wp_enqueue_style 
+			wp_enqueue_style( 'wp_ulike_stats_style' );			
+			
 			wp_register_script('wp_ulike_chart', plugins_url( 'js/chart.min.js' , __FILE__ ), array('jquery'), null, true);
 			wp_enqueue_script('wp_ulike_chart');
 			wp_register_script('wp_ulike_stats', plugins_url( 'js/statistics.js' , __FILE__ ), array('jquery'), null, true);
@@ -49,9 +64,13 @@ if ( ! class_exists( 'wp_ulike_stats' ) ) {
 			$return_type = $type != 'dataset' ? 'new_date_time' : 'count_date_time';
 			$return_val = $this->select_data('ulike');
 			foreach($return_val as $val){
+				if($return_type == 'new_date_time'){
+				$newarray[] = date_i18n("M j, Y", strtotime($val->$return_type) );
+				}
+				else
 				$newarray[] = $val->$return_type;
 			}
-			return json_encode($newarray, JSON_NUMERIC_CHECK);
+			return json_encode($newarray);
 		}
 		
 		/**
@@ -65,9 +84,13 @@ if ( ! class_exists( 'wp_ulike_stats' ) ) {
 			$return_type = $type != 'dataset' ? 'new_date_time' : 'count_date_time';
 			$return_val = $this->select_data('ulike_comments');
 			foreach($return_val as $val){
+				if($return_type == 'new_date_time'){
+				$newarray[] = date_i18n("M j, Y", strtotime($val->$return_type) );
+				}
+				else
 				$newarray[] = $val->$return_type;
 			}				
-			return json_encode($newarray, JSON_NUMERIC_CHECK);
+			return json_encode($newarray);
 		}
 
 		/**
@@ -81,9 +104,13 @@ if ( ! class_exists( 'wp_ulike_stats' ) ) {
 			$return_type = $type != 'dataset' ? 'new_date_time' : 'count_date_time';
 			$return_val = $this->select_data('ulike_activities');
 			foreach($return_val as $val){
+				if($return_type == 'new_date_time'){
+				$newarray[] = date_i18n("M j, Y", strtotime($val->$return_type) );
+				}
+				else
 				$newarray[] = $val->$return_type;
 			}				
-			return json_encode($newarray, JSON_NUMERIC_CHECK);
+			return json_encode($newarray);
 		}
 		
 		/**
@@ -94,11 +121,13 @@ if ( ! class_exists( 'wp_ulike_stats' ) ) {
 		 * @return			String
 		 */		
 		public function select_data($table){
+			$get_option = get_option( 'wp_ulike_statistics_screen' );
+			$set_number = $get_option['days_number'] != null ? $get_option['days_number'] : 20;
 			$return_val = $this->wpdb->get_results(
 			"
 			SELECT DATE(date_time) AS new_date_time, count(date_time) AS count_date_time
 			FROM ".$this->wpdb->prefix."$table
-			GROUP BY new_date_time DESC LIMIT 20
+			GROUP BY new_date_time DESC LIMIT $set_number
 			");
 			return $return_val;
 		}
@@ -134,16 +163,22 @@ if ( ! class_exists( 'wp_ulike_stats' ) ) {
 		 *
 		 * @author       	Alimir
 		 * @since           2.0
+		 * @updated         2.1
 		 * @return			Integer
 		 */					
 		public function get_all_data_date($table,$name){
-			$return_val = $this->wpdb->get_var(
-			"
-			SELECT SUM(meta_value)
-			FROM ".$this->wpdb->prefix."$table
-			WHERE meta_key LIKE '$name'
-			");
-			return $return_val;		
+			$table_name = $this->wpdb->prefix . $table;
+			if($this->wpdb->get_var("SHOW TABLES LIKE '$table_name'") == $table_name) {
+				$return_val = $this->wpdb->get_var(
+				"
+				SELECT SUM(meta_value)
+				FROM ".$this->wpdb->prefix."$table
+				WHERE meta_key LIKE '$name'
+				");
+				return $return_val;
+			}
+			else
+				return 0;
 		}
 		
 	}

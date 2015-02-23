@@ -184,9 +184,5 @@ jQuery(document).ready(function ($) {
             $('.button-icon-show').hide();
         }
     }); 
-	
-    $("#wp_ulike_posts_logging_method, #wp_ulike_comments_logging_method, #wp_ulike_buddypress_logging_method").change(function () {
-		$('.attention-message').fadeIn();
-    });
   
 });

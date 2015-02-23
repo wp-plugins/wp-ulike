@@ -44,20 +44,16 @@ class wp_ulike_widget extends WP_Widget {
 	 * Last Posts Liked By Current User
 	 *
 	 * @author       	Alimir
-	 * @since           1.1
+	 * @since           2.0
+	 * @updated         2.1
 	 * @return			String
 	 */		
 	public function last_posts_liked_by_current_user($numberOf, $before, $after, $show_count) {
 		global $wpdb,$user_ID,$wp_user_IP;
-		
-		if(is_user_logged_in())
-		$get_user_id = $user_ID;
-		else
-		$get_user_id = ip2long($wp_user_IP);
 
 		$request = "SELECT U.post_id, P.meta_value AS counter
 					FROM ".$wpdb->prefix."ulike AS U, ".$wpdb->prefix."postmeta AS P
-					WHERE U.user_id = $get_user_id AND U.post_id = P.post_id AND meta_key='_liked'
+					WHERE (U.ip LIKE '$wp_user_IP' OR U.user_id = $user_ID) AND U.post_id = P.post_id AND meta_key='_liked'
 					GROUP BY U.post_id
 					ORDER BY MAX(U.date_time) DESC LIMIT $numberOf
 					";

@@ -6,6 +6,7 @@ class wp_ulike_settings {
   private $page,
     $title,
     $menu,
+	$admin_screen,
     $settings = array(),
     $empty = true,
     $notices = array();
@@ -32,6 +33,49 @@ class wp_ulike_settings {
     add_action( 'admin_menu', array( $this, 'admin_menu' ) );
     add_action( 'admin_init', array( $this, 'admin_init' ) );
   }
+  
+
+  public function create_help_screen()
+  {
+	$current_screen = get_current_screen();
+	$this->admin_screen = WP_Screen::get($current_screen);
+	$this->admin_screen->add_help_tab(
+		array(
+			'title'    => __('Overview'),
+			'id'       => 'overview_tab',
+			'content'  => '<p>' . __('WP ULike plugin allows to integrate a beautiful Ajax Like Button into your wordPress website to allow your visitors to like and unlike pages, posts, comments AND buddypress activities. Its very simple to use and supports many options.', 'alimir') . '</p>',
+			'callback' => false
+		)
+	);
+	$this->admin_screen->add_help_tab(
+		array(
+			'title'    => __( 'Posts','alimir'),
+			'id'       => 'posts_tab',
+			'content'  => '<p>'.'<strong>'.__('Automatic display', 'alimir').' : </strong></p><ul><li>'.__('If you disable this option, you have to put manually this code on wordpress while loop', 'alimir') . '<br /><code dir="ltr">&lt;?php if(function_exists(\'wp_ulike\')) wp_ulike(\'get\'); ?&gt;</code>'.'</li></ul>'.'<p>'.'<strong>'.__('Users Like Box Template', 'alimir') . ' - ' . __('Default Template:', 'alimir') .' </strong></p><ul><li><code>&lt;p style="margin-top:5px"&gt; '.__('Users who have LIKED this post:','alimir').'&lt;/p&gt; &lt;ul class="tiles"&gt;%START_WHILE%&lt;li&gt;&lt;a class="user-tooltip" title="%USER_NAME%"&gt;%USER_AVATAR%&lt;/a&gt;&lt;/li&gt;%END_WHILE%&lt;/ul&gt;</code>'.'</li></ul>'.'<p>'.'<strong>'.__( 'Logging Method','alimir').' : </strong></p>'. '<ul>'.'<li>'.__('If you select <strong>"Do Not Log"</strong> method: Any data logs can\'t save, There is no limitation in the like/dislike, unlike/undislike capacity do not work', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By Cookie"</strong> method: Any data logs can\'t save, The like/dislike condition will be limited by SetCookie, unlike/undislike capacity do not work', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By Cookie & IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP & SetCookie', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By Username"</strong> method: data logs only is saved for registered users, the convey of like/dislike condition will check by username, There is no permission for guest users to unlike/undislike', 'alimir').'</li></ul>',
+			
+			'callback' => false
+		)
+	);
+	$this->admin_screen->add_help_tab(
+		array(
+			'title'    => __( 'Comments','alimir'),
+			'id'       => 'comments_tab',
+			'content'  => '<p>'.'<strong>'.__('Automatic display', 'alimir').' : </strong></p><ul><li>'.__('If you disable this option, you have to put manually this code on comments text', 'alimir') . '<br /><code dir="ltr">&lt;?php if(function_exists(\'wp_ulike_comments\')) wp_ulike_comments(\'get\'); ?&gt;</code>'.'</li></ul>' . '<p>'.'<strong>'.__('Users Like Box Template', 'alimir') . ' - ' . __('Default Template:', 'alimir') .' </strong></p><ul><li><code>&lt;p style="margin-top:5px"&gt; '.__('Users who have LIKED this comment:','alimir').'&lt;/p&gt; &lt;ul class="tiles"&gt;%START_WHILE%&lt;li&gt;&lt;a class="user-tooltip" title="%USER_NAME%"&gt;%USER_AVATAR%&lt;/a&gt;&lt;/li&gt;%END_WHILE%&lt;/ul&gt;</code>'.'</li></ul>'.'<p>'.'<strong>'.__( 'Logging Method','alimir').' : </strong></p>'. '<ul>'.'<li>'.__('If you select <strong>"Do Not Log"</strong> method: Any data logs can\'t save, There is no limitation in the like/dislike, unlike/undislike capacity do not work', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By Cookie"</strong> method: Any data logs can\'t save, The like/dislike condition will be limited by SetCookie, unlike/undislike capacity do not work', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By Cookie & IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP & SetCookie', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By Username"</strong> method: data logs only is saved for registered users, the convey of like/dislike condition will check by username, There is no permission for guest users to unlike/undislike', 'alimir').'</li></ul>',
+			'callback' => false
+		)
+	);
+	$this->admin_screen->add_help_tab(
+		array(
+			'title'    => __( 'BuddyPress','alimir'),
+			'id'       => 'bp_tab',
+			'content'  => '<p>'.'<strong>'.__('Automatic display', 'alimir').' : </strong></p><ul><li>'.__('If you disable this option, you have to put manually this code on buddypres activities content', 'alimir') . '<br /><code dir="ltr">&lt;?php if(function_exists(\'wp_ulike_buddypress\')) wp_ulike_buddypress(\'get\'); ?&gt;</code>'.'</li></ul>' . '<p>'.'<strong>'.__('Users Like Box Template', 'alimir') . ' - ' . __('Default Template:', 'alimir') .' </strong></p><ul><li><code>&lt;p style="margin-top:5px"&gt; '.__('Users who have liked this activity:','alimir').'&lt;/p&gt; &lt;ul class="tiles"&gt;%START_WHILE%&lt;li&gt;&lt;a class="user-tooltip" title="%USER_NAME%"&gt;%USER_AVATAR%&lt;/a&gt;&lt;/li&gt;%END_WHILE%&lt;/ul&gt;</code>'.'</li></ul>'.'<p>'.'<strong>'.__( 'Logging Method','alimir').' : </strong></p>'. '<ul>'.'<li>'.__('If you select <strong>"Do Not Log"</strong> method: Any data logs can\'t save, There is no limitation in the like/dislike, unlike/undislike capacity do not work', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By Cookie"</strong> method: Any data logs can\'t save, The like/dislike condition will be limited by SetCookie, unlike/undislike capacity do not work', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By Cookie & IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP & SetCookie', 'alimir').'</li>'.'<li>'.__('If you select <strong>"Logged By Username"</strong> method: data logs only is saved for registered users, the convey of like/dislike condition will check by username, There is no permission for guest users to unlike/undislike', 'alimir').'</li></ul>'.'<p>'.'<strong>'.__('Post Activity Text', 'alimir') . ' - ' . __('Default Template:', 'alimir') .' </strong></p><ul><li><code>&lt;strong&gt;%POST_LIKER%&lt;/strong&gt; liked &lt;a href="%POST_PERMALINK%" title="%POST_TITLE%"&gt;%POST_TITLE%&lt;/a&gt;. (So far, This post has &lt;span class="badge"&gt;%POST_COUNT%&lt;/span&gt; likes)</code>'.'</li></ul>' . '<p>'.'<strong>'.__('Comment Activity Text', 'alimir') . ' - ' . __('Default Template:', 'alimir') .' </strong></p><ul><li><code>&lt;strong&gt;%COMMENT_LIKER%&lt;/strong&gt; liked &lt;strong&gt;%COMMENT_AUTHOR%&lt;/strong&gt; comment. (So far, %COMMENT_AUTHOR% has &lt;span class="badge"&gt;%COMMENT_COUNT%&lt;/span&gt; likes for this comment)</code>'.'</li></ul>',
+			'callback' => false
+		)
+	);
+	$this->admin_screen->set_help_sidebar(
+		'<p><strong>'.__('For more information:').'</strong></p><p><a href="https://wordpress.org/plugins/wp-ulike/faq/" target="_blank">'.__('FAQ','alimir').'</a></p><p><a href="https://wordpress.org/support/plugin/wp-ulike" target="_blank">'.__('Support','alimir').'</a></p>'
+	);
+  }  
 
   public function apply_settings( $settings )
   {
@@ -103,6 +147,7 @@ class wp_ulike_settings {
         }
       }
       add_action( 'load-' . $page, array( $this, 'load_page' ) );
+	  add_action( 'load-' . $page, array(&$this, 'create_help_screen'));
     }
   }
 

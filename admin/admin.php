@@ -26,7 +26,7 @@
 	*******************************************************/
 	//check for wp ulike page
 	if(isset($_GET["page"]) && stripos($_GET["page"], "wp-ulike") !== false)
-	add_filter( 'admin_footer_text', 'wp_ulike_copyright' );
+	add_filter( 'admin_footer_text', 'wp_ulike_copyright');
 	/**
 	 * Add WP ULike CopyRight in footer
 	 *
@@ -152,8 +152,7 @@
 			'type'  		=> 'checkbox',
 			'default'		=> 1,
 			'label' 		=> __('Automatic display', 'alimir'),
-			'checkboxlabel' => __('Activate', 'alimir'),
-			'description' 	=> __('If you disable this option, you have to put manually this code on wordpress while loop', 'alimir') . '<code dir="ltr">&lt;?php if(function_exists(\'wp_ulike\')) wp_ulike(\'get\'); ?&gt;</code>'
+			'checkboxlabel' => __('Activate', 'alimir')
 		  ),
 		  'auto_display_position'  => array(
 			'type'    		=> 'radio',
@@ -197,17 +196,7 @@
 			  'by_ip' 		=> __('Logged By IP', 'alimir'),
 			  'by_cookie_ip'=> __('Logged By Cookie & IP', 'alimir'),
 			  'by_username' => __('Logged By Username', 'alimir')
-			),
-			'description' 	=> '
-			<div class="warning settings-error attention-message" style="overflow:hidden; max-width:600px; display:none"><p>'.
-			'<strong>'.__('Attention!', 'alimir').'</strong>'.
-			'<ol>'.
-			'<li>'.__('If you select <strong>"Do Not Log"</strong> method: Any data logs can\'t save, There is no limitation in the like/dislike, unlike/undislike capacity do not work', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By Cookie"</strong> method: Any data logs can\'t save, The like/dislike condition will be limited by SetCookie, unlike/undislike capacity do not work', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By Cookie & IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP & SetCookie', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By Username"</strong> method: data logs only is saved for registered users, the convey of like/dislike condition will check by username, There is no permission for guest users to unlike/undislike', 'alimir').'</li>'.
-			'</ol></p></div>' 
+			)
 		  ),
 		  'users_liked_box'  => array(
 			'type'  		=> 'checkbox',
@@ -232,7 +221,7 @@
 			'type'  		=> 'textarea',
 			'default'		=> '<br /><p style="margin-top:5px"> '.__('Users who have LIKED this post:','alimir').'</p> <ul class="tiles">%START_WHILE%<li><a class="user-tooltip" title="%USER_NAME%">%USER_AVATAR%</a></li>%END_WHILE%</ul>',
 			'label' 		=> __('Users Like Box Template', 'alimir'),
-			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%USER_AVATAR%</code> , <code>%USER_NAME%</code> , <code>%START_WHILE%</code> , <code>%END_WHILE%</code> <br /><br />' . __('Default Template:', 'alimir') . '<code>&lt;p style="margin-top:5px"&gt; '.__('Users who have LIKED this post:','alimir').'&lt;/p&gt; &lt;ul class="tiles"&gt;%START_WHILE%&lt;li&gt;&lt;a class="user-tooltip" title="%USER_NAME%"&gt;%USER_AVATAR%&lt;/a&gt;&lt;/li&gt;%END_WHILE%&lt;/ul&gt;</code>'
+			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%USER_AVATAR%</code> , <code>%USER_NAME%</code> , <code>%START_WHILE%</code> , <code>%END_WHILE%</code>'
 		  )			  
 		)	
 	  ),//end wp_ulike_posts
@@ -243,8 +232,7 @@
 			'type'  		=> 'checkbox',
 			'default'		=> 1,
 			'label' 		=> __('Automatic display', 'alimir'),
-			'checkboxlabel' => __('Activate', 'alimir'),
-			'description' 	=> __('If you disable this option, you have to put manually this code on comments text', 'alimir') . '<code dir="ltr">&lt;?php if(function_exists(\'wp_ulike_comments\')) wp_ulike_comments(\'get\'); ?&gt;</code>'
+			'checkboxlabel' => __('Activate', 'alimir')
 		  ),
 		  'auto_display_position'  => array(
 			'type'   		=> 'radio',
@@ -273,17 +261,7 @@
 			  'by_ip' 		=> __('Logged By IP', 'alimir'),
 			  'by_cookie_ip'=> __('Logged By Cookie & IP', 'alimir'),
 			  'by_username' => __('Logged By Username', 'alimir')
-			),
-			'description' 	=> '
-			<div class="warning settings-error attention-message" style="overflow:hidden; max-width:600px; display:none"><p>'.
-			'<strong>'.__('Attention!', 'alimir').'</strong>'.
-			'<ol>'.
-			'<li>'.__('If you select <strong>"Do Not Log"</strong> method: Any data logs can\'t save, There is no limitation in the like/dislike, unlike/undislike capacity do not work', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By Cookie"</strong> method: Any data logs can\'t save, The like/dislike condition will be limited by SetCookie, unlike/undislike capacity do not work', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By Cookie & IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP & SetCookie', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By Username"</strong> method: data logs only is saved for registered users, the convey of like/dislike condition will check by username, There is no permission for guest users to unlike/undislike', 'alimir').'</li>'.
-			'</ol></p></div>' 
+			)
 		  ),		  
 		  'users_liked_box'  => array(
 			'type'  		=> 'checkbox',
@@ -308,7 +286,7 @@
 			'type'  		=> 'textarea',
 			'default'		=> '<br /><p style="margin-top:5px"> '.__('Users who have LIKED this comment:','alimir').'</p> <ul class="tiles">%START_WHILE%<li><a class="user-tooltip" title="%USER_NAME%">%USER_AVATAR%</a></li>%END_WHILE%</ul>',
 			'label' 		=> __('Users Like Box Template', 'alimir'),
-			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%USER_AVATAR%</code> , <code>%USER_NAME%</code> , <code>%START_WHILE%</code> , <code>%END_WHILE%</code> <br /><br />' . __('Default Template:', 'alimir') . '<code>&lt;p style="margin-top:5px"&gt; '.__('Users who have LIKED this comment:','alimir').'&lt;/p&gt; &lt;ul class="tiles"&gt;%START_WHILE%&lt;li&gt;&lt;a class="user-tooltip" title="%USER_NAME%"&gt;%USER_AVATAR%&lt;/a&gt;&lt;/li&gt;%END_WHILE%&lt;/ul&gt;</code>'
+			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%USER_AVATAR%</code> , <code>%USER_NAME%</code> , <code>%START_WHILE%</code> , <code>%END_WHILE%</code>'
 		  )	
 		)
 	  ),//end wp_ulike_comments
@@ -319,9 +297,17 @@
 			'type'  		=> 'checkbox',
 			'default'		=> 0,
 			'label' 		=> __('Automatic display', 'alimir'),
-			'checkboxlabel' => __('<strong>On all buddypress activities</strong> at the top of activity', 'alimir'),
-			'description' 	=> __('If you disable this option, you have to put manually this code on buddypres activities content', 'alimir') . '<code dir="ltr">&lt;?php if(function_exists(\'wp_ulike_buddypress\')) wp_ulike_buddypress(\'get\'); ?&gt;</code>'
+			'checkboxlabel' => __('Activate', 'alimir')
 		  ),
+		  'auto_display_position'  => array(
+			'type'    		=> 'radio',
+			'label'   		=> __( 'Auto Display Position','alimir'),
+			'default'		=> 'bottom',
+			'options' 		=> array(
+			  'content'   	=> __('Activity Content', 'alimir'),
+			  'meta' 		=> __('Activity Meta', 'alimir')
+			)
+		  ),		  
 		  'only_registered_users'  => array(
 			'type'  		=> 'checkbox',
 			'default'		=> 0,
@@ -339,17 +325,7 @@
 			  'by_ip' 		=> __('Logged By IP', 'alimir'),
 			  'by_cookie_ip'=> __('Logged By Cookie & IP', 'alimir'),
 			  'by_username' => __('Logged By Username', 'alimir')
-			),
-			'description' 	=> '
-			<div class="warning settings-error attention-message" style="overflow:hidden; max-width:600px; display:none"><p>'.
-			'<strong>'.__('Attention!', 'alimir').'</strong>'.
-			'<ol>'.
-			'<li>'.__('If you select <strong>"Do Not Log"</strong> method: Any data logs can\'t save, There is no limitation in the like/dislike, unlike/undislike capacity do not work', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By Cookie"</strong> method: Any data logs can\'t save, The like/dislike condition will be limited by SetCookie, unlike/undislike capacity do not work', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By Cookie & IP"</strong> method: Data logs will save for all users, the convey of like/dislike condition will check by user IP & SetCookie', 'alimir').'</li>'.
-			'<li>'.__('If you select <strong>"Logged By Username"</strong> method: data logs only is saved for registered users, the convey of like/dislike condition will check by username, There is no permission for guest users to unlike/undislike', 'alimir').'</li>'.
-			'</ol></p></div>' 
+			)
 		  ),		    
 		  'users_liked_box'  => array(
 			'type'  		=> 'checkbox',
@@ -374,7 +350,7 @@
 			'type'  		=> 'textarea',
 			'default'		=> '<br /><p style="margin-top:5px"> '.__('Users who have liked this activity:','alimir').'</p> <ul class="tiles">%START_WHILE%<li><a class="user-tooltip" title="%USER_NAME%">%USER_AVATAR%</a></li>%END_WHILE%</ul>',
 			'label' 		=> __('Users Like Box Template', 'alimir'),
-			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%USER_AVATAR%</code> , <code>%USER_NAME%</code> , <code>%START_WHILE%</code> , <code>%END_WHILE%</code> <br /><br />' . __('Default Template:', 'alimir') . '<code>&lt;p style="margin-top:5px"&gt; '.__('Users who have liked this activity:','alimir').'&lt;/p&gt; &lt;ul class="tiles"&gt;%START_WHILE%&lt;li&gt;&lt;a class="user-tooltip" title="%USER_NAME%"&gt;%USER_AVATAR%&lt;/a&gt;&lt;/li&gt;%END_WHILE%&lt;/ul&gt;</code>'
+			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%USER_AVATAR%</code> , <code>%USER_NAME%</code> , <code>%START_WHILE%</code> , <code>%END_WHILE%</code>'
 		  ),
 		  'new_likes_activity'  => array(
 			'type'  		=> 'checkbox',
@@ -387,13 +363,13 @@
 			'type'  		=> 'textarea',
 			'default'		=> '<strong>%POST_LIKER%</strong> liked <a href="%POST_PERMALINK%" title="%POST_TITLE%">%POST_TITLE%</a>. (So far, This post has <span class="badge">%POST_COUNT%</span> likes)',
 			'label' 		=> __('Post Activity Text', 'alimir'),
-			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%POST_LIKER%</code> , <code>%POST_PERMALINK%</code> , <code>%POST_COUNT%</code> , <code>%POST_TITLE%</code> <br /><br />'  . __('Default Template:', 'alimir') . '<code>&lt;strong&gt;%POST_LIKER%&lt;/strong&gt; liked &lt;a href="%POST_PERMALINK%" title="%POST_TITLE%"&gt;%POST_TITLE%&lt;/a&gt;. (So far, This post has &lt;span class="badge"&gt;%POST_COUNT%&lt;/span&gt; likes)</code>'
+			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%POST_LIKER%</code> , <code>%POST_PERMALINK%</code> , <code>%POST_COUNT%</code> , <code>%POST_TITLE%</code>'
 		  ),
 		  'bp_comment_activity_add_header'  => array(
 			'type'  		=> 'textarea',
 			'default'		=> '<strong>%COMMENT_LIKER%</strong> liked <strong>%COMMENT_AUTHOR%</strong> comment. (So far, %COMMENT_AUTHOR% has <span class="badge">%COMMENT_COUNT%</span> likes for this comment)',
 			'label' 		=> __('Comment Activity Text', 'alimir'),
-			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%COMMENT_LIKER%</code> , <code>%COMMENT_AUTHOR%</code> , <code>%COMMENT_COUNT%</code> <br /><br />'  . __('Default Template:', 'alimir') . '<code>&lt;strong&gt;%COMMENT_LIKER%&lt;/strong&gt; liked &lt;strong&gt;%COMMENT_AUTHOR%&lt;/strong&gt; comment. (So far, %COMMENT_AUTHOR% has &lt;span class="badge"&gt;%COMMENT_COUNT%&lt;/span&gt; likes for this comment)</code>'
+			'description' 	=> __('Allowed Variables:', 'alimir') . ' <code>%COMMENT_LIKER%</code> , <code>%COMMENT_AUTHOR%</code> , <code>%COMMENT_COUNT%</code>'
 		  )
 		)
 	  ),//end wp_ulike_buddypress
@@ -451,19 +427,28 @@
 	 *
 	 * @author       	Alimir	 	
 	 * @since           1.0
-	 * @updated         2.0
+	 * @updated         2.1
 	 * @return			String
 	 */
 	add_action('admin_menu', 'wp_ulike_admin_menu');
 	function wp_ulike_admin_menu() {
+	
 		//Post Like Logs Menu
-		add_submenu_page(null, __( 'Post Likes Logs', 'alimir' ), __( 'Post Likes Logs', 'alimir' ), 'manage_options', 'wp-ulike-post-logs', 'wp_ulike_post_likes_logs');
+		$posts_screen 		= add_submenu_page(null, __( 'Post Likes Logs', 'alimir' ), __( 'Post Likes Logs', 'alimir' ), 'manage_options', 'wp-ulike-post-logs', 'wp_ulike_post_likes_logs');
+		add_action("load-$posts_screen",'wp_ulike_logs_per_page');
+		
 		//Comment Like Logs Menu
-		add_submenu_page(null, __( 'Comment Likes Logs', 'alimir' ), __( 'Comment Likes Logs', 'alimir' ), 'manage_options','wp-ulike-comment-logs', 'wp_ulike_comment_likes_logs');
+		$comments_screen 	= add_submenu_page(null, __( 'Comment Likes Logs', 'alimir' ), __( 'Comment Likes Logs', 'alimir' ), 'manage_options','wp-ulike-comment-logs', 'wp_ulike_comment_likes_logs');
+		add_action("load-$comments_screen",'wp_ulike_logs_per_page');
+		
 		//Activity Like Logs Menu
-		add_submenu_page(null, __( 'Activity Likes Logs', 'alimir' ), __( 'Activity Likes Logs', 'alimir' ), 'manage_options', 'wp-ulike-bp-logs', 'wp_ulike_buddypress_likes_logs');
+		$activities_screen 	= add_submenu_page(null, __( 'Activity Likes Logs', 'alimir' ), __( 'Activity Likes Logs', 'alimir' ), 'manage_options', 'wp-ulike-bp-logs', 'wp_ulike_buddypress_likes_logs');
+		add_action("load-$activities_screen",'wp_ulike_logs_per_page');
+		
 		//Statistics Menu
-		add_submenu_page('wp-ulike-settings', __( 'WP ULike Statistics', 'alimir' ), __( 'WP ULike Statistics', 'alimir' ), 'manage_options', 'wp-ulike-statistics', 'wp_ulike_statistics');
+		$statistics_screen 	= add_submenu_page('wp-ulike-settings', __( 'WP ULike Statistics', 'alimir' ), __( 'WP ULike Statistics', 'alimir' ), 'manage_options', 'wp-ulike-statistics', 'wp_ulike_statistics');
+		add_action("load-$statistics_screen",'wp_ulike_statistics_register_option');
+		
 		//WP ULike About Menu
 		add_submenu_page('wp-ulike-settings', __( 'About WP ULike', 'alimir' ), __( 'About WP ULike', 'alimir' ), 'manage_options', 'wp-ulike-about', 'wp_ulike_about_page');	
 	}

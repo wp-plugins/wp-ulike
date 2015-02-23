@@ -2,6 +2,101 @@
 
 	//include pagination class
 	include( plugin_dir_path(__FILE__) . 'classes/class-pagination.php');
+	
+	
+	/**
+	 * Add screen option for per_page value
+	 *
+	 * @author       	Alimir	 	
+	 * @since           2.1
+	 * @return			String
+	 */			
+	function wp_ulike_logs_per_page() {
+		$option = 'per_page';
+		$args = array(
+			'label' => __('Logs','alimir'),
+			'default' => 20,
+			'option' => 'wp_ulike_logs_per_page'
+		);
+		add_screen_option( $option, $args );
+	}
+	
+	/**
+	 * Set the option of per_page
+	 *
+	 * @author       	Alimir	 	
+	 * @since           2.1
+	 * @return			String
+	 */		 
+	add_filter('set-screen-option', 'wp_ulike_logs_per_page_set_option', 10, 3);
+	function wp_ulike_logs_per_page_set_option($status, $option, $value) {
+		if ( 'wp_ulike_logs_per_page' == $option ) return $value;
+		return $status;
+	}
+	
+	/**
+	 * Return per_page option value
+	 *
+	 * @author       	Alimir	 	
+	 * @since           2.1
+	 * @return			Integer
+	 */	
+	function wp_ulike_logs_return_per_page(){
+		$user 	= get_current_user_id();
+		$screen = get_current_screen();
+		$option = $screen->get_option('per_page', 'option');
+		$per_page = get_user_meta($user, $option, true);
+		 
+		if ( empty ( $per_page) || $per_page < 1 ) {
+			return 20;
+		}
+		else
+			return $per_page;
+	}
+	
+	/**
+	 * admin enqueue scripts
+	 *
+	 * @author       	Alimir	 	
+	 * @since           2.1
+	 * @return			Void
+	 */		
+	add_action('admin_enqueue_scripts', 'wp_ulike_logs_enqueue_script');
+	function wp_ulike_logs_enqueue_script($hook){
+		$currentScreen 	= get_current_screen();
+		
+		if ( $currentScreen->id != $hook ) {
+			return;
+		}
+		
+		wp_enqueue_script( 'jquery' );
+		
+		wp_register_script('wp_ulike_logs', plugins_url( 'classes/js/logs.js' , __FILE__ ), array('jquery'), null, true);
+		wp_enqueue_script('wp_ulike_logs');
+		
+		//localize script
+		wp_localize_script( 'wp_ulike_logs', 'wp_ulike_logs', array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'message' => __('Are you sure to remove this item?!','alimir')
+		));
+		
+	}
+
+	/**
+	 * Remove logs from tables
+	 *
+	 * @author       	Alimir	 	
+	 * @since           2.1
+	 * @return			Void
+	 */			
+	add_action('wp_ajax_ulikelogs','wp_ulike_logs_process');
+	function wp_ulike_logs_process(){
+		global $wpdb;
+		$id 	= $_POST['id'];
+		$table 	= $_POST['table'];
+		$wpdb->delete( $wpdb->prefix.$table ,array( 'id' => $id ));
+		wp_die();
+	}
 
 	/*******************************************************
 	  Post Logs Page
@@ -11,7 +106,7 @@
 	 *
 	 * @author       	Alimir	 	
 	 * @since           1.7
-	 * @updated         2.0	
+	 * @updated         2.1	
 	 * @return			String
 	 */		
 	function wp_ulike_post_likes_logs(){
@@ -21,7 +116,7 @@
 		if($items > 0) {
 				$p = new pagination;
 				$p->items($items);
-				$p->limit(20); // Limit entries per page
+				$p->limit(wp_ulike_logs_return_per_page()); // Limit entries per page
 				$p->target("admin.php?page=wp-ulike-post-logs"); 
 				$p->calculate(); // Calculates what to show
 				$p->parameterName('page_number');
@@ -44,22 +139,24 @@
 		<h3><?php _e('Post Likes Logs', 'alimir'); ?></h3>
 		<div class="tablenav">
 			<div class='tablenav-pages'>
+				<span class="displaying-num"><?php echo $items . ' ' .  __('Logs','alimir'); ?></span>
 				<?php echo $p->show();  // Echo out the list of paging. ?>
 			</div>
-		</div>	
+		</div>
 		<table class="widefat">
 			<thead>
 				<tr>
 					<th width="2%"><?php _e('ID', 'alimir'); ?></th>
 					<th width="10%"><?php _e('Username', 'alimir'); ?></th>
 					<th><?php _e('Status', 'alimir'); ?></th>
-					<th width="4%"><?php _e('Post ID', 'alimir'); ?></th>
+					<th width="6%"><?php _e('Post ID', 'alimir'); ?></th>
 					<th><?php _e('Post Title', 'alimir'); ?></th>
 					<th width="20%"><?php _e('Date / Time', 'alimir'); ?></th>
 					<th><?php _e('IP', 'alimir'); ?></th>
+					<th><?php _e('Actions', 'alimir'); ?></th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody class="wp_ulike_logs">
 				<?php
 				foreach ( $get_ulike_logs as $get_ulike_log ) 
 				{
@@ -102,6 +199,9 @@
 				<td>
 				<?php echo $get_ulike_log->ip; ?> 
 				</td>
+				<td>
+				<button class="wp_ulike_delete button" type="button" data-id="<?php echo $get_ulike_log->id;?>" data-table="ulike"><i class="dashicons dashicons-trash"></i></button> 
+				</td>
 				<?php 
 				$alternate = !$alternate;
 				}
@@ -111,6 +211,7 @@
 		</table>
 		<div class="tablenav">
 			<div class='tablenav-pages'>
+				<span class="displaying-num"><?php echo $items . ' ' .  __('Logs','alimir'); ?></span>
 				<?php echo $p->show();  // Echo out the list of paging. ?>
 			</div>
 		</div>
@@ -129,7 +230,7 @@
 	 *
 	 * @author       	Alimir	 	
 	 * @since           1.7
-	 * @updated         2.0	
+	 * @updated         2.1	
 	 * @return			String
 	 */
 	function wp_ulike_comment_likes_logs(){
@@ -139,7 +240,7 @@
 		if($items > 0) {
 				$p = new pagination;
 				$p->items($items);
-				$p->limit(20); // Limit entries per page
+				$p->limit(wp_ulike_logs_return_per_page()); // Limit entries per page
 				$p->target("admin.php?page=wp-ulike-comment-logs"); 
 				$p->calculate(); // Calculates what to show
 				$p->parameterName('page_number');
@@ -161,6 +262,7 @@
 		<h3><?php _e('Comment Likes Logs', 'alimir'); ?></h3>
 		<div class="tablenav">
 			<div class='tablenav-pages'>
+				<span class="displaying-num"><?php echo $items . ' ' .  __('Logs','alimir'); ?></span>
 				<?php echo $p->show();  // Echo out the list of paging. ?>
 			</div>
 		</div>	
@@ -170,11 +272,12 @@
 					<th width="2%"><?php _e('ID', 'alimir'); ?></th>
 					<th width="10%"><?php _e('Username', 'alimir'); ?></th>
 					<th width="5%"><?php _e('Status', 'alimir'); ?></th>
-					<th width="3%"><?php _e('Comment ID', 'alimir'); ?></th>
+					<th width="6%"><?php _e('Comment ID', 'alimir'); ?></th>
 					<th><?php _e('Comment Author', 'alimir'); ?></th>
 					<th><?php _e('Comment Text', 'alimir'); ?></th>
 					<th width="20%"><?php _e('Date / Time', 'alimir'); ?></th>
 					<th><?php _e('IP', 'alimir'); ?></th>
+					<th><?php _e('Actions', 'alimir'); ?></th>					
 				</tr>
 			</thead>
 			<tbody>
@@ -223,6 +326,9 @@
 				<td>
 				<?php echo $get_ulike_log->ip; ?> 
 				</td>
+				<td>
+				<button class="wp_ulike_delete button" type="button" data-id="<?php echo $get_ulike_log->id;?>" data-table="ulike_comments"><i class="dashicons dashicons-trash"></i></button> 
+				</td>				
 				<?php 
 				$alternate = !$alternate;
 				}
@@ -232,6 +338,7 @@
 		</table>
 		<div class="tablenav">
 			<div class='tablenav-pages'>
+				<span class="displaying-num"><?php echo $items . ' ' .  __('Logs','alimir'); ?></span>
 				<?php echo $p->show();  // Echo out the list of paging. ?>
 			</div>
 		</div>
@@ -251,7 +358,7 @@
 	 *
 	 * @author       	Alimir	 	
 	 * @since           1.7
-	 * @updated         2.0	
+	 * @updated         2.1	
 	 * @return			String
 	 */	
 	function wp_ulike_buddypress_likes_logs(){
@@ -261,7 +368,7 @@
 		if($items > 0) {
 				$p = new pagination;
 				$p->items($items);
-				$p->limit(20); // Limit entries per page
+				$p->limit(wp_ulike_logs_return_per_page()); // Limit entries per page
 				$p->target("admin.php?page=wp-ulike-bp-logs"); 
 				$p->calculate(); // Calculates what to show
 				$p->parameterName('page_number');
@@ -284,19 +391,21 @@
 			<h3><?php _e('Activity Likes Logs', 'alimir'); ?></h3>
 			<div class="tablenav">
 				<div class='tablenav-pages'>
+					<span class="displaying-num"><?php echo $items . ' ' .  __('Logs','alimir'); ?></span>
 					<?php echo $p->show();  // Echo out the list of paging. ?>
 				</div>
-			</div>	
+			</div>
 			<table class="widefat">
 				<thead>
 					<tr>
 						<th width="3%"><?php _e('ID', 'alimir'); ?></th>
 						<th width="13%"><?php _e('Username', 'alimir'); ?></th>
 						<th><?php _e('Status', 'alimir'); ?></th>
-						<th width="3%"><?php _e('Activity ID', 'alimir'); ?></th>
+						<th width="6%"><?php _e('Activity ID', 'alimir'); ?></th>
 						<th><?php _e('Permalink', 'alimir'); ?></th>
 						<th><?php _e('Date / Time', 'alimir'); ?></th>
 						<th><?php _e('IP', 'alimir'); ?></th>
+						<th><?php _e('Actions', 'alimir'); ?></th>	
 					</tr>
 				</thead>
 				<tbody>
@@ -342,6 +451,9 @@
 					<td>
 					<?php echo $get_ulike_log->ip; ?> 
 					</td>
+					<td>
+					<button class="wp_ulike_delete button" type="button" data-id="<?php echo $get_ulike_log->id;?>" data-table="ulike_activities"><i class="dashicons dashicons-trash"></i></button> 
+					</td>					
 					<?php 
 					$alternate = !$alternate;
 					}
@@ -351,6 +463,7 @@
 			</table>
 			<div class="tablenav">
 				<div class='tablenav-pages'>
+					<span class="displaying-num"><?php echo $items . ' ' .  __('Logs','alimir'); ?></span>
 					<?php echo $p->show();  // Echo out the list of paging. ?>
 				</div>
 			</div>

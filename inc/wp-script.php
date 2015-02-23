@@ -7,7 +7,7 @@
 	 *
 	 * @author       	Alimir
 	 * @since           1.0		 
-	 * @updated         1.9	 
+	 * @updated         2.1	 
 	 * @return          void
 	 */
 	add_action('init', 'wp_ulike_enqueue_scripts');
@@ -16,7 +16,7 @@
 		//enqueue JQuery script
 		wp_enqueue_script( 'jquery' );
 		//Add ulike script file with special functions.
-		wp_enqueue_script('wp_ulike', plugins_url('assets/js/wp-ulike-scripts.js', dirname(__FILE__)), array('jquery'), '1.0.0');
+		wp_enqueue_script('wp_ulike', plugins_url('assets/js/wp-ulike-scripts.js', dirname(__FILE__)), array('jquery'), '1.0.1');
 		//Add ulike plugin file, such as: tooltip, transaction, ...
 		wp_enqueue_script('wp_ulike_plugins', plugins_url('assets/js/wp-ulike-plugins.js', dirname(__FILE__)), array('jquery'), '1.0.0', true);	
 		//localize script
@@ -42,10 +42,10 @@
 	 *
 	 * @author       	Alimir
 	 * @since           1.0		 
-	 * @updated         1.8	 
+	 * @updated         2.1	 
 	 * @return          Void (Enqueue CSS styles)
 	 */
-	add_action('wp_print_styles', 'wp_ulike_enqueue_style');
+	add_action('wp_enqueue_scripts', 'wp_ulike_enqueue_style');
 	
 	function wp_ulike_enqueue_style() {
 		if(!is_rtl()){

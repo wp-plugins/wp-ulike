@@ -15,7 +15,7 @@ Author: Victor De la Rocha
 		var $page = 1;
 		var $adjacents = 2;
 		var $showCounter = false;
-		var $className = "pagination";
+		var $className = "pagination-links";
 		var $parameterName = "page";
 		var $urlF = false;//urlFriendly
 
@@ -72,12 +72,12 @@ Author: Victor De la Rocha
 		function show(){
 				if(!$this->calculate)
 					if($this->calculate())
-						echo "<div class=\"$this->className\">$this->pagination</div>\n";
+						echo "<span class=\"$this->className\">$this->pagination</span>\n";
 			}
 		function getOutput(){
 				if(!$this->calculate)
 					if($this->calculate())
-						return "<div class=\"$this->className\">$this->pagination</div>\n";
+						return "<span class=\"$this->className\">$this->pagination</span>\n";
 			}
 		function get_pagenum_link($id){
 				if(strpos($this->target,'?')===false)
@@ -194,7 +194,7 @@ Author: Victor De la Rocha
 										$this->pagination .= "<a href=\"".$this->get_pagenum_link($next)."\" class=\"next\">$n</a>";
 									else
 										$this->pagination .= "<span class=\"disabled\">$n</span>";
-									if($this->showCounter)$this->pagination .= "<div class=\"pagination_data\">($this->total_pages Pages)</div>";
+									if($this->showCounter)$this->pagination .= "<span class=\"pagination_data\">($this->total_pages Pages)</span>";
 							}
 					}
 

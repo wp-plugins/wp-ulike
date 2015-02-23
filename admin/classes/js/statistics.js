@@ -73,8 +73,8 @@
 	var pieData = [
 			{
 				value: posts_dataset_sum,
-				color:"#46BFBD",
-				highlight: "#5AD3D1",
+				color:"#5cc6fd",
+				highlight: "#7dd1fd",
 				label: "Posts"
 			},
 			{
@@ -91,45 +91,57 @@
 			}
 		];
 
-	window.onload = function(){
-	
-		if(posts_dataset_var  !== null){
-		var ctx1 = document.getElementById("chart1").getContext("2d");
-		window.myLine = new Chart(ctx1).Line(posts_date, {
-			responsive: true
-		});
-		}else{
-			document.getElementById("posts_likes_stats").getElementsByClassName("main")[0].innerHTML = "No Data Found!";		
+	(function(){
+		var chart1 		= document.getElementById('chart1');
+		var chart2 		= document.getElementById('chart2');
+		var chart3		= document.getElementById('chart3');
+		var piechart 	= document.getElementById('piechart');
+		
+		if (chart1 != null) {
+			if(posts_dataset_var  !== null){
+				var ctx1 = chart1.getContext("2d");
+				new Chart(ctx1).Line(posts_date, {
+					responsive: true
+				});
+			}else{
+				document.getElementById("posts_likes_stats").getElementsByClassName("main")[0].innerHTML = "No Data Found!";		
+			}
 		}
 		
-		if(comments_dataset_var  !== null){
-        var ctx2 = document.getElementById("chart2").getContext("2d");
-        window.myLine = new Chart(ctx2).Line(comments_date, {
-            responsive: true
-        });
-		}else{
-			document.getElementById("comments_likes_stats").getElementsByClassName("main")[0].innerHTML = "No Data Found!";		
+		if (chart2 != null) {
+			if(comments_dataset_var  !== null){
+				var ctx2 = chart2.getContext("2d");
+				new Chart(ctx2).Line(comments_date, {
+					responsive: true
+				});
+			}else{
+				document.getElementById("comments_likes_stats").getElementsByClassName("main")[0].innerHTML = "No Data Found!";		
+			}
 		}
 		
-		if(activities_dataset_var  !== null){
-        var ctx3 = document.getElementById("chart3").getContext("2d");
-        window.myLine = new Chart(ctx3).Line(activities_date, {
-            responsive: true
-        });
-		}else{
-			document.getElementById("activities_likes_stats").getElementsByClassName("main")[0].innerHTML = "No Data Found!";		
+		if (chart3 != null) {
+			if(activities_dataset_var  !== null){
+				var ctx3 = chart3.getContext("2d");
+				new Chart(ctx3).Line(activities_date, {
+					responsive: true
+				});
+			}else{
+				document.getElementById("activities_likes_stats").getElementsByClassName("main")[0].innerHTML = "No Data Found!";		
+			}
 		}
 		
-		if(activities_dataset_var  !== null || comments_dataset_var  || null && posts_dataset_var  || null){
-		var ctx4 = document.getElementById("piechart").getContext("2d");
-		window.myPie = new Chart(ctx4).Pie(pieData, {
-            responsive: true
-        });
-		}else{
-			document.getElementById("piechart_stats").getElementsByClassName("main")[0].innerHTML = "No Data Found!";		
+		if (piechart != null) {
+			if(activities_dataset_var  !== null || comments_dataset_var  || null && posts_dataset_var  || null){
+				var ctx4 = piechart.getContext("2d");
+				new Chart(ctx4).Pie(pieData, {
+					responsive: true
+				});
+			}else{
+				document.getElementById("piechart_stats").getElementsByClassName("main")[0].innerHTML = "No Data Found!";		
+			}
 		}
 		
-	}
+	})();
 	
 
 	jQuery(document).on('ready', function($){

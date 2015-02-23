@@ -17,7 +17,7 @@
 	 *
 	 * @author       	Alimir	 	
 	 * @since           1.7
-	 * @updated         2.0
+	 * @updated         2.1
 	 * @return			String
 	 */ 	
 	function wp_ulike_about_page() {
@@ -74,7 +74,7 @@
 		<h1><?php echo _e('Welcome to WP ULike','alimir') . ' ' . wp_ulike_get_version(); ?></h1>
 
 		<div class="about-text"><?php echo _e('Thank you for choosing WP ULike! This version is our leanest and most powerful version yet.', 'alimir') ; ?><br />
-		<a target="_blank" href="http://preview.alimir.ir/wp-ulike-plugin/"> <?php _e('Visit our homepage','alimir'); ?></a>
+		<a target="_blank" href="http://preview.alimir.ir/developer/wp-ulike/"> <?php _e('Visit our homepage','alimir'); ?></a>
 		</div>
 		<div class="ulike-badge"><?php echo _e('Version','alimir') . ' ' . wp_ulike_get_version(); ?></div>
 
@@ -100,30 +100,35 @@
 
 			<div class="feature-section col two-col">
 				<div>
+					<h4><?php echo _e('New Statistics Design + Screen Option','alimir'); ?> <small class="wp_ulike_version">WP ULike 2.1</small></h4>
+					<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/new-statistics.jpg" alt="WP ULike" />
+				</div>
+
+				<div class="last-feature">
 					<h4><?php echo _e('New Statistics Page','alimir'); ?> <small class="wp_ulike_version">WP ULike 2.0</small></h4>
 					<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/ulike-stats.png" alt="WP ULike" />
 				</div>
-
-				<div class="last-feature">
-					<h4><?php echo _e('New Class-based programming','alimir'); ?> <small class="wp_ulike_version">WP ULike 2.0</small></h4>
-					<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/new-classes.jpg" alt="WP ULike" />
-				</div>
 			</div>	
+			
 			
 			<div class="feature-section col two-col">
 				<div>
+					<h4><?php echo _e('New Class-based programming','alimir'); ?> <small class="wp_ulike_version">WP ULike 2.0</small></h4>
+					<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/new-classes.jpg" alt="WP ULike" />
+				</div>
+				
+				<div class="last-feature">
 					<h4><?php echo _e('Most Liked Comments','alimir'); ?> <small class="wp_ulike_version">WP ULike 1.9</small></h4>
 					<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/most-liked-comments-widget.jpg" alt="WP ULike" />
 				</div>
-
-				<div class="last-feature">
+			</div>
+			
+			<div class="feature-section col three-col">
+				<div>
 					<h4><?php echo _e('Logging Method','alimir'); ?> <small class="wp_ulike_version">WP ULike 1.9</small></h4>
 					<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/loggin-method-option.jpg" alt="WP ULike" />
-				</div>
-			</div>	
+				</div>	
 			
-			<div class="feature-section col two-col">
-
 				<div>
 					<h4><?php echo _e('New options in logs pages','alimir'); ?> <small class="wp_ulike_version">WP ULike 1.9</small></h4>
 					<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/logs-pages-options.jpg" alt="WP ULike" />
@@ -133,8 +138,7 @@
 					<h4><?php echo _e('New setting panel','alimir'); ?> <small class="wp_ulike_version">WP ULike 1.8</small></h4>
 					<img style="width:100%" src="<?php echo plugins_url('/assets', dirname(__FILE__)); ?>/img/new-tools/new-setting.png" alt="WP ULike" />
 				</div>
-
-			</div>	
+			</div>			
 			
 			<div class="feature-section col three-col">
 				<div>
@@ -175,6 +179,7 @@
 		<li>Chinese (Thanks "Changmeng Hu" AND "CMHello")</li>
 		<li>Chinese Tradition (Thanks Arefly)</li>
 		<li>Dutch (Thanks Joey)</li>
+		<li>Arabic (Thanks Ahmad Ahwazi)</li>
 		</ul>
 		
 		<h4 class="wp-people-group"><?php echo _e('Other Plugins','alimir'); ?></h4>
